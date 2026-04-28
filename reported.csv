@@ -1,0 +1,6001 @@
+user_id,item_id,rating,true_profile
+0,0,5,Comedy Lover
+0,2,3,Comedy Lover
+0,3,1,Comedy Lover
+1,0,2,Old Movie Fan
+1,2,3,Old Movie Fan
+1,5,5,Old Movie Fan
+2,1,5,Comedy Lover
+2,2,2,Comedy Lover
+2,3,2,Comedy Lover
+3,1,5,Effects Hater
+3,2,1,Effects Hater
+3,5,4,Effects Hater
+4,2,2,Comedy Lover
+4,4,2,Comedy Lover
+4,5,1,Comedy Lover
+5,0,2,Person with Bad Taste
+5,2,3,Person with Bad Taste
+5,5,5,Person with Bad Taste
+6,0,1,Old Movie Fan
+6,1,3,Old Movie Fan
+6,3,1,Old Movie Fan
+7,0,1,Old Movie Fan
+7,1,4,Old Movie Fan
+7,2,3,Old Movie Fan
+8,0,1,Old Movie Fan
+8,1,4,Old Movie Fan
+8,2,3,Old Movie Fan
+9,0,1,Old Movie Fan
+9,1,3,Old Movie Fan
+9,5,5,Old Movie Fan
+10,0,4,Comedy Lover
+10,2,2,Comedy Lover
+10,5,1,Comedy Lover
+11,2,3,Old Movie Fan
+11,3,1,Old Movie Fan
+11,5,4,Old Movie Fan
+12,2,2,Effects Hater
+12,3,2,Effects Hater
+12,5,4,Effects Hater
+13,1,5,Comedy Lover
+13,3,2,Comedy Lover
+13,4,2,Comedy Lover
+14,0,5,Comedy Lover
+14,2,2,Comedy Lover
+14,3,2,Comedy Lover
+15,3,2,Comedy Lover
+15,4,2,Comedy Lover
+15,5,1,Comedy Lover
+16,0,3,Effects Hater
+16,2,1,Effects Hater
+16,4,5,Effects Hater
+17,1,4,Comedy Lover
+17,4,2,Comedy Lover
+17,5,1,Comedy Lover
+18,3,2,Comedy Lover
+18,4,2,Comedy Lover
+18,5,1,Comedy Lover
+19,0,1,Old Movie Fan
+19,3,2,Old Movie Fan
+19,5,5,Old Movie Fan
+20,1,5,Effects Hater
+20,2,1,Effects Hater
+20,3,1,Effects Hater
+21,1,5,Effects Hater
+21,2,1,Effects Hater
+21,5,4,Effects Hater
+22,2,2,Comedy Lover
+22,4,2,Comedy Lover
+22,5,1,Comedy Lover
+23,0,4,Effects Hater
+23,1,4,Effects Hater
+23,3,1,Effects Hater
+24,1,5,Comedy Lover
+24,3,1,Comedy Lover
+24,5,1,Comedy Lover
+25,1,2,Person with Bad Taste
+25,3,4,Person with Bad Taste
+25,4,1,Person with Bad Taste
+26,1,3,Old Movie Fan
+26,2,3,Old Movie Fan
+26,3,1,Old Movie Fan
+27,1,5,Effects Hater
+27,2,1,Effects Hater
+27,5,5,Effects Hater
+28,1,5,Effects Hater
+28,4,5,Effects Hater
+28,5,4,Effects Hater
+29,1,5,Effects Hater
+29,4,5,Effects Hater
+29,5,3,Effects Hater
+30,2,2,Comedy Lover
+30,4,1,Comedy Lover
+30,5,1,Comedy Lover
+31,0,1,Old Movie Fan
+31,2,2,Old Movie Fan
+31,3,1,Old Movie Fan
+32,0,1,Old Movie Fan
+32,1,2,Old Movie Fan
+32,4,5,Old Movie Fan
+33,0,5,Comedy Lover
+33,2,1,Comedy Lover
+33,4,2,Comedy Lover
+34,2,1,Effects Hater
+34,4,4,Effects Hater
+34,5,4,Effects Hater
+35,3,2,Comedy Lover
+35,4,2,Comedy Lover
+35,5,1,Comedy Lover
+36,3,2,Comedy Lover
+36,4,2,Comedy Lover
+36,5,1,Comedy Lover
+37,0,5,Comedy Lover
+37,2,3,Comedy Lover
+37,4,1,Comedy Lover
+38,0,4,Effects Hater
+38,2,1,Effects Hater
+38,4,5,Effects Hater
+39,0,1,Old Movie Fan
+39,1,3,Old Movie Fan
+39,3,1,Old Movie Fan
+40,0,1,Old Movie Fan
+40,3,1,Old Movie Fan
+40,5,5,Old Movie Fan
+41,0,1,Old Movie Fan
+41,2,3,Old Movie Fan
+41,5,4,Old Movie Fan
+42,0,3,Effects Hater
+42,2,1,Effects Hater
+42,4,5,Effects Hater
+43,2,2,Old Movie Fan
+43,4,5,Old Movie Fan
+43,5,3,Old Movie Fan
+44,2,2,Old Movie Fan
+44,3,2,Old Movie Fan
+44,4,5,Old Movie Fan
+45,0,5,Effects Hater
+45,3,1,Effects Hater
+45,5,3,Effects Hater
+46,0,2,Person with Bad Taste
+46,3,5,Person with Bad Taste
+46,5,5,Person with Bad Taste
+47,2,2,Comedy Lover
+47,3,1,Comedy Lover
+47,5,1,Comedy Lover
+48,0,1,Old Movie Fan
+48,4,5,Old Movie Fan
+48,5,4,Old Movie Fan
+49,1,5,Effects Hater
+49,4,5,Effects Hater
+49,5,4,Effects Hater
+50,1,5,Effects Hater
+50,3,1,Effects Hater
+50,4,5,Effects Hater
+51,1,3,Old Movie Fan
+51,2,2,Old Movie Fan
+51,4,4,Old Movie Fan
+52,0,5,Comedy Lover
+52,3,2,Comedy Lover
+52,4,2,Comedy Lover
+53,0,5,Comedy Lover
+53,3,2,Comedy Lover
+53,5,1,Comedy Lover
+54,2,2,Comedy Lover
+54,3,2,Comedy Lover
+54,4,2,Comedy Lover
+55,1,3,Old Movie Fan
+55,2,3,Old Movie Fan
+55,5,4,Old Movie Fan
+56,1,5,Effects Hater
+56,3,1,Effects Hater
+56,5,4,Effects Hater
+57,2,2,Comedy Lover
+57,3,3,Comedy Lover
+57,4,3,Comedy Lover
+58,1,5,Effects Hater
+58,2,1,Effects Hater
+58,5,4,Effects Hater
+59,1,2,Person with Bad Taste
+59,3,4,Person with Bad Taste
+59,4,2,Person with Bad Taste
+60,2,1,Effects Hater
+60,3,1,Effects Hater
+60,5,4,Effects Hater
+61,0,4,Effects Hater
+61,2,1,Effects Hater
+61,3,1,Effects Hater
+62,2,1,Effects Hater
+62,3,1,Effects Hater
+62,4,5,Effects Hater
+63,0,4,Comedy Lover
+63,4,2,Comedy Lover
+63,5,1,Comedy Lover
+64,0,5,Comedy Lover
+64,2,2,Comedy Lover
+64,5,1,Comedy Lover
+65,0,5,Comedy Lover
+65,1,5,Comedy Lover
+65,5,1,Comedy Lover
+66,0,5,Effects Hater
+66,2,1,Effects Hater
+66,4,4,Effects Hater
+67,0,1,Old Movie Fan
+67,1,3,Old Movie Fan
+67,2,2,Old Movie Fan
+68,0,4,Effects Hater
+68,1,5,Effects Hater
+68,2,1,Effects Hater
+69,1,5,Effects Hater
+69,2,1,Effects Hater
+69,5,4,Effects Hater
+70,0,4,Comedy Lover
+70,1,5,Comedy Lover
+70,5,1,Comedy Lover
+71,0,1,Old Movie Fan
+71,3,1,Old Movie Fan
+71,4,4,Old Movie Fan
+72,0,5,Comedy Lover
+72,3,2,Comedy Lover
+72,4,1,Comedy Lover
+73,0,4,Effects Hater
+73,3,1,Effects Hater
+73,4,5,Effects Hater
+74,0,5,Comedy Lover
+74,4,2,Comedy Lover
+74,5,1,Comedy Lover
+75,0,5,Comedy Lover
+75,1,5,Comedy Lover
+75,4,2,Comedy Lover
+76,2,3,Comedy Lover
+76,4,2,Comedy Lover
+76,5,1,Comedy Lover
+77,0,4,Effects Hater
+77,1,5,Effects Hater
+77,4,5,Effects Hater
+78,0,1,Old Movie Fan
+78,2,3,Old Movie Fan
+78,3,2,Old Movie Fan
+79,2,2,Effects Hater
+79,3,1,Effects Hater
+79,4,5,Effects Hater
+80,0,1,Old Movie Fan
+80,3,1,Old Movie Fan
+80,5,4,Old Movie Fan
+81,0,4,Comedy Lover
+81,4,2,Comedy Lover
+81,5,1,Comedy Lover
+82,3,2,Comedy Lover
+82,4,2,Comedy Lover
+82,5,1,Comedy Lover
+83,0,5,Comedy Lover
+83,4,2,Comedy Lover
+83,5,1,Comedy Lover
+84,0,5,Effects Hater
+84,1,5,Effects Hater
+84,4,5,Effects Hater
+85,0,1,Person with Bad Taste
+85,1,2,Person with Bad Taste
+85,4,1,Person with Bad Taste
+86,0,4,Effects Hater
+86,1,5,Effects Hater
+86,3,1,Effects Hater
+87,2,1,Effects Hater
+87,3,1,Effects Hater
+87,4,5,Effects Hater
+88,1,5,Comedy Lover
+88,2,1,Comedy Lover
+88,5,1,Comedy Lover
+89,0,1,Person with Bad Taste
+89,3,5,Person with Bad Taste
+89,5,5,Person with Bad Taste
+90,0,5,Comedy Lover
+90,1,5,Comedy Lover
+90,5,1,Comedy Lover
+91,0,4,Effects Hater
+91,4,5,Effects Hater
+91,5,5,Effects Hater
+92,2,1,Effects Hater
+92,3,1,Effects Hater
+92,5,3,Effects Hater
+93,0,5,Comedy Lover
+93,3,2,Comedy Lover
+93,4,2,Comedy Lover
+94,0,2,Person with Bad Taste
+94,1,3,Person with Bad Taste
+94,2,3,Person with Bad Taste
+95,0,5,Comedy Lover
+95,2,2,Comedy Lover
+95,3,3,Comedy Lover
+96,0,1,Old Movie Fan
+96,3,1,Old Movie Fan
+96,5,3,Old Movie Fan
+97,1,2,Old Movie Fan
+97,4,5,Old Movie Fan
+97,5,4,Old Movie Fan
+98,0,1,Person with Bad Taste
+98,1,2,Person with Bad Taste
+98,5,5,Person with Bad Taste
+99,0,4,Effects Hater
+99,2,1,Effects Hater
+99,3,1,Effects Hater
+100,2,3,Old Movie Fan
+100,4,5,Old Movie Fan
+100,5,4,Old Movie Fan
+101,0,4,Comedy Lover
+101,4,2,Comedy Lover
+101,5,1,Comedy Lover
+102,3,1,Effects Hater
+102,4,5,Effects Hater
+102,5,4,Effects Hater
+103,1,5,Effects Hater
+103,2,1,Effects Hater
+103,4,5,Effects Hater
+104,1,3,Old Movie Fan
+104,4,5,Old Movie Fan
+104,5,4,Old Movie Fan
+105,1,3,Old Movie Fan
+105,2,4,Old Movie Fan
+105,3,2,Old Movie Fan
+106,2,2,Comedy Lover
+106,3,2,Comedy Lover
+106,4,2,Comedy Lover
+107,0,4,Effects Hater
+107,3,1,Effects Hater
+107,5,4,Effects Hater
+108,1,5,Comedy Lover
+108,2,2,Comedy Lover
+108,5,1,Comedy Lover
+109,3,2,Comedy Lover
+109,4,1,Comedy Lover
+109,5,1,Comedy Lover
+110,0,5,Comedy Lover
+110,2,2,Comedy Lover
+110,5,1,Comedy Lover
+111,0,4,Effects Hater
+111,3,2,Effects Hater
+111,5,4,Effects Hater
+112,0,2,Person with Bad Taste
+112,1,2,Person with Bad Taste
+112,4,1,Person with Bad Taste
+113,2,2,Old Movie Fan
+113,3,1,Old Movie Fan
+113,5,4,Old Movie Fan
+114,0,4,Effects Hater
+114,1,5,Effects Hater
+114,4,5,Effects Hater
+115,2,2,Comedy Lover
+115,4,2,Comedy Lover
+115,5,1,Comedy Lover
+116,0,4,Effects Hater
+116,2,2,Effects Hater
+116,5,5,Effects Hater
+117,1,3,Old Movie Fan
+117,3,2,Old Movie Fan
+117,4,5,Old Movie Fan
+118,1,5,Effects Hater
+118,3,1,Effects Hater
+118,4,5,Effects Hater
+119,0,4,Effects Hater
+119,1,5,Effects Hater
+119,5,4,Effects Hater
+120,0,1,Old Movie Fan
+120,4,4,Old Movie Fan
+120,5,3,Old Movie Fan
+121,0,4,Effects Hater
+121,3,1,Effects Hater
+121,4,5,Effects Hater
+122,1,4,Effects Hater
+122,2,2,Effects Hater
+122,4,4,Effects Hater
+123,3,1,Effects Hater
+123,4,4,Effects Hater
+123,5,5,Effects Hater
+124,2,3,Comedy Lover
+124,4,2,Comedy Lover
+124,5,1,Comedy Lover
+125,2,3,Old Movie Fan
+125,3,2,Old Movie Fan
+125,5,5,Old Movie Fan
+126,0,4,Effects Hater
+126,4,5,Effects Hater
+126,5,5,Effects Hater
+127,0,1,Old Movie Fan
+127,1,2,Old Movie Fan
+127,3,1,Old Movie Fan
+128,1,5,Comedy Lover
+128,3,2,Comedy Lover
+128,5,1,Comedy Lover
+129,0,1,Old Movie Fan
+129,1,3,Old Movie Fan
+129,3,1,Old Movie Fan
+130,2,2,Comedy Lover
+130,3,1,Comedy Lover
+130,4,2,Comedy Lover
+131,0,5,Comedy Lover
+131,3,2,Comedy Lover
+131,5,1,Comedy Lover
+132,1,3,Old Movie Fan
+132,4,4,Old Movie Fan
+132,5,4,Old Movie Fan
+133,0,5,Comedy Lover
+133,1,5,Comedy Lover
+133,4,2,Comedy Lover
+134,0,5,Comedy Lover
+134,2,2,Comedy Lover
+134,4,2,Comedy Lover
+135,1,5,Comedy Lover
+135,2,2,Comedy Lover
+135,3,2,Comedy Lover
+136,0,1,Old Movie Fan
+136,2,3,Old Movie Fan
+136,5,4,Old Movie Fan
+137,0,3,Effects Hater
+137,2,1,Effects Hater
+137,4,5,Effects Hater
+138,0,5,Comedy Lover
+138,2,2,Comedy Lover
+138,3,2,Comedy Lover
+139,0,5,Effects Hater
+139,1,5,Effects Hater
+139,3,1,Effects Hater
+140,0,3,Effects Hater
+140,3,2,Effects Hater
+140,5,4,Effects Hater
+141,3,1,Effects Hater
+141,4,5,Effects Hater
+141,5,3,Effects Hater
+142,2,2,Comedy Lover
+142,3,2,Comedy Lover
+142,5,2,Comedy Lover
+143,1,5,Effects Hater
+143,2,1,Effects Hater
+143,5,3,Effects Hater
+144,1,3,Old Movie Fan
+144,3,1,Old Movie Fan
+144,5,4,Old Movie Fan
+145,2,3,Comedy Lover
+145,3,1,Comedy Lover
+145,4,1,Comedy Lover
+146,1,5,Effects Hater
+146,4,5,Effects Hater
+146,5,3,Effects Hater
+147,1,5,Effects Hater
+147,2,1,Effects Hater
+147,5,4,Effects Hater
+148,0,4,Comedy Lover
+148,4,2,Comedy Lover
+148,5,2,Comedy Lover
+149,0,5,Effects Hater
+149,3,1,Effects Hater
+149,4,4,Effects Hater
+150,1,5,Effects Hater
+150,2,1,Effects Hater
+150,3,1,Effects Hater
+151,0,4,Effects Hater
+151,1,4,Effects Hater
+151,5,4,Effects Hater
+152,0,5,Comedy Lover
+152,2,2,Comedy Lover
+152,3,2,Comedy Lover
+153,1,5,Comedy Lover
+153,2,2,Comedy Lover
+153,4,3,Comedy Lover
+154,2,2,Person with Bad Taste
+154,3,5,Person with Bad Taste
+154,4,1,Person with Bad Taste
+155,0,5,Comedy Lover
+155,2,2,Comedy Lover
+155,3,2,Comedy Lover
+156,1,5,Effects Hater
+156,3,1,Effects Hater
+156,4,5,Effects Hater
+157,0,5,Comedy Lover
+157,1,5,Comedy Lover
+157,3,1,Comedy Lover
+158,2,4,Old Movie Fan
+158,3,1,Old Movie Fan
+158,5,4,Old Movie Fan
+159,0,5,Comedy Lover
+159,2,2,Comedy Lover
+159,5,1,Comedy Lover
+160,2,1,Effects Hater
+160,4,5,Effects Hater
+160,5,3,Effects Hater
+161,1,5,Comedy Lover
+161,3,1,Comedy Lover
+161,4,2,Comedy Lover
+162,0,1,Person with Bad Taste
+162,1,2,Person with Bad Taste
+162,2,3,Person with Bad Taste
+163,2,2,Comedy Lover
+163,4,1,Comedy Lover
+163,5,1,Comedy Lover
+164,2,3,Comedy Lover
+164,3,2,Comedy Lover
+164,5,1,Comedy Lover
+165,0,1,Old Movie Fan
+165,2,3,Old Movie Fan
+165,3,1,Old Movie Fan
+166,1,3,Old Movie Fan
+166,2,3,Old Movie Fan
+166,4,5,Old Movie Fan
+167,2,3,Old Movie Fan
+167,3,2,Old Movie Fan
+167,4,5,Old Movie Fan
+168,0,5,Effects Hater
+168,1,5,Effects Hater
+168,5,4,Effects Hater
+169,0,5,Comedy Lover
+169,1,5,Comedy Lover
+169,2,2,Comedy Lover
+170,1,5,Effects Hater
+170,3,1,Effects Hater
+170,5,4,Effects Hater
+171,0,5,Comedy Lover
+171,1,5,Comedy Lover
+171,2,2,Comedy Lover
+172,1,5,Effects Hater
+172,2,2,Effects Hater
+172,3,2,Effects Hater
+173,1,2,Person with Bad Taste
+173,2,3,Person with Bad Taste
+173,5,5,Person with Bad Taste
+174,0,2,Person with Bad Taste
+174,2,3,Person with Bad Taste
+174,3,4,Person with Bad Taste
+175,2,3,Comedy Lover
+175,3,1,Comedy Lover
+175,4,2,Comedy Lover
+176,1,5,Comedy Lover
+176,2,2,Comedy Lover
+176,3,3,Comedy Lover
+177,1,3,Old Movie Fan
+177,2,2,Old Movie Fan
+177,5,4,Old Movie Fan
+178,0,4,Effects Hater
+178,2,1,Effects Hater
+178,3,2,Effects Hater
+179,0,4,Effects Hater
+179,1,5,Effects Hater
+179,5,4,Effects Hater
+180,1,4,Effects Hater
+180,2,1,Effects Hater
+180,4,5,Effects Hater
+181,1,4,Old Movie Fan
+181,3,1,Old Movie Fan
+181,4,5,Old Movie Fan
+182,1,5,Effects Hater
+182,2,1,Effects Hater
+182,4,5,Effects Hater
+183,2,2,Effects Hater
+183,4,4,Effects Hater
+183,5,4,Effects Hater
+184,0,1,Old Movie Fan
+184,3,1,Old Movie Fan
+184,5,4,Old Movie Fan
+185,0,5,Effects Hater
+185,2,1,Effects Hater
+185,5,4,Effects Hater
+186,1,2,Old Movie Fan
+186,2,4,Old Movie Fan
+186,4,5,Old Movie Fan
+187,0,5,Comedy Lover
+187,1,5,Comedy Lover
+187,3,1,Comedy Lover
+188,0,4,Effects Hater
+188,3,1,Effects Hater
+188,5,4,Effects Hater
+189,0,5,Effects Hater
+189,1,4,Effects Hater
+189,2,1,Effects Hater
+190,0,5,Comedy Lover
+190,1,5,Comedy Lover
+190,3,2,Comedy Lover
+191,1,5,Comedy Lover
+191,3,2,Comedy Lover
+191,5,2,Comedy Lover
+192,2,3,Old Movie Fan
+192,4,5,Old Movie Fan
+192,5,5,Old Movie Fan
+193,3,2,Comedy Lover
+193,4,1,Comedy Lover
+193,5,1,Comedy Lover
+194,2,2,Comedy Lover
+194,3,2,Comedy Lover
+194,4,1,Comedy Lover
+195,1,3,Old Movie Fan
+195,3,2,Old Movie Fan
+195,4,5,Old Movie Fan
+196,1,3,Old Movie Fan
+196,2,3,Old Movie Fan
+196,3,1,Old Movie Fan
+197,2,4,Old Movie Fan
+197,4,5,Old Movie Fan
+197,5,4,Old Movie Fan
+198,0,1,Old Movie Fan
+198,3,1,Old Movie Fan
+198,4,4,Old Movie Fan
+199,0,5,Comedy Lover
+199,4,3,Comedy Lover
+199,5,1,Comedy Lover
+200,1,5,Comedy Lover
+200,4,2,Comedy Lover
+200,5,1,Comedy Lover
+201,0,1,Old Movie Fan
+201,2,3,Old Movie Fan
+201,3,2,Old Movie Fan
+202,1,4,Comedy Lover
+202,2,2,Comedy Lover
+202,5,1,Comedy Lover
+203,0,4,Comedy Lover
+203,1,5,Comedy Lover
+203,4,2,Comedy Lover
+204,1,4,Comedy Lover
+204,3,2,Comedy Lover
+204,4,2,Comedy Lover
+205,1,4,Effects Hater
+205,3,1,Effects Hater
+205,5,4,Effects Hater
+206,1,3,Old Movie Fan
+206,2,3,Old Movie Fan
+206,4,5,Old Movie Fan
+207,0,5,Comedy Lover
+207,4,3,Comedy Lover
+207,5,1,Comedy Lover
+208,0,5,Comedy Lover
+208,4,2,Comedy Lover
+208,5,1,Comedy Lover
+209,0,5,Comedy Lover
+209,1,5,Comedy Lover
+209,3,2,Comedy Lover
+210,0,5,Comedy Lover
+210,2,2,Comedy Lover
+210,3,2,Comedy Lover
+211,0,4,Comedy Lover
+211,1,5,Comedy Lover
+211,2,3,Comedy Lover
+212,0,5,Comedy Lover
+212,4,2,Comedy Lover
+212,5,2,Comedy Lover
+213,0,1,Old Movie Fan
+213,3,1,Old Movie Fan
+213,4,5,Old Movie Fan
+214,0,5,Comedy Lover
+214,3,3,Comedy Lover
+214,5,1,Comedy Lover
+215,1,3,Old Movie Fan
+215,3,1,Old Movie Fan
+215,5,4,Old Movie Fan
+216,0,4,Effects Hater
+216,1,5,Effects Hater
+216,5,4,Effects Hater
+217,0,5,Comedy Lover
+217,4,2,Comedy Lover
+217,5,1,Comedy Lover
+218,0,5,Comedy Lover
+218,4,3,Comedy Lover
+218,5,1,Comedy Lover
+219,0,5,Comedy Lover
+219,1,4,Comedy Lover
+219,2,2,Comedy Lover
+220,1,4,Old Movie Fan
+220,3,1,Old Movie Fan
+220,4,4,Old Movie Fan
+221,0,1,Old Movie Fan
+221,2,3,Old Movie Fan
+221,5,5,Old Movie Fan
+222,0,5,Comedy Lover
+222,2,2,Comedy Lover
+222,3,3,Comedy Lover
+223,0,1,Person with Bad Taste
+223,1,2,Person with Bad Taste
+223,5,5,Person with Bad Taste
+224,1,5,Effects Hater
+224,2,1,Effects Hater
+224,4,5,Effects Hater
+225,1,4,Effects Hater
+225,2,1,Effects Hater
+225,5,4,Effects Hater
+226,2,1,Effects Hater
+226,3,1,Effects Hater
+226,4,5,Effects Hater
+227,1,4,Old Movie Fan
+227,2,3,Old Movie Fan
+227,5,5,Old Movie Fan
+228,0,3,Effects Hater
+228,3,1,Effects Hater
+228,5,4,Effects Hater
+229,0,4,Effects Hater
+229,3,1,Effects Hater
+229,4,5,Effects Hater
+230,0,1,Old Movie Fan
+230,3,1,Old Movie Fan
+230,5,4,Old Movie Fan
+231,0,4,Effects Hater
+231,2,1,Effects Hater
+231,5,5,Effects Hater
+232,2,1,Comedy Lover
+232,3,2,Comedy Lover
+232,4,3,Comedy Lover
+233,1,5,Comedy Lover
+233,4,2,Comedy Lover
+233,5,1,Comedy Lover
+234,1,3,Old Movie Fan
+234,2,3,Old Movie Fan
+234,4,5,Old Movie Fan
+235,0,1,Old Movie Fan
+235,1,2,Old Movie Fan
+235,3,1,Old Movie Fan
+236,1,2,Old Movie Fan
+236,2,3,Old Movie Fan
+236,4,5,Old Movie Fan
+237,0,1,Old Movie Fan
+237,1,4,Old Movie Fan
+237,2,3,Old Movie Fan
+238,0,5,Comedy Lover
+238,1,4,Comedy Lover
+238,5,1,Comedy Lover
+239,0,5,Comedy Lover
+239,4,1,Comedy Lover
+239,5,1,Comedy Lover
+240,2,3,Old Movie Fan
+240,3,1,Old Movie Fan
+240,4,5,Old Movie Fan
+241,1,3,Old Movie Fan
+241,2,3,Old Movie Fan
+241,5,4,Old Movie Fan
+242,0,1,Old Movie Fan
+242,1,3,Old Movie Fan
+242,2,4,Old Movie Fan
+243,0,1,Old Movie Fan
+243,1,3,Old Movie Fan
+243,3,1,Old Movie Fan
+244,0,5,Comedy Lover
+244,1,5,Comedy Lover
+244,4,3,Comedy Lover
+245,0,4,Effects Hater
+245,3,1,Effects Hater
+245,5,4,Effects Hater
+246,0,4,Effects Hater
+246,4,5,Effects Hater
+246,5,5,Effects Hater
+247,0,4,Comedy Lover
+247,2,3,Comedy Lover
+247,5,1,Comedy Lover
+248,0,1,Old Movie Fan
+248,1,3,Old Movie Fan
+248,5,3,Old Movie Fan
+249,1,3,Old Movie Fan
+249,3,1,Old Movie Fan
+249,5,4,Old Movie Fan
+250,0,1,Old Movie Fan
+250,2,3,Old Movie Fan
+250,3,1,Old Movie Fan
+251,0,5,Comedy Lover
+251,1,5,Comedy Lover
+251,5,2,Comedy Lover
+252,0,4,Effects Hater
+252,1,5,Effects Hater
+252,2,1,Effects Hater
+253,0,2,Old Movie Fan
+253,1,3,Old Movie Fan
+253,2,3,Old Movie Fan
+254,0,5,Comedy Lover
+254,2,3,Comedy Lover
+254,3,1,Comedy Lover
+255,1,2,Old Movie Fan
+255,4,5,Old Movie Fan
+255,5,4,Old Movie Fan
+256,1,5,Comedy Lover
+256,3,2,Comedy Lover
+256,5,1,Comedy Lover
+257,0,1,Old Movie Fan
+257,2,3,Old Movie Fan
+257,3,2,Old Movie Fan
+258,1,3,Old Movie Fan
+258,4,4,Old Movie Fan
+258,5,5,Old Movie Fan
+259,0,5,Comedy Lover
+259,1,5,Comedy Lover
+259,2,2,Comedy Lover
+260,1,5,Comedy Lover
+260,2,2,Comedy Lover
+260,5,1,Comedy Lover
+261,0,4,Effects Hater
+261,1,5,Effects Hater
+261,4,5,Effects Hater
+262,2,1,Effects Hater
+262,3,1,Effects Hater
+262,5,4,Effects Hater
+263,1,3,Old Movie Fan
+263,3,1,Old Movie Fan
+263,4,5,Old Movie Fan
+264,0,4,Effects Hater
+264,2,1,Effects Hater
+264,4,5,Effects Hater
+265,0,4,Effects Hater
+265,4,5,Effects Hater
+265,5,4,Effects Hater
+266,1,3,Old Movie Fan
+266,2,2,Old Movie Fan
+266,3,1,Old Movie Fan
+267,1,2,Old Movie Fan
+267,3,1,Old Movie Fan
+267,5,4,Old Movie Fan
+268,0,4,Effects Hater
+268,2,1,Effects Hater
+268,5,4,Effects Hater
+269,0,1,Old Movie Fan
+269,1,4,Old Movie Fan
+269,2,3,Old Movie Fan
+270,0,4,Effects Hater
+270,2,1,Effects Hater
+270,5,4,Effects Hater
+271,1,4,Old Movie Fan
+271,3,2,Old Movie Fan
+271,5,4,Old Movie Fan
+272,0,4,Effects Hater
+272,3,1,Effects Hater
+272,5,4,Effects Hater
+273,0,4,Effects Hater
+273,3,1,Effects Hater
+273,5,4,Effects Hater
+274,0,5,Comedy Lover
+274,2,3,Comedy Lover
+274,3,3,Comedy Lover
+275,1,5,Comedy Lover
+275,2,2,Comedy Lover
+275,3,2,Comedy Lover
+276,1,3,Old Movie Fan
+276,4,4,Old Movie Fan
+276,5,4,Old Movie Fan
+277,0,1,Old Movie Fan
+277,1,3,Old Movie Fan
+277,5,4,Old Movie Fan
+278,0,3,Effects Hater
+278,2,1,Effects Hater
+278,4,5,Effects Hater
+279,2,2,Comedy Lover
+279,3,2,Comedy Lover
+279,4,2,Comedy Lover
+280,1,5,Effects Hater
+280,3,1,Effects Hater
+280,4,4,Effects Hater
+281,0,5,Comedy Lover
+281,2,2,Comedy Lover
+281,3,1,Comedy Lover
+282,0,1,Old Movie Fan
+282,2,2,Old Movie Fan
+282,3,1,Old Movie Fan
+283,0,5,Comedy Lover
+283,1,4,Comedy Lover
+283,2,2,Comedy Lover
+284,0,5,Comedy Lover
+284,3,1,Comedy Lover
+284,5,1,Comedy Lover
+285,0,1,Person with Bad Taste
+285,1,1,Person with Bad Taste
+285,3,5,Person with Bad Taste
+286,0,1,Old Movie Fan
+286,1,3,Old Movie Fan
+286,2,3,Old Movie Fan
+287,0,1,Old Movie Fan
+287,1,4,Old Movie Fan
+287,5,4,Old Movie Fan
+288,0,1,Old Movie Fan
+288,2,3,Old Movie Fan
+288,5,4,Old Movie Fan
+289,0,1,Old Movie Fan
+289,3,1,Old Movie Fan
+289,5,4,Old Movie Fan
+290,1,4,Comedy Lover
+290,2,4,Comedy Lover
+290,3,2,Comedy Lover
+291,2,2,Comedy Lover
+291,4,2,Comedy Lover
+291,5,1,Comedy Lover
+292,2,1,Effects Hater
+292,4,5,Effects Hater
+292,5,4,Effects Hater
+293,1,4,Effects Hater
+293,2,2,Effects Hater
+293,4,4,Effects Hater
+294,0,1,Old Movie Fan
+294,1,3,Old Movie Fan
+294,2,4,Old Movie Fan
+295,0,1,Person with Bad Taste
+295,2,3,Person with Bad Taste
+295,5,5,Person with Bad Taste
+296,2,2,Comedy Lover
+296,4,2,Comedy Lover
+296,5,1,Comedy Lover
+297,0,4,Effects Hater
+297,1,5,Effects Hater
+297,2,1,Effects Hater
+298,0,1,Old Movie Fan
+298,1,3,Old Movie Fan
+298,5,4,Old Movie Fan
+299,1,5,Comedy Lover
+299,2,2,Comedy Lover
+299,4,2,Comedy Lover
+300,1,5,Comedy Lover
+300,3,2,Comedy Lover
+300,4,2,Comedy Lover
+301,2,1,Effects Hater
+301,4,4,Effects Hater
+301,5,4,Effects Hater
+302,0,5,Comedy Lover
+302,1,5,Comedy Lover
+302,3,2,Comedy Lover
+303,0,4,Effects Hater
+303,1,5,Effects Hater
+303,5,4,Effects Hater
+304,0,1,Old Movie Fan
+304,2,3,Old Movie Fan
+304,3,1,Old Movie Fan
+305,1,5,Effects Hater
+305,3,1,Effects Hater
+305,4,5,Effects Hater
+306,1,5,Comedy Lover
+306,2,3,Comedy Lover
+306,5,2,Comedy Lover
+307,0,3,Effects Hater
+307,1,5,Effects Hater
+307,2,2,Effects Hater
+308,0,5,Comedy Lover
+308,2,1,Comedy Lover
+308,4,1,Comedy Lover
+309,0,5,Effects Hater
+309,3,1,Effects Hater
+309,5,3,Effects Hater
+310,0,1,Old Movie Fan
+310,1,2,Old Movie Fan
+310,4,5,Old Movie Fan
+311,0,3,Effects Hater
+311,1,4,Effects Hater
+311,3,2,Effects Hater
+312,0,4,Effects Hater
+312,2,1,Effects Hater
+312,5,5,Effects Hater
+313,3,1,Old Movie Fan
+313,4,5,Old Movie Fan
+313,5,4,Old Movie Fan
+314,1,4,Comedy Lover
+314,2,1,Comedy Lover
+314,3,2,Comedy Lover
+315,2,1,Effects Hater
+315,3,2,Effects Hater
+315,4,5,Effects Hater
+316,0,1,Old Movie Fan
+316,3,2,Old Movie Fan
+316,4,4,Old Movie Fan
+317,0,4,Effects Hater
+317,3,1,Effects Hater
+317,4,5,Effects Hater
+318,0,5,Comedy Lover
+318,1,5,Comedy Lover
+318,5,2,Comedy Lover
+319,0,1,Old Movie Fan
+319,1,3,Old Movie Fan
+319,4,5,Old Movie Fan
+320,0,5,Effects Hater
+320,2,1,Effects Hater
+320,3,1,Effects Hater
+321,0,5,Comedy Lover
+321,2,2,Comedy Lover
+321,5,1,Comedy Lover
+322,3,1,Old Movie Fan
+322,4,5,Old Movie Fan
+322,5,4,Old Movie Fan
+323,0,4,Effects Hater
+323,4,5,Effects Hater
+323,5,4,Effects Hater
+324,2,2,Old Movie Fan
+324,4,5,Old Movie Fan
+324,5,4,Old Movie Fan
+325,2,3,Comedy Lover
+325,4,2,Comedy Lover
+325,5,1,Comedy Lover
+326,1,5,Effects Hater
+326,2,1,Effects Hater
+326,5,4,Effects Hater
+327,0,1,Old Movie Fan
+327,2,3,Old Movie Fan
+327,4,4,Old Movie Fan
+328,0,5,Comedy Lover
+328,2,2,Comedy Lover
+328,5,1,Comedy Lover
+329,0,5,Comedy Lover
+329,1,5,Comedy Lover
+329,4,2,Comedy Lover
+330,2,3,Old Movie Fan
+330,3,1,Old Movie Fan
+330,4,5,Old Movie Fan
+331,1,5,Effects Hater
+331,2,1,Effects Hater
+331,3,1,Effects Hater
+332,2,2,Comedy Lover
+332,4,2,Comedy Lover
+332,5,1,Comedy Lover
+333,0,1,Old Movie Fan
+333,4,5,Old Movie Fan
+333,5,5,Old Movie Fan
+334,0,3,Effects Hater
+334,4,4,Effects Hater
+334,5,4,Effects Hater
+335,1,5,Effects Hater
+335,2,1,Effects Hater
+335,3,1,Effects Hater
+336,0,1,Old Movie Fan
+336,2,4,Old Movie Fan
+336,4,5,Old Movie Fan
+337,0,1,Old Movie Fan
+337,1,3,Old Movie Fan
+337,3,1,Old Movie Fan
+338,0,4,Comedy Lover
+338,2,2,Comedy Lover
+338,4,2,Comedy Lover
+339,0,1,Old Movie Fan
+339,3,1,Old Movie Fan
+339,5,4,Old Movie Fan
+340,1,3,Old Movie Fan
+340,3,1,Old Movie Fan
+340,4,5,Old Movie Fan
+341,0,1,Old Movie Fan
+341,1,3,Old Movie Fan
+341,2,4,Old Movie Fan
+342,0,5,Comedy Lover
+342,3,2,Comedy Lover
+342,4,1,Comedy Lover
+343,0,4,Effects Hater
+343,2,1,Effects Hater
+343,3,1,Effects Hater
+344,0,1,Old Movie Fan
+344,1,2,Old Movie Fan
+344,4,5,Old Movie Fan
+345,1,5,Comedy Lover
+345,2,2,Comedy Lover
+345,3,3,Comedy Lover
+346,1,2,Old Movie Fan
+346,2,3,Old Movie Fan
+346,4,5,Old Movie Fan
+347,1,5,Comedy Lover
+347,2,2,Comedy Lover
+347,5,1,Comedy Lover
+348,0,1,Old Movie Fan
+348,2,3,Old Movie Fan
+348,5,4,Old Movie Fan
+349,0,2,Old Movie Fan
+349,3,2,Old Movie Fan
+349,5,3,Old Movie Fan
+350,1,5,Effects Hater
+350,3,1,Effects Hater
+350,5,4,Effects Hater
+351,0,4,Effects Hater
+351,2,1,Effects Hater
+351,3,1,Effects Hater
+352,0,1,Old Movie Fan
+352,1,3,Old Movie Fan
+352,3,1,Old Movie Fan
+353,0,5,Comedy Lover
+353,1,5,Comedy Lover
+353,5,1,Comedy Lover
+354,2,3,Old Movie Fan
+354,3,1,Old Movie Fan
+354,5,4,Old Movie Fan
+355,0,5,Comedy Lover
+355,2,2,Comedy Lover
+355,3,2,Comedy Lover
+356,0,5,Comedy Lover
+356,1,5,Comedy Lover
+356,4,2,Comedy Lover
+357,0,4,Effects Hater
+357,2,1,Effects Hater
+357,5,4,Effects Hater
+358,1,5,Effects Hater
+358,2,2,Effects Hater
+358,4,5,Effects Hater
+359,0,5,Comedy Lover
+359,3,2,Comedy Lover
+359,4,2,Comedy Lover
+360,3,3,Comedy Lover
+360,4,2,Comedy Lover
+360,5,2,Comedy Lover
+361,0,1,Old Movie Fan
+361,2,3,Old Movie Fan
+361,5,4,Old Movie Fan
+362,0,1,Old Movie Fan
+362,4,5,Old Movie Fan
+362,5,3,Old Movie Fan
+363,1,3,Old Movie Fan
+363,2,2,Old Movie Fan
+363,4,5,Old Movie Fan
+364,0,4,Effects Hater
+364,3,1,Effects Hater
+364,4,5,Effects Hater
+365,1,2,Person with Bad Taste
+365,3,5,Person with Bad Taste
+365,5,5,Person with Bad Taste
+366,1,5,Comedy Lover
+366,3,2,Comedy Lover
+366,5,1,Comedy Lover
+367,1,4,Old Movie Fan
+367,3,1,Old Movie Fan
+367,5,3,Old Movie Fan
+368,1,4,Comedy Lover
+368,4,2,Comedy Lover
+368,5,1,Comedy Lover
+369,2,2,Effects Hater
+369,3,1,Effects Hater
+369,4,5,Effects Hater
+370,2,1,Comedy Lover
+370,4,3,Comedy Lover
+370,5,1,Comedy Lover
+371,0,1,Old Movie Fan
+371,1,2,Old Movie Fan
+371,4,5,Old Movie Fan
+372,2,3,Old Movie Fan
+372,3,1,Old Movie Fan
+372,5,3,Old Movie Fan
+373,2,3,Old Movie Fan
+373,3,2,Old Movie Fan
+373,5,5,Old Movie Fan
+374,0,5,Effects Hater
+374,2,1,Effects Hater
+374,4,5,Effects Hater
+375,1,4,Comedy Lover
+375,3,2,Comedy Lover
+375,4,2,Comedy Lover
+376,0,1,Old Movie Fan
+376,1,3,Old Movie Fan
+376,3,1,Old Movie Fan
+377,3,2,Comedy Lover
+377,4,1,Comedy Lover
+377,5,2,Comedy Lover
+378,2,3,Comedy Lover
+378,3,2,Comedy Lover
+378,4,2,Comedy Lover
+379,1,5,Effects Hater
+379,2,2,Effects Hater
+379,5,3,Effects Hater
+380,1,5,Effects Hater
+380,3,1,Effects Hater
+380,5,4,Effects Hater
+381,0,1,Old Movie Fan
+381,1,3,Old Movie Fan
+381,2,4,Old Movie Fan
+382,2,3,Old Movie Fan
+382,3,2,Old Movie Fan
+382,4,5,Old Movie Fan
+383,3,1,Effects Hater
+383,4,5,Effects Hater
+383,5,4,Effects Hater
+384,0,4,Effects Hater
+384,2,1,Effects Hater
+384,5,4,Effects Hater
+385,0,4,Effects Hater
+385,1,4,Effects Hater
+385,3,2,Effects Hater
+386,0,1,Old Movie Fan
+386,2,3,Old Movie Fan
+386,4,5,Old Movie Fan
+387,1,3,Old Movie Fan
+387,3,1,Old Movie Fan
+387,5,4,Old Movie Fan
+388,0,2,Old Movie Fan
+388,2,2,Old Movie Fan
+388,5,5,Old Movie Fan
+389,1,3,Old Movie Fan
+389,2,3,Old Movie Fan
+389,3,1,Old Movie Fan
+390,0,4,Comedy Lover
+390,1,5,Comedy Lover
+390,5,2,Comedy Lover
+391,0,5,Comedy Lover
+391,1,4,Comedy Lover
+391,3,2,Comedy Lover
+392,0,4,Effects Hater
+392,3,1,Effects Hater
+392,4,5,Effects Hater
+393,0,1,Old Movie Fan
+393,1,3,Old Movie Fan
+393,5,5,Old Movie Fan
+394,2,2,Old Movie Fan
+394,4,5,Old Movie Fan
+394,5,4,Old Movie Fan
+395,0,4,Effects Hater
+395,1,5,Effects Hater
+395,2,1,Effects Hater
+396,1,5,Comedy Lover
+396,3,2,Comedy Lover
+396,4,3,Comedy Lover
+397,1,5,Comedy Lover
+397,2,3,Comedy Lover
+397,4,2,Comedy Lover
+398,1,4,Old Movie Fan
+398,3,1,Old Movie Fan
+398,5,4,Old Movie Fan
+399,1,5,Effects Hater
+399,2,1,Effects Hater
+399,3,1,Effects Hater
+400,1,5,Comedy Lover
+400,4,2,Comedy Lover
+400,5,1,Comedy Lover
+401,1,2,Old Movie Fan
+401,3,1,Old Movie Fan
+401,4,5,Old Movie Fan
+402,0,5,Comedy Lover
+402,1,5,Comedy Lover
+402,2,2,Comedy Lover
+403,0,5,Comedy Lover
+403,3,2,Comedy Lover
+403,4,3,Comedy Lover
+404,0,4,Effects Hater
+404,3,1,Effects Hater
+404,5,4,Effects Hater
+405,0,5,Comedy Lover
+405,1,5,Comedy Lover
+405,3,1,Comedy Lover
+406,0,5,Comedy Lover
+406,3,3,Comedy Lover
+406,5,1,Comedy Lover
+407,2,3,Person with Bad Taste
+407,4,1,Person with Bad Taste
+407,5,4,Person with Bad Taste
+408,1,5,Effects Hater
+408,3,2,Effects Hater
+408,5,4,Effects Hater
+409,0,1,Old Movie Fan
+409,3,1,Old Movie Fan
+409,4,5,Old Movie Fan
+410,0,1,Old Movie Fan
+410,1,4,Old Movie Fan
+410,3,1,Old Movie Fan
+411,0,1,Old Movie Fan
+411,3,1,Old Movie Fan
+411,4,5,Old Movie Fan
+412,2,1,Effects Hater
+412,3,1,Effects Hater
+412,4,5,Effects Hater
+413,0,1,Old Movie Fan
+413,3,1,Old Movie Fan
+413,5,4,Old Movie Fan
+414,2,3,Old Movie Fan
+414,4,5,Old Movie Fan
+414,5,4,Old Movie Fan
+415,0,1,Old Movie Fan
+415,1,3,Old Movie Fan
+415,4,4,Old Movie Fan
+416,1,5,Effects Hater
+416,2,1,Effects Hater
+416,5,4,Effects Hater
+417,0,5,Comedy Lover
+417,2,2,Comedy Lover
+417,4,1,Comedy Lover
+418,1,5,Comedy Lover
+418,4,2,Comedy Lover
+418,5,2,Comedy Lover
+419,0,1,Person with Bad Taste
+419,2,2,Person with Bad Taste
+419,3,5,Person with Bad Taste
+420,0,5,Comedy Lover
+420,4,2,Comedy Lover
+420,5,1,Comedy Lover
+421,0,5,Comedy Lover
+421,3,2,Comedy Lover
+421,5,2,Comedy Lover
+422,1,5,Effects Hater
+422,2,1,Effects Hater
+422,4,5,Effects Hater
+423,1,4,Comedy Lover
+423,3,2,Comedy Lover
+423,4,2,Comedy Lover
+424,1,4,Old Movie Fan
+424,3,1,Old Movie Fan
+424,5,4,Old Movie Fan
+425,1,4,Comedy Lover
+425,3,3,Comedy Lover
+425,4,2,Comedy Lover
+426,0,4,Effects Hater
+426,1,5,Effects Hater
+426,4,5,Effects Hater
+427,2,2,Comedy Lover
+427,4,2,Comedy Lover
+427,5,1,Comedy Lover
+428,2,2,Comedy Lover
+428,4,3,Comedy Lover
+428,5,1,Comedy Lover
+429,0,4,Effects Hater
+429,3,1,Effects Hater
+429,5,5,Effects Hater
+430,0,4,Effects Hater
+430,3,1,Effects Hater
+430,4,5,Effects Hater
+431,0,3,Effects Hater
+431,3,2,Effects Hater
+431,5,3,Effects Hater
+432,0,4,Effects Hater
+432,4,5,Effects Hater
+432,5,5,Effects Hater
+433,0,5,Effects Hater
+433,2,1,Effects Hater
+433,5,4,Effects Hater
+434,2,3,Old Movie Fan
+434,4,5,Old Movie Fan
+434,5,4,Old Movie Fan
+435,0,5,Comedy Lover
+435,3,2,Comedy Lover
+435,5,1,Comedy Lover
+436,3,1,Old Movie Fan
+436,4,5,Old Movie Fan
+436,5,5,Old Movie Fan
+437,0,4,Effects Hater
+437,2,2,Effects Hater
+437,3,1,Effects Hater
+438,1,5,Effects Hater
+438,2,1,Effects Hater
+438,4,5,Effects Hater
+439,1,5,Comedy Lover
+439,2,3,Comedy Lover
+439,3,2,Comedy Lover
+440,0,1,Old Movie Fan
+440,1,3,Old Movie Fan
+440,3,1,Old Movie Fan
+441,3,1,Effects Hater
+441,4,5,Effects Hater
+441,5,3,Effects Hater
+442,0,5,Comedy Lover
+442,1,5,Comedy Lover
+442,3,2,Comedy Lover
+443,0,5,Comedy Lover
+443,4,2,Comedy Lover
+443,5,1,Comedy Lover
+444,0,4,Effects Hater
+444,1,5,Effects Hater
+444,3,1,Effects Hater
+445,0,5,Comedy Lover
+445,2,2,Comedy Lover
+445,5,2,Comedy Lover
+446,0,1,Old Movie Fan
+446,3,1,Old Movie Fan
+446,5,4,Old Movie Fan
+447,0,5,Comedy Lover
+447,1,5,Comedy Lover
+447,2,2,Comedy Lover
+448,1,2,Person with Bad Taste
+448,2,3,Person with Bad Taste
+448,4,1,Person with Bad Taste
+449,1,5,Effects Hater
+449,3,2,Effects Hater
+449,5,5,Effects Hater
+450,0,5,Comedy Lover
+450,1,5,Comedy Lover
+450,4,2,Comedy Lover
+451,2,3,Old Movie Fan
+451,3,1,Old Movie Fan
+451,5,4,Old Movie Fan
+452,2,3,Old Movie Fan
+452,3,1,Old Movie Fan
+452,5,3,Old Movie Fan
+453,0,5,Comedy Lover
+453,1,4,Comedy Lover
+453,4,1,Comedy Lover
+454,0,5,Comedy Lover
+454,4,3,Comedy Lover
+454,5,1,Comedy Lover
+455,0,4,Comedy Lover
+455,3,2,Comedy Lover
+455,4,2,Comedy Lover
+456,0,4,Comedy Lover
+456,4,2,Comedy Lover
+456,5,1,Comedy Lover
+457,0,5,Comedy Lover
+457,2,2,Comedy Lover
+457,3,1,Comedy Lover
+458,1,2,Old Movie Fan
+458,2,4,Old Movie Fan
+458,3,1,Old Movie Fan
+459,0,5,Comedy Lover
+459,4,2,Comedy Lover
+459,5,2,Comedy Lover
+460,0,5,Comedy Lover
+460,1,5,Comedy Lover
+460,3,2,Comedy Lover
+461,1,5,Effects Hater
+461,2,1,Effects Hater
+461,5,4,Effects Hater
+462,0,4,Comedy Lover
+462,1,5,Comedy Lover
+462,5,1,Comedy Lover
+463,0,5,Comedy Lover
+463,1,5,Comedy Lover
+463,5,1,Comedy Lover
+464,2,3,Comedy Lover
+464,4,1,Comedy Lover
+464,5,1,Comedy Lover
+465,0,4,Comedy Lover
+465,2,3,Comedy Lover
+465,3,1,Comedy Lover
+466,0,1,Old Movie Fan
+466,2,3,Old Movie Fan
+466,3,1,Old Movie Fan
+467,0,1,Old Movie Fan
+467,1,2,Old Movie Fan
+467,4,5,Old Movie Fan
+468,0,5,Comedy Lover
+468,2,3,Comedy Lover
+468,4,1,Comedy Lover
+469,3,2,Comedy Lover
+469,4,2,Comedy Lover
+469,5,1,Comedy Lover
+470,0,4,Effects Hater
+470,3,1,Effects Hater
+470,5,4,Effects Hater
+471,0,1,Old Movie Fan
+471,1,4,Old Movie Fan
+471,2,4,Old Movie Fan
+472,0,4,Effects Hater
+472,1,5,Effects Hater
+472,4,5,Effects Hater
+473,1,5,Comedy Lover
+473,3,2,Comedy Lover
+473,4,2,Comedy Lover
+474,0,4,Effects Hater
+474,3,1,Effects Hater
+474,4,5,Effects Hater
+475,0,1,Old Movie Fan
+475,1,3,Old Movie Fan
+475,3,1,Old Movie Fan
+476,2,1,Effects Hater
+476,4,4,Effects Hater
+476,5,3,Effects Hater
+477,0,5,Comedy Lover
+477,1,4,Comedy Lover
+477,4,1,Comedy Lover
+478,1,5,Effects Hater
+478,2,1,Effects Hater
+478,5,4,Effects Hater
+479,0,1,Old Movie Fan
+479,1,3,Old Movie Fan
+479,4,5,Old Movie Fan
+480,0,4,Effects Hater
+480,1,5,Effects Hater
+480,3,2,Effects Hater
+481,1,4,Comedy Lover
+481,3,2,Comedy Lover
+481,4,2,Comedy Lover
+482,0,1,Old Movie Fan
+482,2,2,Old Movie Fan
+482,3,1,Old Movie Fan
+483,0,2,Old Movie Fan
+483,1,2,Old Movie Fan
+483,5,5,Old Movie Fan
+484,0,1,Old Movie Fan
+484,1,4,Old Movie Fan
+484,3,2,Old Movie Fan
+485,0,5,Comedy Lover
+485,1,5,Comedy Lover
+485,5,1,Comedy Lover
+486,1,4,Effects Hater
+486,2,1,Effects Hater
+486,4,5,Effects Hater
+487,0,5,Comedy Lover
+487,2,2,Comedy Lover
+487,5,1,Comedy Lover
+488,0,3,Effects Hater
+488,3,1,Effects Hater
+488,5,4,Effects Hater
+489,0,1,Old Movie Fan
+489,2,3,Old Movie Fan
+489,4,5,Old Movie Fan
+490,0,4,Effects Hater
+490,4,5,Effects Hater
+490,5,3,Effects Hater
+491,0,4,Effects Hater
+491,3,1,Effects Hater
+491,4,5,Effects Hater
+492,1,4,Comedy Lover
+492,2,2,Comedy Lover
+492,5,1,Comedy Lover
+493,0,2,Old Movie Fan
+493,1,3,Old Movie Fan
+493,2,3,Old Movie Fan
+494,2,2,Comedy Lover
+494,4,2,Comedy Lover
+494,5,1,Comedy Lover
+495,1,5,Effects Hater
+495,2,1,Effects Hater
+495,5,3,Effects Hater
+496,2,2,Comedy Lover
+496,3,2,Comedy Lover
+496,4,2,Comedy Lover
+497,0,4,Comedy Lover
+497,2,2,Comedy Lover
+497,3,1,Comedy Lover
+498,1,4,Old Movie Fan
+498,2,3,Old Movie Fan
+498,5,3,Old Movie Fan
+499,1,5,Comedy Lover
+499,2,2,Comedy Lover
+499,4,2,Comedy Lover
+500,1,5,Effects Hater
+500,4,5,Effects Hater
+500,5,4,Effects Hater
+501,2,2,Comedy Lover
+501,4,1,Comedy Lover
+501,5,1,Comedy Lover
+502,0,5,Comedy Lover
+502,1,5,Comedy Lover
+502,4,1,Comedy Lover
+503,0,3,Effects Hater
+503,2,1,Effects Hater
+503,5,4,Effects Hater
+504,0,4,Effects Hater
+504,2,1,Effects Hater
+504,5,5,Effects Hater
+505,0,5,Comedy Lover
+505,1,4,Comedy Lover
+505,3,2,Comedy Lover
+506,0,1,Old Movie Fan
+506,4,5,Old Movie Fan
+506,5,4,Old Movie Fan
+507,0,2,Person with Bad Taste
+507,3,5,Person with Bad Taste
+507,5,5,Person with Bad Taste
+508,0,4,Effects Hater
+508,3,1,Effects Hater
+508,5,4,Effects Hater
+509,0,3,Effects Hater
+509,2,1,Effects Hater
+509,3,1,Effects Hater
+510,1,2,Old Movie Fan
+510,2,3,Old Movie Fan
+510,3,1,Old Movie Fan
+511,1,5,Comedy Lover
+511,2,2,Comedy Lover
+511,5,1,Comedy Lover
+512,1,5,Effects Hater
+512,2,1,Effects Hater
+512,4,5,Effects Hater
+513,0,5,Comedy Lover
+513,3,1,Comedy Lover
+513,4,2,Comedy Lover
+514,0,5,Comedy Lover
+514,1,5,Comedy Lover
+514,5,1,Comedy Lover
+515,2,2,Comedy Lover
+515,3,1,Comedy Lover
+515,4,3,Comedy Lover
+516,0,4,Effects Hater
+516,1,5,Effects Hater
+516,2,1,Effects Hater
+517,0,2,Old Movie Fan
+517,1,4,Old Movie Fan
+517,5,4,Old Movie Fan
+518,1,5,Effects Hater
+518,2,1,Effects Hater
+518,3,1,Effects Hater
+519,1,5,Comedy Lover
+519,3,2,Comedy Lover
+519,4,3,Comedy Lover
+520,2,1,Effects Hater
+520,3,2,Effects Hater
+520,4,5,Effects Hater
+521,1,5,Comedy Lover
+521,4,2,Comedy Lover
+521,5,1,Comedy Lover
+522,0,4,Effects Hater
+522,2,1,Effects Hater
+522,3,1,Effects Hater
+523,0,1,Old Movie Fan
+523,4,4,Old Movie Fan
+523,5,3,Old Movie Fan
+524,0,5,Effects Hater
+524,3,1,Effects Hater
+524,5,3,Effects Hater
+525,0,1,Old Movie Fan
+525,2,3,Old Movie Fan
+525,5,4,Old Movie Fan
+526,0,4,Effects Hater
+526,2,1,Effects Hater
+526,4,4,Effects Hater
+527,0,5,Effects Hater
+527,1,5,Effects Hater
+527,3,1,Effects Hater
+528,0,3,Effects Hater
+528,2,1,Effects Hater
+528,4,5,Effects Hater
+529,3,2,Comedy Lover
+529,4,2,Comedy Lover
+529,5,2,Comedy Lover
+530,1,4,Comedy Lover
+530,2,2,Comedy Lover
+530,4,3,Comedy Lover
+531,2,1,Effects Hater
+531,4,5,Effects Hater
+531,5,4,Effects Hater
+532,0,2,Old Movie Fan
+532,2,2,Old Movie Fan
+532,3,1,Old Movie Fan
+533,0,4,Effects Hater
+533,1,5,Effects Hater
+533,2,1,Effects Hater
+534,0,1,Old Movie Fan
+534,1,2,Old Movie Fan
+534,4,5,Old Movie Fan
+535,1,5,Effects Hater
+535,2,1,Effects Hater
+535,5,4,Effects Hater
+536,0,2,Old Movie Fan
+536,2,3,Old Movie Fan
+536,5,5,Old Movie Fan
+537,0,5,Comedy Lover
+537,3,2,Comedy Lover
+537,5,1,Comedy Lover
+538,0,1,Old Movie Fan
+538,2,3,Old Movie Fan
+538,5,4,Old Movie Fan
+539,0,4,Effects Hater
+539,1,5,Effects Hater
+539,5,4,Effects Hater
+540,2,1,Comedy Lover
+540,3,2,Comedy Lover
+540,5,1,Comedy Lover
+541,0,3,Effects Hater
+541,1,5,Effects Hater
+541,2,1,Effects Hater
+542,0,5,Effects Hater
+542,2,1,Effects Hater
+542,3,2,Effects Hater
+543,0,5,Effects Hater
+543,1,5,Effects Hater
+543,3,1,Effects Hater
+544,1,4,Old Movie Fan
+544,3,1,Old Movie Fan
+544,5,5,Old Movie Fan
+545,1,5,Comedy Lover
+545,3,1,Comedy Lover
+545,5,2,Comedy Lover
+546,1,2,Person with Bad Taste
+546,3,5,Person with Bad Taste
+546,5,5,Person with Bad Taste
+547,2,4,Person with Bad Taste
+547,4,2,Person with Bad Taste
+547,5,5,Person with Bad Taste
+548,0,4,Comedy Lover
+548,4,2,Comedy Lover
+548,5,2,Comedy Lover
+549,3,1,Old Movie Fan
+549,4,5,Old Movie Fan
+549,5,4,Old Movie Fan
+550,0,4,Effects Hater
+550,1,5,Effects Hater
+550,2,1,Effects Hater
+551,2,4,Old Movie Fan
+551,3,2,Old Movie Fan
+551,4,5,Old Movie Fan
+552,3,1,Effects Hater
+552,4,5,Effects Hater
+552,5,4,Effects Hater
+553,2,1,Effects Hater
+553,3,1,Effects Hater
+553,5,4,Effects Hater
+554,1,5,Effects Hater
+554,3,2,Effects Hater
+554,5,4,Effects Hater
+555,0,5,Comedy Lover
+555,3,2,Comedy Lover
+555,5,1,Comedy Lover
+556,1,3,Old Movie Fan
+556,4,5,Old Movie Fan
+556,5,4,Old Movie Fan
+557,0,1,Person with Bad Taste
+557,3,4,Person with Bad Taste
+557,4,1,Person with Bad Taste
+558,0,4,Effects Hater
+558,1,4,Effects Hater
+558,4,5,Effects Hater
+559,0,3,Effects Hater
+559,1,5,Effects Hater
+559,4,4,Effects Hater
+560,0,5,Comedy Lover
+560,1,5,Comedy Lover
+560,3,2,Comedy Lover
+561,2,2,Comedy Lover
+561,4,1,Comedy Lover
+561,5,1,Comedy Lover
+562,0,5,Comedy Lover
+562,2,2,Comedy Lover
+562,4,3,Comedy Lover
+563,1,3,Old Movie Fan
+563,2,1,Old Movie Fan
+563,5,4,Old Movie Fan
+564,1,2,Old Movie Fan
+564,4,4,Old Movie Fan
+564,5,4,Old Movie Fan
+565,2,1,Effects Hater
+565,3,2,Effects Hater
+565,4,5,Effects Hater
+566,0,4,Comedy Lover
+566,2,2,Comedy Lover
+566,3,1,Comedy Lover
+567,0,5,Comedy Lover
+567,1,5,Comedy Lover
+567,3,2,Comedy Lover
+568,1,3,Old Movie Fan
+568,4,4,Old Movie Fan
+568,5,5,Old Movie Fan
+569,0,5,Effects Hater
+569,3,1,Effects Hater
+569,4,5,Effects Hater
+570,2,3,Old Movie Fan
+570,3,1,Old Movie Fan
+570,5,3,Old Movie Fan
+571,0,4,Effects Hater
+571,2,1,Effects Hater
+571,5,3,Effects Hater
+572,1,5,Comedy Lover
+572,3,2,Comedy Lover
+572,5,1,Comedy Lover
+573,1,2,Old Movie Fan
+573,2,3,Old Movie Fan
+573,4,5,Old Movie Fan
+574,0,5,Comedy Lover
+574,4,2,Comedy Lover
+574,5,1,Comedy Lover
+575,2,2,Comedy Lover
+575,3,2,Comedy Lover
+575,4,1,Comedy Lover
+576,2,2,Comedy Lover
+576,3,2,Comedy Lover
+576,5,1,Comedy Lover
+577,1,4,Effects Hater
+577,3,1,Effects Hater
+577,4,5,Effects Hater
+578,0,4,Comedy Lover
+578,4,2,Comedy Lover
+578,5,1,Comedy Lover
+579,0,4,Comedy Lover
+579,1,5,Comedy Lover
+579,3,2,Comedy Lover
+580,1,3,Old Movie Fan
+580,2,3,Old Movie Fan
+580,5,4,Old Movie Fan
+581,0,5,Comedy Lover
+581,3,1,Comedy Lover
+581,5,1,Comedy Lover
+582,0,3,Effects Hater
+582,1,5,Effects Hater
+582,4,5,Effects Hater
+583,1,5,Effects Hater
+583,2,1,Effects Hater
+583,3,2,Effects Hater
+584,1,5,Effects Hater
+584,2,1,Effects Hater
+584,3,1,Effects Hater
+585,1,5,Effects Hater
+585,4,4,Effects Hater
+585,5,4,Effects Hater
+586,1,2,Old Movie Fan
+586,2,2,Old Movie Fan
+586,3,1,Old Movie Fan
+587,2,3,Old Movie Fan
+587,3,1,Old Movie Fan
+587,5,3,Old Movie Fan
+588,0,1,Old Movie Fan
+588,2,3,Old Movie Fan
+588,3,1,Old Movie Fan
+589,0,4,Effects Hater
+589,1,5,Effects Hater
+589,3,1,Effects Hater
+590,0,5,Effects Hater
+590,1,5,Effects Hater
+590,3,1,Effects Hater
+591,1,4,Old Movie Fan
+591,3,1,Old Movie Fan
+591,4,5,Old Movie Fan
+592,2,3,Comedy Lover
+592,3,2,Comedy Lover
+592,5,1,Comedy Lover
+593,0,5,Comedy Lover
+593,1,5,Comedy Lover
+593,2,1,Comedy Lover
+594,0,5,Comedy Lover
+594,1,5,Comedy Lover
+594,3,4,Comedy Lover
+595,1,5,Comedy Lover
+595,2,2,Comedy Lover
+595,3,1,Comedy Lover
+596,0,1,Old Movie Fan
+596,2,3,Old Movie Fan
+596,4,4,Old Movie Fan
+597,0,5,Effects Hater
+597,1,5,Effects Hater
+597,4,5,Effects Hater
+598,0,5,Comedy Lover
+598,1,5,Comedy Lover
+598,2,1,Comedy Lover
+599,0,5,Comedy Lover
+599,1,5,Comedy Lover
+599,2,2,Comedy Lover
+600,0,5,Effects Hater
+600,3,2,Effects Hater
+600,5,4,Effects Hater
+601,1,5,Comedy Lover
+601,3,1,Comedy Lover
+601,4,2,Comedy Lover
+602,1,3,Old Movie Fan
+602,2,3,Old Movie Fan
+602,3,1,Old Movie Fan
+603,0,5,Comedy Lover
+603,2,1,Comedy Lover
+603,4,2,Comedy Lover
+604,0,2,Old Movie Fan
+604,1,3,Old Movie Fan
+604,2,3,Old Movie Fan
+605,1,4,Old Movie Fan
+605,4,5,Old Movie Fan
+605,5,3,Old Movie Fan
+606,2,2,Old Movie Fan
+606,4,5,Old Movie Fan
+606,5,4,Old Movie Fan
+607,1,5,Effects Hater
+607,4,5,Effects Hater
+607,5,4,Effects Hater
+608,0,1,Old Movie Fan
+608,1,3,Old Movie Fan
+608,2,3,Old Movie Fan
+609,2,3,Old Movie Fan
+609,3,2,Old Movie Fan
+609,5,5,Old Movie Fan
+610,3,1,Old Movie Fan
+610,4,5,Old Movie Fan
+610,5,5,Old Movie Fan
+611,0,1,Old Movie Fan
+611,2,3,Old Movie Fan
+611,4,5,Old Movie Fan
+612,3,2,Comedy Lover
+612,4,2,Comedy Lover
+612,5,1,Comedy Lover
+613,2,1,Effects Hater
+613,3,1,Effects Hater
+613,4,5,Effects Hater
+614,0,3,Effects Hater
+614,2,1,Effects Hater
+614,3,2,Effects Hater
+615,1,5,Comedy Lover
+615,3,2,Comedy Lover
+615,4,2,Comedy Lover
+616,1,3,Old Movie Fan
+616,2,3,Old Movie Fan
+616,3,1,Old Movie Fan
+617,0,1,Old Movie Fan
+617,1,2,Old Movie Fan
+617,4,5,Old Movie Fan
+618,0,4,Comedy Lover
+618,1,5,Comedy Lover
+618,5,1,Comedy Lover
+619,0,4,Effects Hater
+619,2,1,Effects Hater
+619,5,4,Effects Hater
+620,0,5,Comedy Lover
+620,1,5,Comedy Lover
+620,4,2,Comedy Lover
+621,2,3,Old Movie Fan
+621,3,1,Old Movie Fan
+621,5,4,Old Movie Fan
+622,0,1,Old Movie Fan
+622,1,3,Old Movie Fan
+622,2,4,Old Movie Fan
+623,0,4,Effects Hater
+623,1,5,Effects Hater
+623,3,1,Effects Hater
+624,1,5,Comedy Lover
+624,4,2,Comedy Lover
+624,5,1,Comedy Lover
+625,1,3,Old Movie Fan
+625,2,4,Old Movie Fan
+625,3,1,Old Movie Fan
+626,0,5,Effects Hater
+626,2,1,Effects Hater
+626,3,1,Effects Hater
+627,2,3,Old Movie Fan
+627,3,1,Old Movie Fan
+627,4,5,Old Movie Fan
+628,0,1,Old Movie Fan
+628,3,1,Old Movie Fan
+628,5,4,Old Movie Fan
+629,1,5,Comedy Lover
+629,2,2,Comedy Lover
+629,5,1,Comedy Lover
+630,2,2,Comedy Lover
+630,3,1,Comedy Lover
+630,5,1,Comedy Lover
+631,1,5,Effects Hater
+631,2,1,Effects Hater
+631,5,4,Effects Hater
+632,0,5,Effects Hater
+632,3,1,Effects Hater
+632,4,5,Effects Hater
+633,2,3,Old Movie Fan
+633,3,1,Old Movie Fan
+633,4,5,Old Movie Fan
+634,0,3,Effects Hater
+634,3,1,Effects Hater
+634,4,5,Effects Hater
+635,0,3,Effects Hater
+635,1,4,Effects Hater
+635,4,5,Effects Hater
+636,2,3,Old Movie Fan
+636,4,5,Old Movie Fan
+636,5,4,Old Movie Fan
+637,2,2,Comedy Lover
+637,3,2,Comedy Lover
+637,4,1,Comedy Lover
+638,0,5,Comedy Lover
+638,2,2,Comedy Lover
+638,4,2,Comedy Lover
+639,0,4,Effects Hater
+639,4,5,Effects Hater
+639,5,5,Effects Hater
+640,1,3,Old Movie Fan
+640,2,3,Old Movie Fan
+640,5,4,Old Movie Fan
+641,1,5,Comedy Lover
+641,2,2,Comedy Lover
+641,3,2,Comedy Lover
+642,3,2,Old Movie Fan
+642,4,4,Old Movie Fan
+642,5,4,Old Movie Fan
+643,2,2,Comedy Lover
+643,3,1,Comedy Lover
+643,4,3,Comedy Lover
+644,0,1,Old Movie Fan
+644,1,3,Old Movie Fan
+644,5,4,Old Movie Fan
+645,1,5,Effects Hater
+645,2,1,Effects Hater
+645,3,1,Effects Hater
+646,0,1,Old Movie Fan
+646,3,1,Old Movie Fan
+646,4,5,Old Movie Fan
+647,2,3,Old Movie Fan
+647,3,1,Old Movie Fan
+647,5,4,Old Movie Fan
+648,0,4,Effects Hater
+648,2,1,Effects Hater
+648,3,1,Effects Hater
+649,2,2,Comedy Lover
+649,4,3,Comedy Lover
+649,5,1,Comedy Lover
+650,1,3,Old Movie Fan
+650,4,5,Old Movie Fan
+650,5,3,Old Movie Fan
+651,0,1,Old Movie Fan
+651,1,3,Old Movie Fan
+651,2,3,Old Movie Fan
+652,2,2,Comedy Lover
+652,3,2,Comedy Lover
+652,5,1,Comedy Lover
+653,0,2,Old Movie Fan
+653,1,3,Old Movie Fan
+653,3,1,Old Movie Fan
+654,0,5,Comedy Lover
+654,1,5,Comedy Lover
+654,2,2,Comedy Lover
+655,1,3,Old Movie Fan
+655,2,3,Old Movie Fan
+655,5,4,Old Movie Fan
+656,3,1,Old Movie Fan
+656,4,4,Old Movie Fan
+656,5,4,Old Movie Fan
+657,1,3,Person with Bad Taste
+657,2,4,Person with Bad Taste
+657,4,1,Person with Bad Taste
+658,3,1,Effects Hater
+658,4,5,Effects Hater
+658,5,4,Effects Hater
+659,1,5,Effects Hater
+659,3,1,Effects Hater
+659,5,3,Effects Hater
+660,2,2,Effects Hater
+660,3,1,Effects Hater
+660,4,4,Effects Hater
+661,0,4,Effects Hater
+661,3,1,Effects Hater
+661,5,4,Effects Hater
+662,0,4,Effects Hater
+662,2,1,Effects Hater
+662,3,1,Effects Hater
+663,0,4,Effects Hater
+663,2,1,Effects Hater
+663,3,1,Effects Hater
+664,1,3,Old Movie Fan
+664,3,1,Old Movie Fan
+664,4,5,Old Movie Fan
+665,1,5,Comedy Lover
+665,2,2,Comedy Lover
+665,4,1,Comedy Lover
+666,1,4,Old Movie Fan
+666,2,3,Old Movie Fan
+666,3,1,Old Movie Fan
+667,0,5,Comedy Lover
+667,2,2,Comedy Lover
+667,3,2,Comedy Lover
+668,0,3,Effects Hater
+668,2,2,Effects Hater
+668,5,5,Effects Hater
+669,1,3,Old Movie Fan
+669,4,5,Old Movie Fan
+669,5,3,Old Movie Fan
+670,0,4,Comedy Lover
+670,1,5,Comedy Lover
+670,3,3,Comedy Lover
+671,0,5,Effects Hater
+671,2,1,Effects Hater
+671,3,1,Effects Hater
+672,2,1,Effects Hater
+672,4,5,Effects Hater
+672,5,4,Effects Hater
+673,0,4,Effects Hater
+673,2,1,Effects Hater
+673,3,1,Effects Hater
+674,0,5,Comedy Lover
+674,3,3,Comedy Lover
+674,5,1,Comedy Lover
+675,1,3,Old Movie Fan
+675,2,3,Old Movie Fan
+675,4,5,Old Movie Fan
+676,2,1,Comedy Lover
+676,4,2,Comedy Lover
+676,5,1,Comedy Lover
+677,0,5,Effects Hater
+677,1,5,Effects Hater
+677,2,1,Effects Hater
+678,0,5,Comedy Lover
+678,2,2,Comedy Lover
+678,5,1,Comedy Lover
+679,0,4,Effects Hater
+679,3,1,Effects Hater
+679,4,5,Effects Hater
+680,0,4,Effects Hater
+680,2,1,Effects Hater
+680,5,5,Effects Hater
+681,0,3,Effects Hater
+681,3,1,Effects Hater
+681,4,5,Effects Hater
+682,1,3,Old Movie Fan
+682,2,3,Old Movie Fan
+682,3,1,Old Movie Fan
+683,0,4,Comedy Lover
+683,4,2,Comedy Lover
+683,5,1,Comedy Lover
+684,0,4,Effects Hater
+684,1,5,Effects Hater
+684,5,4,Effects Hater
+685,0,1,Old Movie Fan
+685,3,1,Old Movie Fan
+685,5,4,Old Movie Fan
+686,0,1,Old Movie Fan
+686,1,3,Old Movie Fan
+686,5,4,Old Movie Fan
+687,1,5,Comedy Lover
+687,4,3,Comedy Lover
+687,5,1,Comedy Lover
+688,0,4,Effects Hater
+688,1,5,Effects Hater
+688,5,5,Effects Hater
+689,0,4,Effects Hater
+689,3,1,Effects Hater
+689,4,5,Effects Hater
+690,0,3,Effects Hater
+690,1,5,Effects Hater
+690,2,1,Effects Hater
+691,2,3,Old Movie Fan
+691,4,5,Old Movie Fan
+691,5,4,Old Movie Fan
+692,1,5,Effects Hater
+692,3,1,Effects Hater
+692,5,5,Effects Hater
+693,1,5,Effects Hater
+693,2,1,Effects Hater
+693,4,5,Effects Hater
+694,1,2,Person with Bad Taste
+694,3,4,Person with Bad Taste
+694,5,5,Person with Bad Taste
+695,2,2,Effects Hater
+695,4,5,Effects Hater
+695,5,4,Effects Hater
+696,0,5,Comedy Lover
+696,2,2,Comedy Lover
+696,3,2,Comedy Lover
+697,0,1,Old Movie Fan
+697,3,1,Old Movie Fan
+697,4,4,Old Movie Fan
+698,1,3,Old Movie Fan
+698,4,5,Old Movie Fan
+698,5,4,Old Movie Fan
+699,0,4,Effects Hater
+699,3,1,Effects Hater
+699,5,5,Effects Hater
+700,1,4,Old Movie Fan
+700,4,5,Old Movie Fan
+700,5,4,Old Movie Fan
+701,0,5,Comedy Lover
+701,1,5,Comedy Lover
+701,4,2,Comedy Lover
+702,3,1,Old Movie Fan
+702,4,5,Old Movie Fan
+702,5,4,Old Movie Fan
+703,2,2,Old Movie Fan
+703,3,1,Old Movie Fan
+703,4,5,Old Movie Fan
+704,1,4,Effects Hater
+704,2,1,Effects Hater
+704,3,1,Effects Hater
+705,0,4,Effects Hater
+705,2,1,Effects Hater
+705,3,1,Effects Hater
+706,1,5,Effects Hater
+706,2,1,Effects Hater
+706,4,5,Effects Hater
+707,1,5,Comedy Lover
+707,3,3,Comedy Lover
+707,4,2,Comedy Lover
+708,0,5,Comedy Lover
+708,1,5,Comedy Lover
+708,4,2,Comedy Lover
+709,1,5,Effects Hater
+709,2,1,Effects Hater
+709,5,4,Effects Hater
+710,0,1,Old Movie Fan
+710,3,2,Old Movie Fan
+710,5,3,Old Movie Fan
+711,0,4,Effects Hater
+711,1,5,Effects Hater
+711,2,1,Effects Hater
+712,0,4,Effects Hater
+712,3,1,Effects Hater
+712,5,4,Effects Hater
+713,0,1,Old Movie Fan
+713,1,3,Old Movie Fan
+713,4,4,Old Movie Fan
+714,0,4,Effects Hater
+714,3,1,Effects Hater
+714,5,4,Effects Hater
+715,0,5,Comedy Lover
+715,3,3,Comedy Lover
+715,4,2,Comedy Lover
+716,1,5,Effects Hater
+716,2,1,Effects Hater
+716,3,1,Effects Hater
+717,2,3,Old Movie Fan
+717,3,1,Old Movie Fan
+717,5,4,Old Movie Fan
+718,1,5,Comedy Lover
+718,2,3,Comedy Lover
+718,5,1,Comedy Lover
+719,2,2,Comedy Lover
+719,3,2,Comedy Lover
+719,5,1,Comedy Lover
+720,0,2,Old Movie Fan
+720,3,1,Old Movie Fan
+720,4,4,Old Movie Fan
+721,2,3,Old Movie Fan
+721,3,1,Old Movie Fan
+721,4,5,Old Movie Fan
+722,1,5,Effects Hater
+722,3,1,Effects Hater
+722,5,5,Effects Hater
+723,0,2,Person with Bad Taste
+723,1,1,Person with Bad Taste
+723,5,5,Person with Bad Taste
+724,1,5,Effects Hater
+724,4,5,Effects Hater
+724,5,4,Effects Hater
+725,0,4,Effects Hater
+725,1,5,Effects Hater
+725,2,2,Effects Hater
+726,1,5,Comedy Lover
+726,2,2,Comedy Lover
+726,3,3,Comedy Lover
+727,0,5,Comedy Lover
+727,2,1,Comedy Lover
+727,5,2,Comedy Lover
+728,2,3,Old Movie Fan
+728,4,5,Old Movie Fan
+728,5,4,Old Movie Fan
+729,0,4,Effects Hater
+729,1,5,Effects Hater
+729,3,1,Effects Hater
+730,1,4,Old Movie Fan
+730,2,3,Old Movie Fan
+730,4,4,Old Movie Fan
+731,0,4,Effects Hater
+731,3,1,Effects Hater
+731,5,3,Effects Hater
+732,0,5,Comedy Lover
+732,1,5,Comedy Lover
+732,5,2,Comedy Lover
+733,0,4,Effects Hater
+733,1,4,Effects Hater
+733,2,1,Effects Hater
+734,0,5,Comedy Lover
+734,2,2,Comedy Lover
+734,4,2,Comedy Lover
+735,1,3,Old Movie Fan
+735,2,3,Old Movie Fan
+735,4,5,Old Movie Fan
+736,0,1,Old Movie Fan
+736,2,4,Old Movie Fan
+736,4,5,Old Movie Fan
+737,1,3,Old Movie Fan
+737,4,5,Old Movie Fan
+737,5,5,Old Movie Fan
+738,2,2,Comedy Lover
+738,3,2,Comedy Lover
+738,5,2,Comedy Lover
+739,3,2,Comedy Lover
+739,4,3,Comedy Lover
+739,5,1,Comedy Lover
+740,0,1,Person with Bad Taste
+740,2,3,Person with Bad Taste
+740,4,1,Person with Bad Taste
+741,2,4,Old Movie Fan
+741,3,1,Old Movie Fan
+741,4,5,Old Movie Fan
+742,0,2,Old Movie Fan
+742,1,3,Old Movie Fan
+742,5,4,Old Movie Fan
+743,1,5,Comedy Lover
+743,2,3,Comedy Lover
+743,5,1,Comedy Lover
+744,0,4,Effects Hater
+744,1,5,Effects Hater
+744,2,2,Effects Hater
+745,1,3,Old Movie Fan
+745,4,5,Old Movie Fan
+745,5,4,Old Movie Fan
+746,0,5,Comedy Lover
+746,2,2,Comedy Lover
+746,4,2,Comedy Lover
+747,2,1,Effects Hater
+747,3,1,Effects Hater
+747,5,4,Effects Hater
+748,0,5,Comedy Lover
+748,3,2,Comedy Lover
+748,4,3,Comedy Lover
+749,1,2,Old Movie Fan
+749,4,5,Old Movie Fan
+749,5,4,Old Movie Fan
+750,0,4,Effects Hater
+750,1,5,Effects Hater
+750,3,1,Effects Hater
+751,1,4,Old Movie Fan
+751,3,1,Old Movie Fan
+751,5,4,Old Movie Fan
+752,3,1,Effects Hater
+752,4,5,Effects Hater
+752,5,4,Effects Hater
+753,1,5,Effects Hater
+753,2,1,Effects Hater
+753,4,5,Effects Hater
+754,0,1,Old Movie Fan
+754,2,3,Old Movie Fan
+754,5,4,Old Movie Fan
+755,1,4,Comedy Lover
+755,3,2,Comedy Lover
+755,4,2,Comedy Lover
+756,2,2,Effects Hater
+756,4,5,Effects Hater
+756,5,4,Effects Hater
+757,0,4,Effects Hater
+757,2,1,Effects Hater
+757,5,5,Effects Hater
+758,1,5,Comedy Lover
+758,4,2,Comedy Lover
+758,5,1,Comedy Lover
+759,0,5,Comedy Lover
+759,2,2,Comedy Lover
+759,4,2,Comedy Lover
+760,0,1,Old Movie Fan
+760,2,3,Old Movie Fan
+760,5,4,Old Movie Fan
+761,2,4,Old Movie Fan
+761,3,1,Old Movie Fan
+761,4,5,Old Movie Fan
+762,0,5,Comedy Lover
+762,3,2,Comedy Lover
+762,4,2,Comedy Lover
+763,0,4,Comedy Lover
+763,1,5,Comedy Lover
+763,4,2,Comedy Lover
+764,2,2,Comedy Lover
+764,4,2,Comedy Lover
+764,5,1,Comedy Lover
+765,2,3,Old Movie Fan
+765,3,1,Old Movie Fan
+765,5,5,Old Movie Fan
+766,0,5,Comedy Lover
+766,1,4,Comedy Lover
+766,3,2,Comedy Lover
+767,1,5,Effects Hater
+767,2,1,Effects Hater
+767,4,4,Effects Hater
+768,1,2,Old Movie Fan
+768,3,1,Old Movie Fan
+768,4,5,Old Movie Fan
+769,0,5,Comedy Lover
+769,1,5,Comedy Lover
+769,3,2,Comedy Lover
+770,0,4,Effects Hater
+770,1,5,Effects Hater
+770,5,4,Effects Hater
+771,2,3,Person with Bad Taste
+771,3,5,Person with Bad Taste
+771,5,5,Person with Bad Taste
+772,0,4,Effects Hater
+772,2,2,Effects Hater
+772,5,4,Effects Hater
+773,1,5,Comedy Lover
+773,3,2,Comedy Lover
+773,5,1,Comedy Lover
+774,0,1,Old Movie Fan
+774,4,5,Old Movie Fan
+774,5,4,Old Movie Fan
+775,0,5,Comedy Lover
+775,3,2,Comedy Lover
+775,4,2,Comedy Lover
+776,0,5,Comedy Lover
+776,2,2,Comedy Lover
+776,5,1,Comedy Lover
+777,0,4,Effects Hater
+777,1,5,Effects Hater
+777,4,5,Effects Hater
+778,0,4,Effects Hater
+778,2,1,Effects Hater
+778,5,4,Effects Hater
+779,1,5,Effects Hater
+779,2,1,Effects Hater
+779,5,4,Effects Hater
+780,1,5,Comedy Lover
+780,4,2,Comedy Lover
+780,5,1,Comedy Lover
+781,0,5,Comedy Lover
+781,2,1,Comedy Lover
+781,3,3,Comedy Lover
+782,1,3,Old Movie Fan
+782,2,3,Old Movie Fan
+782,4,5,Old Movie Fan
+783,1,3,Old Movie Fan
+783,2,3,Old Movie Fan
+783,3,1,Old Movie Fan
+784,2,1,Comedy Lover
+784,3,1,Comedy Lover
+784,5,1,Comedy Lover
+785,0,5,Comedy Lover
+785,1,5,Comedy Lover
+785,3,2,Comedy Lover
+786,2,3,Old Movie Fan
+786,3,1,Old Movie Fan
+786,4,5,Old Movie Fan
+787,0,5,Comedy Lover
+787,2,3,Comedy Lover
+787,5,2,Comedy Lover
+788,0,4,Comedy Lover
+788,2,2,Comedy Lover
+788,5,1,Comedy Lover
+789,1,5,Comedy Lover
+789,4,3,Comedy Lover
+789,5,1,Comedy Lover
+790,0,4,Effects Hater
+790,4,5,Effects Hater
+790,5,4,Effects Hater
+791,1,3,Old Movie Fan
+791,4,5,Old Movie Fan
+791,5,4,Old Movie Fan
+792,0,4,Effects Hater
+792,2,2,Effects Hater
+792,3,1,Effects Hater
+793,0,4,Comedy Lover
+793,2,3,Comedy Lover
+793,5,1,Comedy Lover
+794,0,4,Effects Hater
+794,1,5,Effects Hater
+794,3,1,Effects Hater
+795,1,5,Effects Hater
+795,4,5,Effects Hater
+795,5,4,Effects Hater
+796,1,3,Old Movie Fan
+796,4,5,Old Movie Fan
+796,5,5,Old Movie Fan
+797,1,3,Old Movie Fan
+797,2,4,Old Movie Fan
+797,4,5,Old Movie Fan
+798,0,2,Old Movie Fan
+798,3,2,Old Movie Fan
+798,5,4,Old Movie Fan
+799,1,3,Old Movie Fan
+799,4,5,Old Movie Fan
+799,5,4,Old Movie Fan
+800,1,5,Effects Hater
+800,2,1,Effects Hater
+800,3,1,Effects Hater
+801,3,1,Effects Hater
+801,4,5,Effects Hater
+801,5,3,Effects Hater
+802,1,5,Comedy Lover
+802,3,2,Comedy Lover
+802,4,2,Comedy Lover
+803,1,4,Effects Hater
+803,2,1,Effects Hater
+803,5,3,Effects Hater
+804,0,2,Old Movie Fan
+804,1,3,Old Movie Fan
+804,3,1,Old Movie Fan
+805,1,3,Old Movie Fan
+805,4,5,Old Movie Fan
+805,5,3,Old Movie Fan
+806,0,1,Old Movie Fan
+806,2,2,Old Movie Fan
+806,3,1,Old Movie Fan
+807,0,5,Comedy Lover
+807,1,5,Comedy Lover
+807,4,3,Comedy Lover
+808,3,2,Comedy Lover
+808,4,2,Comedy Lover
+808,5,1,Comedy Lover
+809,1,5,Comedy Lover
+809,2,2,Comedy Lover
+809,3,2,Comedy Lover
+810,0,5,Comedy Lover
+810,1,5,Comedy Lover
+810,2,1,Comedy Lover
+811,3,2,Comedy Lover
+811,4,1,Comedy Lover
+811,5,1,Comedy Lover
+812,0,5,Effects Hater
+812,1,5,Effects Hater
+812,5,4,Effects Hater
+813,0,5,Comedy Lover
+813,3,2,Comedy Lover
+813,4,2,Comedy Lover
+814,2,2,Comedy Lover
+814,3,2,Comedy Lover
+814,5,1,Comedy Lover
+815,2,3,Old Movie Fan
+815,3,1,Old Movie Fan
+815,4,5,Old Movie Fan
+816,0,2,Old Movie Fan
+816,3,1,Old Movie Fan
+816,5,3,Old Movie Fan
+817,0,4,Effects Hater
+817,2,1,Effects Hater
+817,3,1,Effects Hater
+818,0,1,Old Movie Fan
+818,1,4,Old Movie Fan
+818,2,3,Old Movie Fan
+819,0,5,Comedy Lover
+819,1,4,Comedy Lover
+819,5,1,Comedy Lover
+820,0,3,Effects Hater
+820,3,2,Effects Hater
+820,4,5,Effects Hater
+821,0,1,Old Movie Fan
+821,1,3,Old Movie Fan
+821,2,2,Old Movie Fan
+822,0,4,Comedy Lover
+822,2,2,Comedy Lover
+822,3,2,Comedy Lover
+823,0,5,Comedy Lover
+823,1,5,Comedy Lover
+823,2,2,Comedy Lover
+824,1,5,Effects Hater
+824,4,4,Effects Hater
+824,5,4,Effects Hater
+825,0,1,Person with Bad Taste
+825,1,2,Person with Bad Taste
+825,3,5,Person with Bad Taste
+826,3,2,Comedy Lover
+826,4,1,Comedy Lover
+826,5,2,Comedy Lover
+827,3,2,Comedy Lover
+827,4,2,Comedy Lover
+827,5,1,Comedy Lover
+828,0,5,Comedy Lover
+828,1,5,Comedy Lover
+828,3,2,Comedy Lover
+829,2,2,Comedy Lover
+829,3,2,Comedy Lover
+829,4,2,Comedy Lover
+830,0,4,Effects Hater
+830,2,2,Effects Hater
+830,3,1,Effects Hater
+831,3,2,Effects Hater
+831,4,5,Effects Hater
+831,5,3,Effects Hater
+832,1,5,Comedy Lover
+832,3,2,Comedy Lover
+832,5,1,Comedy Lover
+833,1,5,Effects Hater
+833,2,1,Effects Hater
+833,5,4,Effects Hater
+834,1,3,Old Movie Fan
+834,3,1,Old Movie Fan
+834,4,5,Old Movie Fan
+835,1,5,Effects Hater
+835,2,2,Effects Hater
+835,5,4,Effects Hater
+836,0,4,Effects Hater
+836,2,1,Effects Hater
+836,5,4,Effects Hater
+837,1,3,Old Movie Fan
+837,3,1,Old Movie Fan
+837,4,5,Old Movie Fan
+838,1,5,Comedy Lover
+838,3,2,Comedy Lover
+838,5,1,Comedy Lover
+839,3,1,Comedy Lover
+839,4,2,Comedy Lover
+839,5,1,Comedy Lover
+840,0,4,Effects Hater
+840,2,1,Effects Hater
+840,3,1,Effects Hater
+841,0,4,Comedy Lover
+841,2,2,Comedy Lover
+841,4,1,Comedy Lover
+842,0,5,Comedy Lover
+842,2,2,Comedy Lover
+842,3,2,Comedy Lover
+843,0,4,Effects Hater
+843,4,5,Effects Hater
+843,5,4,Effects Hater
+844,1,2,Old Movie Fan
+844,4,5,Old Movie Fan
+844,5,3,Old Movie Fan
+845,0,4,Comedy Lover
+845,4,3,Comedy Lover
+845,5,1,Comedy Lover
+846,0,1,Old Movie Fan
+846,1,3,Old Movie Fan
+846,5,4,Old Movie Fan
+847,0,1,Person with Bad Taste
+847,3,5,Person with Bad Taste
+847,5,5,Person with Bad Taste
+848,1,4,Effects Hater
+848,2,1,Effects Hater
+848,5,4,Effects Hater
+849,0,5,Comedy Lover
+849,2,2,Comedy Lover
+849,3,2,Comedy Lover
+850,2,1,Effects Hater
+850,3,1,Effects Hater
+850,5,4,Effects Hater
+851,2,3,Old Movie Fan
+851,3,1,Old Movie Fan
+851,4,5,Old Movie Fan
+852,2,3,Old Movie Fan
+852,3,1,Old Movie Fan
+852,5,3,Old Movie Fan
+853,1,3,Old Movie Fan
+853,2,3,Old Movie Fan
+853,5,3,Old Movie Fan
+854,0,3,Effects Hater
+854,1,5,Effects Hater
+854,2,1,Effects Hater
+855,1,2,Old Movie Fan
+855,2,3,Old Movie Fan
+855,3,1,Old Movie Fan
+856,0,1,Old Movie Fan
+856,1,3,Old Movie Fan
+856,4,4,Old Movie Fan
+857,0,5,Comedy Lover
+857,1,5,Comedy Lover
+857,4,2,Comedy Lover
+858,1,2,Old Movie Fan
+858,2,3,Old Movie Fan
+858,4,4,Old Movie Fan
+859,1,3,Old Movie Fan
+859,3,1,Old Movie Fan
+859,4,5,Old Movie Fan
+860,2,3,Old Movie Fan
+860,4,5,Old Movie Fan
+860,5,4,Old Movie Fan
+861,0,5,Comedy Lover
+861,3,1,Comedy Lover
+861,5,1,Comedy Lover
+862,0,4,Effects Hater
+862,1,5,Effects Hater
+862,5,4,Effects Hater
+863,1,3,Old Movie Fan
+863,2,2,Old Movie Fan
+863,3,1,Old Movie Fan
+864,0,1,Old Movie Fan
+864,2,3,Old Movie Fan
+864,5,5,Old Movie Fan
+865,2,1,Effects Hater
+865,3,1,Effects Hater
+865,5,3,Effects Hater
+866,1,5,Comedy Lover
+866,2,2,Comedy Lover
+866,5,1,Comedy Lover
+867,0,4,Comedy Lover
+867,1,5,Comedy Lover
+867,4,2,Comedy Lover
+868,1,5,Comedy Lover
+868,2,2,Comedy Lover
+868,4,1,Comedy Lover
+869,0,5,Comedy Lover
+869,1,5,Comedy Lover
+869,2,2,Comedy Lover
+870,1,5,Comedy Lover
+870,2,2,Comedy Lover
+870,4,2,Comedy Lover
+871,1,5,Comedy Lover
+871,4,2,Comedy Lover
+871,5,1,Comedy Lover
+872,0,2,Old Movie Fan
+872,2,4,Old Movie Fan
+872,4,5,Old Movie Fan
+873,0,5,Comedy Lover
+873,1,5,Comedy Lover
+873,5,1,Comedy Lover
+874,0,1,Old Movie Fan
+874,3,2,Old Movie Fan
+874,5,4,Old Movie Fan
+875,1,4,Old Movie Fan
+875,3,1,Old Movie Fan
+875,5,3,Old Movie Fan
+876,1,5,Effects Hater
+876,4,5,Effects Hater
+876,5,4,Effects Hater
+877,0,4,Effects Hater
+877,1,5,Effects Hater
+877,2,1,Effects Hater
+878,1,3,Old Movie Fan
+878,4,5,Old Movie Fan
+878,5,4,Old Movie Fan
+879,0,2,Old Movie Fan
+879,2,2,Old Movie Fan
+879,5,4,Old Movie Fan
+880,3,3,Comedy Lover
+880,4,2,Comedy Lover
+880,5,1,Comedy Lover
+881,3,1,Old Movie Fan
+881,4,4,Old Movie Fan
+881,5,4,Old Movie Fan
+882,0,1,Old Movie Fan
+882,1,3,Old Movie Fan
+882,4,4,Old Movie Fan
+883,1,3,Old Movie Fan
+883,2,4,Old Movie Fan
+883,3,2,Old Movie Fan
+884,0,5,Comedy Lover
+884,1,5,Comedy Lover
+884,4,2,Comedy Lover
+885,2,2,Old Movie Fan
+885,3,2,Old Movie Fan
+885,4,4,Old Movie Fan
+886,0,4,Effects Hater
+886,1,5,Effects Hater
+886,2,1,Effects Hater
+887,1,5,Comedy Lover
+887,4,1,Comedy Lover
+887,5,1,Comedy Lover
+888,3,1,Comedy Lover
+888,4,2,Comedy Lover
+888,5,1,Comedy Lover
+889,1,4,Effects Hater
+889,3,1,Effects Hater
+889,5,4,Effects Hater
+890,1,4,Comedy Lover
+890,2,2,Comedy Lover
+890,4,3,Comedy Lover
+891,3,2,Effects Hater
+891,4,5,Effects Hater
+891,5,4,Effects Hater
+892,0,1,Old Movie Fan
+892,1,2,Old Movie Fan
+892,4,5,Old Movie Fan
+893,2,2,Comedy Lover
+893,4,1,Comedy Lover
+893,5,1,Comedy Lover
+894,1,5,Comedy Lover
+894,2,2,Comedy Lover
+894,4,2,Comedy Lover
+895,0,5,Comedy Lover
+895,3,2,Comedy Lover
+895,5,1,Comedy Lover
+896,0,1,Old Movie Fan
+896,2,4,Old Movie Fan
+896,4,5,Old Movie Fan
+897,1,5,Effects Hater
+897,2,1,Effects Hater
+897,5,4,Effects Hater
+898,0,1,Old Movie Fan
+898,1,3,Old Movie Fan
+898,3,1,Old Movie Fan
+899,0,5,Comedy Lover
+899,2,3,Comedy Lover
+899,3,2,Comedy Lover
+900,0,5,Comedy Lover
+900,1,5,Comedy Lover
+900,2,1,Comedy Lover
+901,1,5,Comedy Lover
+901,3,2,Comedy Lover
+901,4,3,Comedy Lover
+902,0,1,Old Movie Fan
+902,4,5,Old Movie Fan
+902,5,4,Old Movie Fan
+903,0,4,Comedy Lover
+903,1,5,Comedy Lover
+903,4,1,Comedy Lover
+904,0,5,Comedy Lover
+904,3,3,Comedy Lover
+904,5,1,Comedy Lover
+905,0,5,Comedy Lover
+905,1,5,Comedy Lover
+905,4,3,Comedy Lover
+906,1,3,Old Movie Fan
+906,2,3,Old Movie Fan
+906,3,1,Old Movie Fan
+907,3,3,Comedy Lover
+907,4,2,Comedy Lover
+907,5,1,Comedy Lover
+908,3,2,Effects Hater
+908,4,5,Effects Hater
+908,5,4,Effects Hater
+909,0,4,Effects Hater
+909,3,1,Effects Hater
+909,5,4,Effects Hater
+910,1,4,Old Movie Fan
+910,4,5,Old Movie Fan
+910,5,4,Old Movie Fan
+911,0,5,Comedy Lover
+911,1,5,Comedy Lover
+911,5,1,Comedy Lover
+912,0,1,Old Movie Fan
+912,4,5,Old Movie Fan
+912,5,5,Old Movie Fan
+913,1,3,Old Movie Fan
+913,3,1,Old Movie Fan
+913,4,5,Old Movie Fan
+914,2,2,Comedy Lover
+914,3,1,Comedy Lover
+914,5,1,Comedy Lover
+915,1,3,Old Movie Fan
+915,4,4,Old Movie Fan
+915,5,4,Old Movie Fan
+916,0,1,Person with Bad Taste
+916,1,1,Person with Bad Taste
+916,4,1,Person with Bad Taste
+917,0,4,Effects Hater
+917,1,5,Effects Hater
+917,4,5,Effects Hater
+918,0,5,Comedy Lover
+918,3,2,Comedy Lover
+918,5,1,Comedy Lover
+919,0,4,Comedy Lover
+919,2,2,Comedy Lover
+919,4,2,Comedy Lover
+920,1,5,Comedy Lover
+920,3,2,Comedy Lover
+920,5,1,Comedy Lover
+921,2,1,Effects Hater
+921,3,2,Effects Hater
+921,4,5,Effects Hater
+922,0,5,Comedy Lover
+922,1,5,Comedy Lover
+922,2,3,Comedy Lover
+923,1,3,Old Movie Fan
+923,2,3,Old Movie Fan
+923,5,3,Old Movie Fan
+924,3,1,Effects Hater
+924,4,5,Effects Hater
+924,5,3,Effects Hater
+925,1,4,Old Movie Fan
+925,4,3,Old Movie Fan
+925,5,3,Old Movie Fan
+926,2,2,Comedy Lover
+926,3,2,Comedy Lover
+926,4,2,Comedy Lover
+927,2,1,Effects Hater
+927,3,1,Effects Hater
+927,4,5,Effects Hater
+928,0,5,Comedy Lover
+928,2,2,Comedy Lover
+928,3,2,Comedy Lover
+929,1,5,Effects Hater
+929,3,1,Effects Hater
+929,5,4,Effects Hater
+930,0,5,Comedy Lover
+930,1,5,Comedy Lover
+930,2,3,Comedy Lover
+931,2,1,Effects Hater
+931,4,5,Effects Hater
+931,5,4,Effects Hater
+932,0,4,Effects Hater
+932,1,5,Effects Hater
+932,4,5,Effects Hater
+933,1,5,Comedy Lover
+933,2,2,Comedy Lover
+933,4,3,Comedy Lover
+934,2,2,Comedy Lover
+934,3,2,Comedy Lover
+934,5,1,Comedy Lover
+935,0,5,Comedy Lover
+935,1,5,Comedy Lover
+935,2,2,Comedy Lover
+936,0,4,Comedy Lover
+936,2,1,Comedy Lover
+936,5,1,Comedy Lover
+937,1,5,Effects Hater
+937,3,1,Effects Hater
+937,5,4,Effects Hater
+938,0,5,Comedy Lover
+938,2,3,Comedy Lover
+938,3,2,Comedy Lover
+939,3,2,Comedy Lover
+939,4,4,Comedy Lover
+939,5,1,Comedy Lover
+940,2,1,Effects Hater
+940,3,1,Effects Hater
+940,5,4,Effects Hater
+941,1,5,Comedy Lover
+941,3,2,Comedy Lover
+941,4,1,Comedy Lover
+942,1,5,Comedy Lover
+942,4,1,Comedy Lover
+942,5,1,Comedy Lover
+943,0,3,Effects Hater
+943,1,5,Effects Hater
+943,4,5,Effects Hater
+944,2,1,Effects Hater
+944,3,1,Effects Hater
+944,4,5,Effects Hater
+945,1,4,Effects Hater
+945,2,1,Effects Hater
+945,4,5,Effects Hater
+946,1,5,Effects Hater
+946,2,1,Effects Hater
+946,3,2,Effects Hater
+947,2,1,Effects Hater
+947,3,2,Effects Hater
+947,5,4,Effects Hater
+948,1,5,Effects Hater
+948,2,1,Effects Hater
+948,4,5,Effects Hater
+949,1,2,Old Movie Fan
+949,2,3,Old Movie Fan
+949,5,3,Old Movie Fan
+950,1,3,Old Movie Fan
+950,3,1,Old Movie Fan
+950,5,4,Old Movie Fan
+951,0,3,Effects Hater
+951,1,5,Effects Hater
+951,4,5,Effects Hater
+952,0,1,Old Movie Fan
+952,1,3,Old Movie Fan
+952,4,5,Old Movie Fan
+953,0,1,Person with Bad Taste
+953,4,1,Person with Bad Taste
+953,5,4,Person with Bad Taste
+954,2,3,Old Movie Fan
+954,3,2,Old Movie Fan
+954,4,5,Old Movie Fan
+955,0,5,Effects Hater
+955,2,1,Effects Hater
+955,5,4,Effects Hater
+956,1,3,Old Movie Fan
+956,2,4,Old Movie Fan
+956,4,5,Old Movie Fan
+957,2,2,Comedy Lover
+957,3,2,Comedy Lover
+957,4,1,Comedy Lover
+958,2,3,Comedy Lover
+958,3,2,Comedy Lover
+958,5,1,Comedy Lover
+959,0,4,Effects Hater
+959,2,2,Effects Hater
+959,4,5,Effects Hater
+960,1,3,Old Movie Fan
+960,4,5,Old Movie Fan
+960,5,4,Old Movie Fan
+961,1,2,Old Movie Fan
+961,3,1,Old Movie Fan
+961,4,5,Old Movie Fan
+962,0,1,Old Movie Fan
+962,3,1,Old Movie Fan
+962,5,4,Old Movie Fan
+963,1,3,Old Movie Fan
+963,2,3,Old Movie Fan
+963,4,5,Old Movie Fan
+964,1,2,Old Movie Fan
+964,2,4,Old Movie Fan
+964,4,5,Old Movie Fan
+965,0,4,Effects Hater
+965,1,5,Effects Hater
+965,5,4,Effects Hater
+966,1,5,Effects Hater
+966,4,5,Effects Hater
+966,5,5,Effects Hater
+967,1,5,Effects Hater
+967,2,1,Effects Hater
+967,3,2,Effects Hater
+968,2,4,Old Movie Fan
+968,3,1,Old Movie Fan
+968,4,5,Old Movie Fan
+969,2,1,Effects Hater
+969,4,5,Effects Hater
+969,5,4,Effects Hater
+970,1,5,Effects Hater
+970,3,1,Effects Hater
+970,5,3,Effects Hater
+971,0,1,Old Movie Fan
+971,3,1,Old Movie Fan
+971,4,5,Old Movie Fan
+972,0,1,Old Movie Fan
+972,1,3,Old Movie Fan
+972,4,5,Old Movie Fan
+973,1,5,Effects Hater
+973,2,1,Effects Hater
+973,5,3,Effects Hater
+974,2,3,Old Movie Fan
+974,3,1,Old Movie Fan
+974,4,5,Old Movie Fan
+975,1,2,Person with Bad Taste
+975,2,3,Person with Bad Taste
+975,5,4,Person with Bad Taste
+976,0,5,Comedy Lover
+976,1,5,Comedy Lover
+976,5,1,Comedy Lover
+977,1,5,Comedy Lover
+977,2,2,Comedy Lover
+977,5,1,Comedy Lover
+978,1,3,Old Movie Fan
+978,2,3,Old Movie Fan
+978,5,4,Old Movie Fan
+979,0,1,Old Movie Fan
+979,2,3,Old Movie Fan
+979,3,1,Old Movie Fan
+980,1,3,Old Movie Fan
+980,2,3,Old Movie Fan
+980,4,5,Old Movie Fan
+981,1,5,Comedy Lover
+981,4,2,Comedy Lover
+981,5,3,Comedy Lover
+982,0,4,Effects Hater
+982,3,1,Effects Hater
+982,4,5,Effects Hater
+983,1,5,Comedy Lover
+983,2,2,Comedy Lover
+983,4,2,Comedy Lover
+984,1,5,Effects Hater
+984,2,1,Effects Hater
+984,4,5,Effects Hater
+985,1,5,Effects Hater
+985,4,5,Effects Hater
+985,5,4,Effects Hater
+986,0,5,Comedy Lover
+986,1,5,Comedy Lover
+986,3,2,Comedy Lover
+987,1,5,Comedy Lover
+987,4,2,Comedy Lover
+987,5,1,Comedy Lover
+988,0,1,Old Movie Fan
+988,1,3,Old Movie Fan
+988,2,3,Old Movie Fan
+989,0,3,Effects Hater
+989,4,5,Effects Hater
+989,5,3,Effects Hater
+990,1,3,Old Movie Fan
+990,3,1,Old Movie Fan
+990,5,3,Old Movie Fan
+991,0,5,Comedy Lover
+991,1,4,Comedy Lover
+991,4,2,Comedy Lover
+992,0,4,Effects Hater
+992,1,5,Effects Hater
+992,5,3,Effects Hater
+993,1,5,Effects Hater
+993,3,1,Effects Hater
+993,4,5,Effects Hater
+994,0,5,Comedy Lover
+994,1,5,Comedy Lover
+994,2,1,Comedy Lover
+995,0,5,Comedy Lover
+995,2,2,Comedy Lover
+995,5,1,Comedy Lover
+996,1,5,Effects Hater
+996,2,1,Effects Hater
+996,3,2,Effects Hater
+997,1,5,Comedy Lover
+997,4,3,Comedy Lover
+997,5,1,Comedy Lover
+998,1,3,Old Movie Fan
+998,2,3,Old Movie Fan
+998,4,5,Old Movie Fan
+999,3,2,Comedy Lover
+999,4,2,Comedy Lover
+999,5,1,Comedy Lover
+1000,2,1,Effects Hater
+1000,3,1,Effects Hater
+1000,4,5,Effects Hater
+1001,2,2,Comedy Lover
+1001,3,2,Comedy Lover
+1001,4,2,Comedy Lover
+1002,2,4,Old Movie Fan
+1002,3,1,Old Movie Fan
+1002,5,4,Old Movie Fan
+1003,2,3,Old Movie Fan
+1003,4,5,Old Movie Fan
+1003,5,3,Old Movie Fan
+1004,1,5,Comedy Lover
+1004,2,2,Comedy Lover
+1004,3,1,Comedy Lover
+1005,2,1,Effects Hater
+1005,4,5,Effects Hater
+1005,5,5,Effects Hater
+1006,0,4,Effects Hater
+1006,2,1,Effects Hater
+1006,5,4,Effects Hater
+1007,2,2,Old Movie Fan
+1007,3,1,Old Movie Fan
+1007,4,5,Old Movie Fan
+1008,0,4,Effects Hater
+1008,4,5,Effects Hater
+1008,5,3,Effects Hater
+1009,0,4,Effects Hater
+1009,1,5,Effects Hater
+1009,4,5,Effects Hater
+1010,1,3,Old Movie Fan
+1010,2,2,Old Movie Fan
+1010,4,5,Old Movie Fan
+1011,0,1,Old Movie Fan
+1011,3,1,Old Movie Fan
+1011,5,4,Old Movie Fan
+1012,2,3,Old Movie Fan
+1012,3,1,Old Movie Fan
+1012,5,3,Old Movie Fan
+1013,0,4,Effects Hater
+1013,1,5,Effects Hater
+1013,5,3,Effects Hater
+1014,1,5,Effects Hater
+1014,3,1,Effects Hater
+1014,5,4,Effects Hater
+1015,2,2,Comedy Lover
+1015,3,2,Comedy Lover
+1015,5,1,Comedy Lover
+1016,0,5,Comedy Lover
+1016,1,5,Comedy Lover
+1016,3,2,Comedy Lover
+1017,0,4,Comedy Lover
+1017,1,5,Comedy Lover
+1017,4,1,Comedy Lover
+1018,2,1,Effects Hater
+1018,4,5,Effects Hater
+1018,5,4,Effects Hater
+1019,0,5,Comedy Lover
+1019,2,2,Comedy Lover
+1019,3,2,Comedy Lover
+1020,3,1,Old Movie Fan
+1020,4,5,Old Movie Fan
+1020,5,4,Old Movie Fan
+1021,0,5,Comedy Lover
+1021,1,5,Comedy Lover
+1021,2,2,Comedy Lover
+1022,0,4,Effects Hater
+1022,2,1,Effects Hater
+1022,5,4,Effects Hater
+1023,0,1,Old Movie Fan
+1023,2,2,Old Movie Fan
+1023,3,1,Old Movie Fan
+1024,3,1,Effects Hater
+1024,4,5,Effects Hater
+1024,5,4,Effects Hater
+1025,0,3,Effects Hater
+1025,2,1,Effects Hater
+1025,5,4,Effects Hater
+1026,0,1,Person with Bad Taste
+1026,1,2,Person with Bad Taste
+1026,2,3,Person with Bad Taste
+1027,0,5,Comedy Lover
+1027,3,2,Comedy Lover
+1027,4,2,Comedy Lover
+1028,0,1,Old Movie Fan
+1028,3,2,Old Movie Fan
+1028,5,4,Old Movie Fan
+1029,0,2,Old Movie Fan
+1029,3,1,Old Movie Fan
+1029,4,5,Old Movie Fan
+1030,3,1,Comedy Lover
+1030,4,2,Comedy Lover
+1030,5,1,Comedy Lover
+1031,1,5,Effects Hater
+1031,4,5,Effects Hater
+1031,5,5,Effects Hater
+1032,1,5,Comedy Lover
+1032,3,2,Comedy Lover
+1032,4,2,Comedy Lover
+1033,2,2,Comedy Lover
+1033,4,2,Comedy Lover
+1033,5,1,Comedy Lover
+1034,1,5,Effects Hater
+1034,3,2,Effects Hater
+1034,4,5,Effects Hater
+1035,0,5,Effects Hater
+1035,1,4,Effects Hater
+1035,5,4,Effects Hater
+1036,0,5,Comedy Lover
+1036,3,2,Comedy Lover
+1036,5,1,Comedy Lover
+1037,0,5,Comedy Lover
+1037,3,2,Comedy Lover
+1037,4,1,Comedy Lover
+1038,1,3,Old Movie Fan
+1038,2,4,Old Movie Fan
+1038,5,3,Old Movie Fan
+1039,1,5,Effects Hater
+1039,2,1,Effects Hater
+1039,5,4,Effects Hater
+1040,1,4,Comedy Lover
+1040,3,2,Comedy Lover
+1040,4,2,Comedy Lover
+1041,2,4,Old Movie Fan
+1041,3,1,Old Movie Fan
+1041,4,5,Old Movie Fan
+1042,2,2,Comedy Lover
+1042,4,1,Comedy Lover
+1042,5,1,Comedy Lover
+1043,2,1,Effects Hater
+1043,3,1,Effects Hater
+1043,4,4,Effects Hater
+1044,1,2,Old Movie Fan
+1044,3,2,Old Movie Fan
+1044,5,4,Old Movie Fan
+1045,0,1,Person with Bad Taste
+1045,1,3,Person with Bad Taste
+1045,2,3,Person with Bad Taste
+1046,0,2,Old Movie Fan
+1046,4,5,Old Movie Fan
+1046,5,4,Old Movie Fan
+1047,1,3,Old Movie Fan
+1047,4,5,Old Movie Fan
+1047,5,4,Old Movie Fan
+1048,2,1,Effects Hater
+1048,3,1,Effects Hater
+1048,5,5,Effects Hater
+1049,1,3,Old Movie Fan
+1049,4,5,Old Movie Fan
+1049,5,4,Old Movie Fan
+1050,0,3,Effects Hater
+1050,3,2,Effects Hater
+1050,5,4,Effects Hater
+1051,1,5,Effects Hater
+1051,4,5,Effects Hater
+1051,5,4,Effects Hater
+1052,0,5,Comedy Lover
+1052,1,5,Comedy Lover
+1052,4,2,Comedy Lover
+1053,1,5,Effects Hater
+1053,2,2,Effects Hater
+1053,4,5,Effects Hater
+1054,0,1,Old Movie Fan
+1054,1,2,Old Movie Fan
+1054,2,4,Old Movie Fan
+1055,1,5,Effects Hater
+1055,3,1,Effects Hater
+1055,4,5,Effects Hater
+1056,0,1,Old Movie Fan
+1056,1,3,Old Movie Fan
+1056,4,5,Old Movie Fan
+1057,0,1,Old Movie Fan
+1057,1,2,Old Movie Fan
+1057,3,1,Old Movie Fan
+1058,1,5,Effects Hater
+1058,2,1,Effects Hater
+1058,3,1,Effects Hater
+1059,1,5,Effects Hater
+1059,3,1,Effects Hater
+1059,4,5,Effects Hater
+1060,1,5,Comedy Lover
+1060,2,2,Comedy Lover
+1060,4,1,Comedy Lover
+1061,0,4,Effects Hater
+1061,1,4,Effects Hater
+1061,3,1,Effects Hater
+1062,0,4,Effects Hater
+1062,1,5,Effects Hater
+1062,4,5,Effects Hater
+1063,0,1,Old Movie Fan
+1063,4,4,Old Movie Fan
+1063,5,3,Old Movie Fan
+1064,0,5,Comedy Lover
+1064,2,3,Comedy Lover
+1064,5,1,Comedy Lover
+1065,0,3,Effects Hater
+1065,2,1,Effects Hater
+1065,3,1,Effects Hater
+1066,0,3,Effects Hater
+1066,2,1,Effects Hater
+1066,5,4,Effects Hater
+1067,2,1,Effects Hater
+1067,3,1,Effects Hater
+1067,5,4,Effects Hater
+1068,1,5,Effects Hater
+1068,2,1,Effects Hater
+1068,5,4,Effects Hater
+1069,1,5,Effects Hater
+1069,2,2,Effects Hater
+1069,5,5,Effects Hater
+1070,0,5,Comedy Lover
+1070,2,3,Comedy Lover
+1070,3,2,Comedy Lover
+1071,2,2,Old Movie Fan
+1071,4,5,Old Movie Fan
+1071,5,4,Old Movie Fan
+1072,1,5,Comedy Lover
+1072,3,2,Comedy Lover
+1072,4,2,Comedy Lover
+1073,0,2,Old Movie Fan
+1073,1,3,Old Movie Fan
+1073,2,3,Old Movie Fan
+1074,0,1,Old Movie Fan
+1074,1,3,Old Movie Fan
+1074,3,1,Old Movie Fan
+1075,1,3,Old Movie Fan
+1075,2,3,Old Movie Fan
+1075,5,5,Old Movie Fan
+1076,0,5,Effects Hater
+1076,1,5,Effects Hater
+1076,5,5,Effects Hater
+1077,0,1,Old Movie Fan
+1077,2,3,Old Movie Fan
+1077,5,3,Old Movie Fan
+1078,1,5,Comedy Lover
+1078,3,2,Comedy Lover
+1078,5,1,Comedy Lover
+1079,0,1,Old Movie Fan
+1079,1,3,Old Movie Fan
+1079,2,3,Old Movie Fan
+1080,1,4,Old Movie Fan
+1080,2,3,Old Movie Fan
+1080,4,5,Old Movie Fan
+1081,1,3,Old Movie Fan
+1081,4,5,Old Movie Fan
+1081,5,4,Old Movie Fan
+1082,1,5,Comedy Lover
+1082,4,2,Comedy Lover
+1082,5,1,Comedy Lover
+1083,1,3,Old Movie Fan
+1083,4,5,Old Movie Fan
+1083,5,4,Old Movie Fan
+1084,1,5,Effects Hater
+1084,4,5,Effects Hater
+1084,5,4,Effects Hater
+1085,0,5,Comedy Lover
+1085,1,5,Comedy Lover
+1085,4,2,Comedy Lover
+1086,0,5,Comedy Lover
+1086,1,5,Comedy Lover
+1086,2,2,Comedy Lover
+1087,0,4,Effects Hater
+1087,1,5,Effects Hater
+1087,2,1,Effects Hater
+1088,0,2,Old Movie Fan
+1088,1,4,Old Movie Fan
+1088,5,4,Old Movie Fan
+1089,0,1,Old Movie Fan
+1089,2,3,Old Movie Fan
+1089,5,3,Old Movie Fan
+1090,0,4,Effects Hater
+1090,3,1,Effects Hater
+1090,4,4,Effects Hater
+1091,2,1,Comedy Lover
+1091,4,2,Comedy Lover
+1091,5,1,Comedy Lover
+1092,1,3,Old Movie Fan
+1092,2,3,Old Movie Fan
+1092,4,5,Old Movie Fan
+1093,0,5,Comedy Lover
+1093,1,5,Comedy Lover
+1093,2,2,Comedy Lover
+1094,2,1,Effects Hater
+1094,3,1,Effects Hater
+1094,5,4,Effects Hater
+1095,1,5,Effects Hater
+1095,2,1,Effects Hater
+1095,3,1,Effects Hater
+1096,0,5,Comedy Lover
+1096,3,2,Comedy Lover
+1096,4,1,Comedy Lover
+1097,1,5,Comedy Lover
+1097,2,2,Comedy Lover
+1097,5,1,Comedy Lover
+1098,0,1,Old Movie Fan
+1098,2,3,Old Movie Fan
+1098,4,4,Old Movie Fan
+1099,0,5,Effects Hater
+1099,2,2,Effects Hater
+1099,4,4,Effects Hater
+1100,2,1,Effects Hater
+1100,3,1,Effects Hater
+1100,5,4,Effects Hater
+1101,0,5,Comedy Lover
+1101,3,2,Comedy Lover
+1101,4,2,Comedy Lover
+1102,1,5,Comedy Lover
+1102,3,1,Comedy Lover
+1102,5,1,Comedy Lover
+1103,0,5,Effects Hater
+1103,4,5,Effects Hater
+1103,5,4,Effects Hater
+1104,2,2,Comedy Lover
+1104,3,2,Comedy Lover
+1104,4,2,Comedy Lover
+1105,0,5,Comedy Lover
+1105,3,2,Comedy Lover
+1105,4,3,Comedy Lover
+1106,0,4,Effects Hater
+1106,3,1,Effects Hater
+1106,4,5,Effects Hater
+1107,1,5,Comedy Lover
+1107,2,3,Comedy Lover
+1107,5,1,Comedy Lover
+1108,0,4,Effects Hater
+1108,2,1,Effects Hater
+1108,3,1,Effects Hater
+1109,0,5,Effects Hater
+1109,2,2,Effects Hater
+1109,4,4,Effects Hater
+1110,2,1,Effects Hater
+1110,4,5,Effects Hater
+1110,5,3,Effects Hater
+1111,0,2,Person with Bad Taste
+1111,1,2,Person with Bad Taste
+1111,2,3,Person with Bad Taste
+1112,0,4,Effects Hater
+1112,4,5,Effects Hater
+1112,5,4,Effects Hater
+1113,1,3,Old Movie Fan
+1113,4,5,Old Movie Fan
+1113,5,3,Old Movie Fan
+1114,1,5,Comedy Lover
+1114,3,3,Comedy Lover
+1114,5,1,Comedy Lover
+1115,2,3,Person with Bad Taste
+1115,3,5,Person with Bad Taste
+1115,4,1,Person with Bad Taste
+1116,2,2,Comedy Lover
+1116,3,3,Comedy Lover
+1116,4,2,Comedy Lover
+1117,0,4,Effects Hater
+1117,2,1,Effects Hater
+1117,3,1,Effects Hater
+1118,0,2,Old Movie Fan
+1118,2,3,Old Movie Fan
+1118,5,4,Old Movie Fan
+1119,1,5,Effects Hater
+1119,2,1,Effects Hater
+1119,3,1,Effects Hater
+1120,1,3,Old Movie Fan
+1120,3,1,Old Movie Fan
+1120,5,4,Old Movie Fan
+1121,0,3,Effects Hater
+1121,3,1,Effects Hater
+1121,4,5,Effects Hater
+1122,1,5,Comedy Lover
+1122,4,2,Comedy Lover
+1122,5,1,Comedy Lover
+1123,2,3,Old Movie Fan
+1123,4,5,Old Movie Fan
+1123,5,4,Old Movie Fan
+1124,1,3,Old Movie Fan
+1124,3,1,Old Movie Fan
+1124,4,4,Old Movie Fan
+1125,1,3,Old Movie Fan
+1125,2,3,Old Movie Fan
+1125,4,5,Old Movie Fan
+1126,1,5,Comedy Lover
+1126,2,2,Comedy Lover
+1126,5,1,Comedy Lover
+1127,1,5,Effects Hater
+1127,3,1,Effects Hater
+1127,4,5,Effects Hater
+1128,0,1,Old Movie Fan
+1128,1,3,Old Movie Fan
+1128,2,3,Old Movie Fan
+1129,0,5,Comedy Lover
+1129,1,5,Comedy Lover
+1129,2,2,Comedy Lover
+1130,1,5,Effects Hater
+1130,2,1,Effects Hater
+1130,4,5,Effects Hater
+1131,0,2,Old Movie Fan
+1131,1,3,Old Movie Fan
+1131,3,1,Old Movie Fan
+1132,1,4,Comedy Lover
+1132,4,2,Comedy Lover
+1132,5,1,Comedy Lover
+1133,2,1,Effects Hater
+1133,3,1,Effects Hater
+1133,4,4,Effects Hater
+1134,0,1,Old Movie Fan
+1134,2,3,Old Movie Fan
+1134,4,5,Old Movie Fan
+1135,1,3,Old Movie Fan
+1135,2,3,Old Movie Fan
+1135,4,5,Old Movie Fan
+1136,1,4,Effects Hater
+1136,3,1,Effects Hater
+1136,5,4,Effects Hater
+1137,2,1,Effects Hater
+1137,4,5,Effects Hater
+1137,5,4,Effects Hater
+1138,0,1,Old Movie Fan
+1138,3,1,Old Movie Fan
+1138,4,5,Old Movie Fan
+1139,1,4,Effects Hater
+1139,2,2,Effects Hater
+1139,4,5,Effects Hater
+1140,2,2,Comedy Lover
+1140,4,2,Comedy Lover
+1140,5,1,Comedy Lover
+1141,0,1,Old Movie Fan
+1141,3,1,Old Movie Fan
+1141,4,5,Old Movie Fan
+1142,1,5,Comedy Lover
+1142,3,2,Comedy Lover
+1142,4,2,Comedy Lover
+1143,1,5,Comedy Lover
+1143,2,2,Comedy Lover
+1143,5,1,Comedy Lover
+1144,0,4,Comedy Lover
+1144,1,5,Comedy Lover
+1144,3,3,Comedy Lover
+1145,2,2,Effects Hater
+1145,3,2,Effects Hater
+1145,5,4,Effects Hater
+1146,1,5,Comedy Lover
+1146,3,2,Comedy Lover
+1146,5,2,Comedy Lover
+1147,0,1,Old Movie Fan
+1147,1,3,Old Movie Fan
+1147,3,2,Old Movie Fan
+1148,1,5,Effects Hater
+1148,4,5,Effects Hater
+1148,5,5,Effects Hater
+1149,2,2,Comedy Lover
+1149,3,2,Comedy Lover
+1149,4,1,Comedy Lover
+1150,0,5,Comedy Lover
+1150,1,5,Comedy Lover
+1150,5,1,Comedy Lover
+1151,0,3,Effects Hater
+1151,1,5,Effects Hater
+1151,2,1,Effects Hater
+1152,1,3,Old Movie Fan
+1152,2,4,Old Movie Fan
+1152,5,3,Old Movie Fan
+1153,0,4,Effects Hater
+1153,1,5,Effects Hater
+1153,4,5,Effects Hater
+1154,0,4,Effects Hater
+1154,3,1,Effects Hater
+1154,5,5,Effects Hater
+1155,1,5,Comedy Lover
+1155,2,2,Comedy Lover
+1155,5,1,Comedy Lover
+1156,0,4,Effects Hater
+1156,1,5,Effects Hater
+1156,4,5,Effects Hater
+1157,1,3,Old Movie Fan
+1157,4,5,Old Movie Fan
+1157,5,5,Old Movie Fan
+1158,0,2,Person with Bad Taste
+1158,1,2,Person with Bad Taste
+1158,4,2,Person with Bad Taste
+1159,3,3,Comedy Lover
+1159,4,3,Comedy Lover
+1159,5,1,Comedy Lover
+1160,1,3,Old Movie Fan
+1160,4,5,Old Movie Fan
+1160,5,4,Old Movie Fan
+1161,0,1,Old Movie Fan
+1161,1,4,Old Movie Fan
+1161,3,1,Old Movie Fan
+1162,0,3,Effects Hater
+1162,2,1,Effects Hater
+1162,5,4,Effects Hater
+1163,0,5,Comedy Lover
+1163,2,2,Comedy Lover
+1163,5,1,Comedy Lover
+1164,0,5,Comedy Lover
+1164,3,2,Comedy Lover
+1164,5,1,Comedy Lover
+1165,0,4,Effects Hater
+1165,1,5,Effects Hater
+1165,5,4,Effects Hater
+1166,1,5,Effects Hater
+1166,2,1,Effects Hater
+1166,3,1,Effects Hater
+1167,0,5,Comedy Lover
+1167,1,5,Comedy Lover
+1167,2,2,Comedy Lover
+1168,0,5,Comedy Lover
+1168,1,5,Comedy Lover
+1168,4,1,Comedy Lover
+1169,2,2,Comedy Lover
+1169,4,2,Comedy Lover
+1169,5,1,Comedy Lover
+1170,1,2,Old Movie Fan
+1170,4,5,Old Movie Fan
+1170,5,3,Old Movie Fan
+1171,1,4,Comedy Lover
+1171,2,1,Comedy Lover
+1171,4,3,Comedy Lover
+1172,0,5,Effects Hater
+1172,1,4,Effects Hater
+1172,4,4,Effects Hater
+1173,0,4,Effects Hater
+1173,1,5,Effects Hater
+1173,4,5,Effects Hater
+1174,0,4,Effects Hater
+1174,3,1,Effects Hater
+1174,4,5,Effects Hater
+1175,2,1,Effects Hater
+1175,4,5,Effects Hater
+1175,5,4,Effects Hater
+1176,1,5,Effects Hater
+1176,3,1,Effects Hater
+1176,4,4,Effects Hater
+1177,3,2,Comedy Lover
+1177,4,2,Comedy Lover
+1177,5,2,Comedy Lover
+1178,0,3,Effects Hater
+1178,1,5,Effects Hater
+1178,3,1,Effects Hater
+1179,1,5,Effects Hater
+1179,2,3,Effects Hater
+1179,3,1,Effects Hater
+1180,2,2,Comedy Lover
+1180,3,1,Comedy Lover
+1180,5,1,Comedy Lover
+1181,3,1,Effects Hater
+1181,4,5,Effects Hater
+1181,5,4,Effects Hater
+1182,2,1,Effects Hater
+1182,4,5,Effects Hater
+1182,5,4,Effects Hater
+1183,1,5,Comedy Lover
+1183,3,3,Comedy Lover
+1183,4,1,Comedy Lover
+1184,1,3,Old Movie Fan
+1184,3,1,Old Movie Fan
+1184,5,4,Old Movie Fan
+1185,1,5,Comedy Lover
+1185,2,3,Comedy Lover
+1185,3,3,Comedy Lover
+1186,0,4,Effects Hater
+1186,1,5,Effects Hater
+1186,3,1,Effects Hater
+1187,1,5,Comedy Lover
+1187,3,1,Comedy Lover
+1187,5,1,Comedy Lover
+1188,0,4,Effects Hater
+1188,3,1,Effects Hater
+1188,4,5,Effects Hater
+1189,2,1,Effects Hater
+1189,3,1,Effects Hater
+1189,5,4,Effects Hater
+1190,1,5,Effects Hater
+1190,2,1,Effects Hater
+1190,5,4,Effects Hater
+1191,0,4,Effects Hater
+1191,1,5,Effects Hater
+1191,5,4,Effects Hater
+1192,1,5,Effects Hater
+1192,2,1,Effects Hater
+1192,4,5,Effects Hater
+1193,2,2,Comedy Lover
+1193,4,2,Comedy Lover
+1193,5,1,Comedy Lover
+1194,0,3,Effects Hater
+1194,1,4,Effects Hater
+1194,2,2,Effects Hater
+1195,1,5,Effects Hater
+1195,3,1,Effects Hater
+1195,5,4,Effects Hater
+1196,3,1,Old Movie Fan
+1196,4,5,Old Movie Fan
+1196,5,4,Old Movie Fan
+1197,0,5,Comedy Lover
+1197,4,2,Comedy Lover
+1197,5,1,Comedy Lover
+1198,2,2,Comedy Lover
+1198,4,2,Comedy Lover
+1198,5,2,Comedy Lover
+1199,0,4,Effects Hater
+1199,1,5,Effects Hater
+1199,3,1,Effects Hater
+1200,0,5,Comedy Lover
+1200,1,5,Comedy Lover
+1200,4,1,Comedy Lover
+1201,2,1,Comedy Lover
+1201,3,1,Comedy Lover
+1201,5,1,Comedy Lover
+1202,1,3,Old Movie Fan
+1202,2,2,Old Movie Fan
+1202,4,4,Old Movie Fan
+1203,0,1,Old Movie Fan
+1203,1,3,Old Movie Fan
+1203,2,2,Old Movie Fan
+1204,2,2,Old Movie Fan
+1204,4,4,Old Movie Fan
+1204,5,4,Old Movie Fan
+1205,0,5,Comedy Lover
+1205,3,3,Comedy Lover
+1205,4,1,Comedy Lover
+1206,0,5,Comedy Lover
+1206,2,3,Comedy Lover
+1206,3,3,Comedy Lover
+1207,1,4,Old Movie Fan
+1207,3,1,Old Movie Fan
+1207,5,5,Old Movie Fan
+1208,0,4,Comedy Lover
+1208,1,5,Comedy Lover
+1208,5,2,Comedy Lover
+1209,0,3,Effects Hater
+1209,1,5,Effects Hater
+1209,4,5,Effects Hater
+1210,3,1,Effects Hater
+1210,4,5,Effects Hater
+1210,5,4,Effects Hater
+1211,1,3,Old Movie Fan
+1211,2,2,Old Movie Fan
+1211,5,4,Old Movie Fan
+1212,1,5,Effects Hater
+1212,3,2,Effects Hater
+1212,5,4,Effects Hater
+1213,0,3,Effects Hater
+1213,4,5,Effects Hater
+1213,5,5,Effects Hater
+1214,1,4,Effects Hater
+1214,2,1,Effects Hater
+1214,5,5,Effects Hater
+1215,0,5,Comedy Lover
+1215,1,5,Comedy Lover
+1215,2,2,Comedy Lover
+1216,0,2,Old Movie Fan
+1216,2,4,Old Movie Fan
+1216,5,3,Old Movie Fan
+1217,2,2,Comedy Lover
+1217,3,2,Comedy Lover
+1217,5,2,Comedy Lover
+1218,0,5,Comedy Lover
+1218,3,2,Comedy Lover
+1218,4,2,Comedy Lover
+1219,1,5,Comedy Lover
+1219,2,3,Comedy Lover
+1219,5,1,Comedy Lover
+1220,1,2,Person with Bad Taste
+1220,2,2,Person with Bad Taste
+1220,4,1,Person with Bad Taste
+1221,0,4,Effects Hater
+1221,1,5,Effects Hater
+1221,2,1,Effects Hater
+1222,0,5,Comedy Lover
+1222,2,2,Comedy Lover
+1222,4,2,Comedy Lover
+1223,2,2,Comedy Lover
+1223,4,2,Comedy Lover
+1223,5,1,Comedy Lover
+1224,1,3,Old Movie Fan
+1224,2,3,Old Movie Fan
+1224,5,4,Old Movie Fan
+1225,2,1,Effects Hater
+1225,3,1,Effects Hater
+1225,4,5,Effects Hater
+1226,1,5,Comedy Lover
+1226,2,2,Comedy Lover
+1226,5,1,Comedy Lover
+1227,2,3,Old Movie Fan
+1227,3,1,Old Movie Fan
+1227,5,4,Old Movie Fan
+1228,0,4,Comedy Lover
+1228,1,5,Comedy Lover
+1228,5,2,Comedy Lover
+1229,1,4,Old Movie Fan
+1229,3,1,Old Movie Fan
+1229,5,3,Old Movie Fan
+1230,1,5,Effects Hater
+1230,3,1,Effects Hater
+1230,5,5,Effects Hater
+1231,0,4,Effects Hater
+1231,2,1,Effects Hater
+1231,3,2,Effects Hater
+1232,0,4,Effects Hater
+1232,3,1,Effects Hater
+1232,5,4,Effects Hater
+1233,1,5,Comedy Lover
+1233,3,2,Comedy Lover
+1233,5,1,Comedy Lover
+1234,0,5,Comedy Lover
+1234,1,5,Comedy Lover
+1234,3,2,Comedy Lover
+1235,1,5,Effects Hater
+1235,3,1,Effects Hater
+1235,4,5,Effects Hater
+1236,3,1,Effects Hater
+1236,4,5,Effects Hater
+1236,5,4,Effects Hater
+1237,0,3,Effects Hater
+1237,1,5,Effects Hater
+1237,5,5,Effects Hater
+1238,0,1,Old Movie Fan
+1238,1,3,Old Movie Fan
+1238,3,1,Old Movie Fan
+1239,0,4,Effects Hater
+1239,1,5,Effects Hater
+1239,5,5,Effects Hater
+1240,0,5,Comedy Lover
+1240,2,2,Comedy Lover
+1240,3,2,Comedy Lover
+1241,3,2,Comedy Lover
+1241,4,2,Comedy Lover
+1241,5,1,Comedy Lover
+1242,2,1,Comedy Lover
+1242,3,2,Comedy Lover
+1242,5,1,Comedy Lover
+1243,1,5,Comedy Lover
+1243,4,3,Comedy Lover
+1243,5,1,Comedy Lover
+1244,2,2,Comedy Lover
+1244,3,2,Comedy Lover
+1244,5,1,Comedy Lover
+1245,0,1,Old Movie Fan
+1245,4,4,Old Movie Fan
+1245,5,4,Old Movie Fan
+1246,1,5,Effects Hater
+1246,2,1,Effects Hater
+1246,4,5,Effects Hater
+1247,0,4,Effects Hater
+1247,3,1,Effects Hater
+1247,5,4,Effects Hater
+1248,0,5,Comedy Lover
+1248,1,5,Comedy Lover
+1248,4,2,Comedy Lover
+1249,0,1,Old Movie Fan
+1249,3,1,Old Movie Fan
+1249,5,5,Old Movie Fan
+1250,3,2,Comedy Lover
+1250,4,2,Comedy Lover
+1250,5,2,Comedy Lover
+1251,0,5,Comedy Lover
+1251,4,3,Comedy Lover
+1251,5,2,Comedy Lover
+1252,0,5,Comedy Lover
+1252,2,2,Comedy Lover
+1252,5,1,Comedy Lover
+1253,0,5,Comedy Lover
+1253,4,3,Comedy Lover
+1253,5,1,Comedy Lover
+1254,0,4,Effects Hater
+1254,4,5,Effects Hater
+1254,5,4,Effects Hater
+1255,1,4,Old Movie Fan
+1255,3,1,Old Movie Fan
+1255,4,4,Old Movie Fan
+1256,3,1,Effects Hater
+1256,4,5,Effects Hater
+1256,5,4,Effects Hater
+1257,2,3,Old Movie Fan
+1257,3,1,Old Movie Fan
+1257,4,4,Old Movie Fan
+1258,0,5,Effects Hater
+1258,1,5,Effects Hater
+1258,5,5,Effects Hater
+1259,0,5,Comedy Lover
+1259,2,2,Comedy Lover
+1259,4,2,Comedy Lover
+1260,1,5,Comedy Lover
+1260,2,1,Comedy Lover
+1260,5,2,Comedy Lover
+1261,0,4,Effects Hater
+1261,1,5,Effects Hater
+1261,2,1,Effects Hater
+1262,3,1,Effects Hater
+1262,4,5,Effects Hater
+1262,5,4,Effects Hater
+1263,2,2,Effects Hater
+1263,3,1,Effects Hater
+1263,5,4,Effects Hater
+1264,1,5,Effects Hater
+1264,4,5,Effects Hater
+1264,5,5,Effects Hater
+1265,0,1,Old Movie Fan
+1265,4,5,Old Movie Fan
+1265,5,3,Old Movie Fan
+1266,0,2,Person with Bad Taste
+1266,2,1,Person with Bad Taste
+1266,4,1,Person with Bad Taste
+1267,0,1,Old Movie Fan
+1267,3,1,Old Movie Fan
+1267,5,4,Old Movie Fan
+1268,2,1,Effects Hater
+1268,3,1,Effects Hater
+1268,5,4,Effects Hater
+1269,1,5,Comedy Lover
+1269,2,2,Comedy Lover
+1269,5,1,Comedy Lover
+1270,0,4,Effects Hater
+1270,1,4,Effects Hater
+1270,5,4,Effects Hater
+1271,1,4,Effects Hater
+1271,2,1,Effects Hater
+1271,4,5,Effects Hater
+1272,1,4,Comedy Lover
+1272,3,1,Comedy Lover
+1272,4,2,Comedy Lover
+1273,1,5,Effects Hater
+1273,3,1,Effects Hater
+1273,4,5,Effects Hater
+1274,1,4,Comedy Lover
+1274,4,2,Comedy Lover
+1274,5,2,Comedy Lover
+1275,0,5,Comedy Lover
+1275,4,3,Comedy Lover
+1275,5,1,Comedy Lover
+1276,3,5,Person with Bad Taste
+1276,4,1,Person with Bad Taste
+1276,5,5,Person with Bad Taste
+1277,2,1,Effects Hater
+1277,3,1,Effects Hater
+1277,4,5,Effects Hater
+1278,2,1,Comedy Lover
+1278,3,2,Comedy Lover
+1278,4,3,Comedy Lover
+1279,0,4,Effects Hater
+1279,1,5,Effects Hater
+1279,3,1,Effects Hater
+1280,1,5,Effects Hater
+1280,4,5,Effects Hater
+1280,5,5,Effects Hater
+1281,0,1,Old Movie Fan
+1281,3,2,Old Movie Fan
+1281,4,5,Old Movie Fan
+1282,0,3,Effects Hater
+1282,2,1,Effects Hater
+1282,4,4,Effects Hater
+1283,1,4,Old Movie Fan
+1283,2,3,Old Movie Fan
+1283,4,5,Old Movie Fan
+1284,1,5,Effects Hater
+1284,2,2,Effects Hater
+1284,4,5,Effects Hater
+1285,3,1,Effects Hater
+1285,4,5,Effects Hater
+1285,5,4,Effects Hater
+1286,2,3,Old Movie Fan
+1286,3,1,Old Movie Fan
+1286,4,5,Old Movie Fan
+1287,0,5,Comedy Lover
+1287,4,2,Comedy Lover
+1287,5,1,Comedy Lover
+1288,3,1,Old Movie Fan
+1288,4,5,Old Movie Fan
+1288,5,3,Old Movie Fan
+1289,3,2,Comedy Lover
+1289,4,3,Comedy Lover
+1289,5,2,Comedy Lover
+1290,0,5,Comedy Lover
+1290,1,4,Comedy Lover
+1290,2,2,Comedy Lover
+1291,0,1,Old Movie Fan
+1291,4,5,Old Movie Fan
+1291,5,3,Old Movie Fan
+1292,3,2,Comedy Lover
+1292,4,2,Comedy Lover
+1292,5,1,Comedy Lover
+1293,0,4,Effects Hater
+1293,1,5,Effects Hater
+1293,3,1,Effects Hater
+1294,0,5,Comedy Lover
+1294,3,1,Comedy Lover
+1294,4,2,Comedy Lover
+1295,1,5,Comedy Lover
+1295,3,1,Comedy Lover
+1295,4,3,Comedy Lover
+1296,1,5,Comedy Lover
+1296,3,2,Comedy Lover
+1296,5,1,Comedy Lover
+1297,0,4,Effects Hater
+1297,3,3,Effects Hater
+1297,4,5,Effects Hater
+1298,0,5,Comedy Lover
+1298,2,2,Comedy Lover
+1298,4,2,Comedy Lover
+1299,1,5,Effects Hater
+1299,2,1,Effects Hater
+1299,4,5,Effects Hater
+1300,2,2,Comedy Lover
+1300,4,2,Comedy Lover
+1300,5,1,Comedy Lover
+1301,1,5,Effects Hater
+1301,2,1,Effects Hater
+1301,4,5,Effects Hater
+1302,0,4,Comedy Lover
+1302,1,5,Comedy Lover
+1302,5,1,Comedy Lover
+1303,0,5,Effects Hater
+1303,4,5,Effects Hater
+1303,5,4,Effects Hater
+1304,1,5,Comedy Lover
+1304,2,1,Comedy Lover
+1304,3,3,Comedy Lover
+1305,1,4,Old Movie Fan
+1305,2,4,Old Movie Fan
+1305,5,4,Old Movie Fan
+1306,3,1,Effects Hater
+1306,4,5,Effects Hater
+1306,5,4,Effects Hater
+1307,0,5,Comedy Lover
+1307,1,5,Comedy Lover
+1307,2,2,Comedy Lover
+1308,0,3,Effects Hater
+1308,1,5,Effects Hater
+1308,4,5,Effects Hater
+1309,0,5,Effects Hater
+1309,2,1,Effects Hater
+1309,4,4,Effects Hater
+1310,0,5,Comedy Lover
+1310,3,2,Comedy Lover
+1310,5,1,Comedy Lover
+1311,0,1,Person with Bad Taste
+1311,1,2,Person with Bad Taste
+1311,5,5,Person with Bad Taste
+1312,0,2,Old Movie Fan
+1312,2,2,Old Movie Fan
+1312,4,5,Old Movie Fan
+1313,0,4,Comedy Lover
+1313,1,5,Comedy Lover
+1313,5,1,Comedy Lover
+1314,0,1,Old Movie Fan
+1314,4,5,Old Movie Fan
+1314,5,4,Old Movie Fan
+1315,0,5,Comedy Lover
+1315,3,2,Comedy Lover
+1315,5,1,Comedy Lover
+1316,1,5,Effects Hater
+1316,4,5,Effects Hater
+1316,5,4,Effects Hater
+1317,1,5,Comedy Lover
+1317,4,2,Comedy Lover
+1317,5,1,Comedy Lover
+1318,1,5,Effects Hater
+1318,3,1,Effects Hater
+1318,4,5,Effects Hater
+1319,0,2,Old Movie Fan
+1319,2,3,Old Movie Fan
+1319,4,5,Old Movie Fan
+1320,0,1,Old Movie Fan
+1320,1,3,Old Movie Fan
+1320,5,4,Old Movie Fan
+1321,0,1,Old Movie Fan
+1321,1,3,Old Movie Fan
+1321,3,1,Old Movie Fan
+1322,3,2,Effects Hater
+1322,4,5,Effects Hater
+1322,5,5,Effects Hater
+1323,1,5,Comedy Lover
+1323,2,2,Comedy Lover
+1323,4,1,Comedy Lover
+1324,1,3,Old Movie Fan
+1324,3,1,Old Movie Fan
+1324,5,4,Old Movie Fan
+1325,0,5,Comedy Lover
+1325,1,5,Comedy Lover
+1325,5,1,Comedy Lover
+1326,1,3,Old Movie Fan
+1326,2,3,Old Movie Fan
+1326,4,5,Old Movie Fan
+1327,0,5,Comedy Lover
+1327,2,2,Comedy Lover
+1327,3,1,Comedy Lover
+1328,0,4,Comedy Lover
+1328,2,2,Comedy Lover
+1328,4,1,Comedy Lover
+1329,1,5,Effects Hater
+1329,2,2,Effects Hater
+1329,5,4,Effects Hater
+1330,2,3,Old Movie Fan
+1330,4,5,Old Movie Fan
+1330,5,4,Old Movie Fan
+1331,3,2,Comedy Lover
+1331,4,2,Comedy Lover
+1331,5,1,Comedy Lover
+1332,0,1,Old Movie Fan
+1332,3,1,Old Movie Fan
+1332,4,5,Old Movie Fan
+1333,0,5,Effects Hater
+1333,3,2,Effects Hater
+1333,5,4,Effects Hater
+1334,1,3,Old Movie Fan
+1334,2,3,Old Movie Fan
+1334,4,5,Old Movie Fan
+1335,0,1,Old Movie Fan
+1335,2,2,Old Movie Fan
+1335,3,1,Old Movie Fan
+1336,0,5,Comedy Lover
+1336,2,2,Comedy Lover
+1336,4,2,Comedy Lover
+1337,1,5,Comedy Lover
+1337,3,2,Comedy Lover
+1337,5,1,Comedy Lover
+1338,1,5,Effects Hater
+1338,4,5,Effects Hater
+1338,5,4,Effects Hater
+1339,1,3,Old Movie Fan
+1339,3,1,Old Movie Fan
+1339,5,4,Old Movie Fan
+1340,0,4,Effects Hater
+1340,1,5,Effects Hater
+1340,2,2,Effects Hater
+1341,2,3,Comedy Lover
+1341,3,2,Comedy Lover
+1341,5,1,Comedy Lover
+1342,1,5,Effects Hater
+1342,2,1,Effects Hater
+1342,3,1,Effects Hater
+1343,0,5,Comedy Lover
+1343,2,2,Comedy Lover
+1343,4,2,Comedy Lover
+1344,0,3,Effects Hater
+1344,1,5,Effects Hater
+1344,3,1,Effects Hater
+1345,1,5,Effects Hater
+1345,4,5,Effects Hater
+1345,5,4,Effects Hater
+1346,0,2,Old Movie Fan
+1346,2,3,Old Movie Fan
+1346,3,1,Old Movie Fan
+1347,2,2,Old Movie Fan
+1347,3,1,Old Movie Fan
+1347,4,5,Old Movie Fan
+1348,0,1,Old Movie Fan
+1348,4,5,Old Movie Fan
+1348,5,4,Old Movie Fan
+1349,1,5,Comedy Lover
+1349,2,3,Comedy Lover
+1349,4,3,Comedy Lover
+1350,0,4,Effects Hater
+1350,1,5,Effects Hater
+1350,3,1,Effects Hater
+1351,0,4,Effects Hater
+1351,3,2,Effects Hater
+1351,4,5,Effects Hater
+1352,1,2,Person with Bad Taste
+1352,2,3,Person with Bad Taste
+1352,4,1,Person with Bad Taste
+1353,1,5,Comedy Lover
+1353,2,2,Comedy Lover
+1353,5,1,Comedy Lover
+1354,0,1,Old Movie Fan
+1354,2,3,Old Movie Fan
+1354,3,2,Old Movie Fan
+1355,0,5,Comedy Lover
+1355,1,5,Comedy Lover
+1355,3,2,Comedy Lover
+1356,3,1,Old Movie Fan
+1356,4,5,Old Movie Fan
+1356,5,4,Old Movie Fan
+1357,2,2,Comedy Lover
+1357,4,2,Comedy Lover
+1357,5,1,Comedy Lover
+1358,0,5,Comedy Lover
+1358,1,5,Comedy Lover
+1358,5,1,Comedy Lover
+1359,1,5,Effects Hater
+1359,2,1,Effects Hater
+1359,3,2,Effects Hater
+1360,0,3,Effects Hater
+1360,1,5,Effects Hater
+1360,4,4,Effects Hater
+1361,2,2,Comedy Lover
+1361,3,1,Comedy Lover
+1361,5,1,Comedy Lover
+1362,1,4,Comedy Lover
+1362,2,2,Comedy Lover
+1362,5,1,Comedy Lover
+1363,0,1,Old Movie Fan
+1363,2,4,Old Movie Fan
+1363,5,4,Old Movie Fan
+1364,0,3,Effects Hater
+1364,4,4,Effects Hater
+1364,5,4,Effects Hater
+1365,2,1,Comedy Lover
+1365,3,1,Comedy Lover
+1365,5,2,Comedy Lover
+1366,1,5,Comedy Lover
+1366,2,2,Comedy Lover
+1366,5,2,Comedy Lover
+1367,1,2,Old Movie Fan
+1367,4,5,Old Movie Fan
+1367,5,4,Old Movie Fan
+1368,0,2,Old Movie Fan
+1368,1,4,Old Movie Fan
+1368,3,1,Old Movie Fan
+1369,3,3,Comedy Lover
+1369,4,3,Comedy Lover
+1369,5,2,Comedy Lover
+1370,2,3,Old Movie Fan
+1370,3,1,Old Movie Fan
+1370,4,5,Old Movie Fan
+1371,3,1,Old Movie Fan
+1371,4,5,Old Movie Fan
+1371,5,4,Old Movie Fan
+1372,1,5,Effects Hater
+1372,2,1,Effects Hater
+1372,3,1,Effects Hater
+1373,0,1,Old Movie Fan
+1373,1,3,Old Movie Fan
+1373,5,5,Old Movie Fan
+1374,3,2,Comedy Lover
+1374,4,2,Comedy Lover
+1374,5,1,Comedy Lover
+1375,0,1,Old Movie Fan
+1375,4,4,Old Movie Fan
+1375,5,4,Old Movie Fan
+1376,0,1,Person with Bad Taste
+1376,2,3,Person with Bad Taste
+1376,3,5,Person with Bad Taste
+1377,0,4,Effects Hater
+1377,2,1,Effects Hater
+1377,4,5,Effects Hater
+1378,0,4,Effects Hater
+1378,1,5,Effects Hater
+1378,3,2,Effects Hater
+1379,3,3,Comedy Lover
+1379,4,2,Comedy Lover
+1379,5,1,Comedy Lover
+1380,2,3,Person with Bad Taste
+1380,3,5,Person with Bad Taste
+1380,4,1,Person with Bad Taste
+1381,0,1,Old Movie Fan
+1381,1,3,Old Movie Fan
+1381,5,4,Old Movie Fan
+1382,0,4,Effects Hater
+1382,2,1,Effects Hater
+1382,5,5,Effects Hater
+1383,0,3,Effects Hater
+1383,2,1,Effects Hater
+1383,4,5,Effects Hater
+1384,0,1,Old Movie Fan
+1384,1,3,Old Movie Fan
+1384,4,5,Old Movie Fan
+1385,3,2,Comedy Lover
+1385,4,1,Comedy Lover
+1385,5,1,Comedy Lover
+1386,2,1,Effects Hater
+1386,3,2,Effects Hater
+1386,5,3,Effects Hater
+1387,0,3,Effects Hater
+1387,2,1,Effects Hater
+1387,5,4,Effects Hater
+1388,0,1,Old Movie Fan
+1388,1,3,Old Movie Fan
+1388,5,4,Old Movie Fan
+1389,1,5,Comedy Lover
+1389,2,2,Comedy Lover
+1389,3,2,Comedy Lover
+1390,1,4,Effects Hater
+1390,3,1,Effects Hater
+1390,5,4,Effects Hater
+1391,1,5,Comedy Lover
+1391,3,2,Comedy Lover
+1391,4,2,Comedy Lover
+1392,2,3,Old Movie Fan
+1392,4,5,Old Movie Fan
+1392,5,4,Old Movie Fan
+1393,1,5,Effects Hater
+1393,4,5,Effects Hater
+1393,5,4,Effects Hater
+1394,2,1,Effects Hater
+1394,4,5,Effects Hater
+1394,5,4,Effects Hater
+1395,0,4,Effects Hater
+1395,1,4,Effects Hater
+1395,2,1,Effects Hater
+1396,0,3,Effects Hater
+1396,4,5,Effects Hater
+1396,5,4,Effects Hater
+1397,0,1,Old Movie Fan
+1397,1,4,Old Movie Fan
+1397,4,5,Old Movie Fan
+1398,1,5,Effects Hater
+1398,2,1,Effects Hater
+1398,4,5,Effects Hater
+1399,0,1,Old Movie Fan
+1399,2,4,Old Movie Fan
+1399,5,5,Old Movie Fan
+1400,0,1,Old Movie Fan
+1400,1,4,Old Movie Fan
+1400,2,3,Old Movie Fan
+1401,1,5,Comedy Lover
+1401,3,3,Comedy Lover
+1401,4,2,Comedy Lover
+1402,0,4,Comedy Lover
+1402,2,2,Comedy Lover
+1402,4,3,Comedy Lover
+1403,1,3,Old Movie Fan
+1403,3,1,Old Movie Fan
+1403,4,4,Old Movie Fan
+1404,0,1,Old Movie Fan
+1404,1,3,Old Movie Fan
+1404,3,2,Old Movie Fan
+1405,0,1,Old Movie Fan
+1405,3,1,Old Movie Fan
+1405,5,4,Old Movie Fan
+1406,0,1,Old Movie Fan
+1406,3,1,Old Movie Fan
+1406,5,3,Old Movie Fan
+1407,2,2,Comedy Lover
+1407,4,1,Comedy Lover
+1407,5,2,Comedy Lover
+1408,3,1,Old Movie Fan
+1408,4,5,Old Movie Fan
+1408,5,4,Old Movie Fan
+1409,1,3,Old Movie Fan
+1409,2,3,Old Movie Fan
+1409,3,1,Old Movie Fan
+1410,0,1,Old Movie Fan
+1410,2,2,Old Movie Fan
+1410,3,1,Old Movie Fan
+1411,0,4,Effects Hater
+1411,4,4,Effects Hater
+1411,5,5,Effects Hater
+1412,2,1,Effects Hater
+1412,3,1,Effects Hater
+1412,5,4,Effects Hater
+1413,1,5,Effects Hater
+1413,4,5,Effects Hater
+1413,5,3,Effects Hater
+1414,1,5,Comedy Lover
+1414,2,2,Comedy Lover
+1414,3,2,Comedy Lover
+1415,2,2,Comedy Lover
+1415,3,2,Comedy Lover
+1415,4,2,Comedy Lover
+1416,0,1,Old Movie Fan
+1416,3,1,Old Movie Fan
+1416,4,5,Old Movie Fan
+1417,0,1,Old Movie Fan
+1417,1,2,Old Movie Fan
+1417,2,3,Old Movie Fan
+1418,2,3,Old Movie Fan
+1418,3,2,Old Movie Fan
+1418,5,4,Old Movie Fan
+1419,0,4,Effects Hater
+1419,3,1,Effects Hater
+1419,5,4,Effects Hater
+1420,0,1,Old Movie Fan
+1420,1,3,Old Movie Fan
+1420,4,5,Old Movie Fan
+1421,1,5,Comedy Lover
+1421,2,1,Comedy Lover
+1421,4,2,Comedy Lover
+1422,0,1,Old Movie Fan
+1422,1,3,Old Movie Fan
+1422,5,3,Old Movie Fan
+1423,1,3,Old Movie Fan
+1423,4,4,Old Movie Fan
+1423,5,4,Old Movie Fan
+1424,0,5,Comedy Lover
+1424,2,3,Comedy Lover
+1424,3,2,Comedy Lover
+1425,1,4,Effects Hater
+1425,3,1,Effects Hater
+1425,4,5,Effects Hater
+1426,1,5,Comedy Lover
+1426,2,2,Comedy Lover
+1426,4,2,Comedy Lover
+1427,1,4,Comedy Lover
+1427,3,3,Comedy Lover
+1427,5,1,Comedy Lover
+1428,0,5,Comedy Lover
+1428,3,2,Comedy Lover
+1428,4,3,Comedy Lover
+1429,1,5,Effects Hater
+1429,2,1,Effects Hater
+1429,3,1,Effects Hater
+1430,0,4,Effects Hater
+1430,1,5,Effects Hater
+1430,5,4,Effects Hater
+1431,0,5,Comedy Lover
+1431,1,5,Comedy Lover
+1431,4,2,Comedy Lover
+1432,2,3,Old Movie Fan
+1432,3,1,Old Movie Fan
+1432,5,5,Old Movie Fan
+1433,0,4,Effects Hater
+1433,3,1,Effects Hater
+1433,4,5,Effects Hater
+1434,1,3,Old Movie Fan
+1434,3,1,Old Movie Fan
+1434,5,4,Old Movie Fan
+1435,1,5,Effects Hater
+1435,2,1,Effects Hater
+1435,5,4,Effects Hater
+1436,0,5,Comedy Lover
+1436,3,1,Comedy Lover
+1436,5,1,Comedy Lover
+1437,1,5,Effects Hater
+1437,4,5,Effects Hater
+1437,5,4,Effects Hater
+1438,1,3,Old Movie Fan
+1438,2,3,Old Movie Fan
+1438,3,1,Old Movie Fan
+1439,1,5,Comedy Lover
+1439,4,3,Comedy Lover
+1439,5,1,Comedy Lover
+1440,1,5,Effects Hater
+1440,4,5,Effects Hater
+1440,5,4,Effects Hater
+1441,0,1,Old Movie Fan
+1441,2,3,Old Movie Fan
+1441,4,5,Old Movie Fan
+1442,2,3,Old Movie Fan
+1442,4,5,Old Movie Fan
+1442,5,4,Old Movie Fan
+1443,0,5,Effects Hater
+1443,2,2,Effects Hater
+1443,4,5,Effects Hater
+1444,1,3,Old Movie Fan
+1444,2,4,Old Movie Fan
+1444,5,5,Old Movie Fan
+1445,1,5,Effects Hater
+1445,2,1,Effects Hater
+1445,4,5,Effects Hater
+1446,0,4,Effects Hater
+1446,1,5,Effects Hater
+1446,4,5,Effects Hater
+1447,1,5,Comedy Lover
+1447,3,2,Comedy Lover
+1447,4,2,Comedy Lover
+1448,2,1,Effects Hater
+1448,3,2,Effects Hater
+1448,5,4,Effects Hater
+1449,0,4,Effects Hater
+1449,1,5,Effects Hater
+1449,3,1,Effects Hater
+1450,1,3,Old Movie Fan
+1450,2,2,Old Movie Fan
+1450,3,2,Old Movie Fan
+1451,0,1,Old Movie Fan
+1451,3,1,Old Movie Fan
+1451,4,5,Old Movie Fan
+1452,0,1,Old Movie Fan
+1452,2,3,Old Movie Fan
+1452,5,4,Old Movie Fan
+1453,0,4,Effects Hater
+1453,2,1,Effects Hater
+1453,3,1,Effects Hater
+1454,0,1,Old Movie Fan
+1454,4,5,Old Movie Fan
+1454,5,4,Old Movie Fan
+1455,0,5,Comedy Lover
+1455,1,5,Comedy Lover
+1455,2,3,Comedy Lover
+1456,1,3,Old Movie Fan
+1456,3,1,Old Movie Fan
+1456,4,5,Old Movie Fan
+1457,0,5,Comedy Lover
+1457,3,2,Comedy Lover
+1457,5,1,Comedy Lover
+1458,1,5,Effects Hater
+1458,3,2,Effects Hater
+1458,5,4,Effects Hater
+1459,2,3,Old Movie Fan
+1459,4,5,Old Movie Fan
+1459,5,5,Old Movie Fan
+1460,3,1,Old Movie Fan
+1460,4,5,Old Movie Fan
+1460,5,4,Old Movie Fan
+1461,0,5,Comedy Lover
+1461,3,2,Comedy Lover
+1461,5,1,Comedy Lover
+1462,2,2,Comedy Lover
+1462,3,1,Comedy Lover
+1462,4,2,Comedy Lover
+1463,3,1,Old Movie Fan
+1463,4,5,Old Movie Fan
+1463,5,4,Old Movie Fan
+1464,0,4,Effects Hater
+1464,1,5,Effects Hater
+1464,2,1,Effects Hater
+1465,0,3,Effects Hater
+1465,1,5,Effects Hater
+1465,3,1,Effects Hater
+1466,0,1,Old Movie Fan
+1466,2,2,Old Movie Fan
+1466,4,5,Old Movie Fan
+1467,0,3,Effects Hater
+1467,1,5,Effects Hater
+1467,2,1,Effects Hater
+1468,1,4,Comedy Lover
+1468,2,3,Comedy Lover
+1468,5,1,Comedy Lover
+1469,2,3,Old Movie Fan
+1469,3,1,Old Movie Fan
+1469,5,4,Old Movie Fan
+1470,2,2,Comedy Lover
+1470,3,2,Comedy Lover
+1470,5,1,Comedy Lover
+1471,2,1,Effects Hater
+1471,3,2,Effects Hater
+1471,5,4,Effects Hater
+1472,0,4,Effects Hater
+1472,1,5,Effects Hater
+1472,2,1,Effects Hater
+1473,1,5,Comedy Lover
+1473,4,2,Comedy Lover
+1473,5,1,Comedy Lover
+1474,0,4,Effects Hater
+1474,3,1,Effects Hater
+1474,4,5,Effects Hater
+1475,0,5,Effects Hater
+1475,2,1,Effects Hater
+1475,4,4,Effects Hater
+1476,0,1,Old Movie Fan
+1476,1,3,Old Movie Fan
+1476,4,5,Old Movie Fan
+1477,0,4,Effects Hater
+1477,1,4,Effects Hater
+1477,4,4,Effects Hater
+1478,0,2,Person with Bad Taste
+1478,1,2,Person with Bad Taste
+1478,2,3,Person with Bad Taste
+1479,0,5,Comedy Lover
+1479,1,4,Comedy Lover
+1479,3,2,Comedy Lover
+1480,3,1,Old Movie Fan
+1480,4,5,Old Movie Fan
+1480,5,3,Old Movie Fan
+1481,0,5,Comedy Lover
+1481,2,2,Comedy Lover
+1481,5,1,Comedy Lover
+1482,0,1,Old Movie Fan
+1482,1,3,Old Movie Fan
+1482,5,5,Old Movie Fan
+1483,2,2,Comedy Lover
+1483,4,2,Comedy Lover
+1483,5,1,Comedy Lover
+1484,0,4,Effects Hater
+1484,1,5,Effects Hater
+1484,4,5,Effects Hater
+1485,3,1,Effects Hater
+1485,4,5,Effects Hater
+1485,5,4,Effects Hater
+1486,1,3,Old Movie Fan
+1486,4,5,Old Movie Fan
+1486,5,4,Old Movie Fan
+1487,1,5,Effects Hater
+1487,3,1,Effects Hater
+1487,5,4,Effects Hater
+1488,0,1,Old Movie Fan
+1488,1,3,Old Movie Fan
+1488,2,3,Old Movie Fan
+1489,3,1,Effects Hater
+1489,4,5,Effects Hater
+1489,5,4,Effects Hater
+1490,0,4,Effects Hater
+1490,3,1,Effects Hater
+1490,5,5,Effects Hater
+1491,0,1,Old Movie Fan
+1491,2,4,Old Movie Fan
+1491,3,1,Old Movie Fan
+1492,0,1,Old Movie Fan
+1492,1,3,Old Movie Fan
+1492,4,4,Old Movie Fan
+1493,0,5,Comedy Lover
+1493,1,5,Comedy Lover
+1493,5,1,Comedy Lover
+1494,3,1,Old Movie Fan
+1494,4,5,Old Movie Fan
+1494,5,4,Old Movie Fan
+1495,2,2,Comedy Lover
+1495,4,1,Comedy Lover
+1495,5,1,Comedy Lover
+1496,1,3,Old Movie Fan
+1496,2,4,Old Movie Fan
+1496,5,4,Old Movie Fan
+1497,0,1,Old Movie Fan
+1497,3,1,Old Movie Fan
+1497,5,3,Old Movie Fan
+1498,0,4,Effects Hater
+1498,2,1,Effects Hater
+1498,5,4,Effects Hater
+1499,0,4,Effects Hater
+1499,3,1,Effects Hater
+1499,5,3,Effects Hater
+1500,0,5,Comedy Lover
+1500,1,5,Comedy Lover
+1500,5,1,Comedy Lover
+1501,0,5,Comedy Lover
+1501,3,1,Comedy Lover
+1501,4,2,Comedy Lover
+1502,0,4,Effects Hater
+1502,2,1,Effects Hater
+1502,5,3,Effects Hater
+1503,0,3,Effects Hater
+1503,2,1,Effects Hater
+1503,4,5,Effects Hater
+1504,0,4,Effects Hater
+1504,3,1,Effects Hater
+1504,4,5,Effects Hater
+1505,2,2,Old Movie Fan
+1505,3,1,Old Movie Fan
+1505,5,4,Old Movie Fan
+1506,0,5,Comedy Lover
+1506,3,1,Comedy Lover
+1506,4,1,Comedy Lover
+1507,0,5,Comedy Lover
+1507,3,2,Comedy Lover
+1507,4,2,Comedy Lover
+1508,2,2,Effects Hater
+1508,3,1,Effects Hater
+1508,5,4,Effects Hater
+1509,2,2,Comedy Lover
+1509,3,3,Comedy Lover
+1509,4,2,Comedy Lover
+1510,0,5,Comedy Lover
+1510,2,2,Comedy Lover
+1510,3,2,Comedy Lover
+1511,1,3,Old Movie Fan
+1511,3,2,Old Movie Fan
+1511,5,4,Old Movie Fan
+1512,0,1,Old Movie Fan
+1512,1,3,Old Movie Fan
+1512,4,5,Old Movie Fan
+1513,2,2,Comedy Lover
+1513,3,2,Comedy Lover
+1513,4,2,Comedy Lover
+1514,0,5,Effects Hater
+1514,2,1,Effects Hater
+1514,4,5,Effects Hater
+1515,0,3,Effects Hater
+1515,2,1,Effects Hater
+1515,5,4,Effects Hater
+1516,2,1,Effects Hater
+1516,4,5,Effects Hater
+1516,5,4,Effects Hater
+1517,2,3,Old Movie Fan
+1517,3,1,Old Movie Fan
+1517,5,4,Old Movie Fan
+1518,0,1,Old Movie Fan
+1518,1,2,Old Movie Fan
+1518,2,3,Old Movie Fan
+1519,1,3,Person with Bad Taste
+1519,2,4,Person with Bad Taste
+1519,5,5,Person with Bad Taste
+1520,0,1,Person with Bad Taste
+1520,2,3,Person with Bad Taste
+1520,4,1,Person with Bad Taste
+1521,2,2,Comedy Lover
+1521,3,1,Comedy Lover
+1521,5,1,Comedy Lover
+1522,2,3,Old Movie Fan
+1522,3,1,Old Movie Fan
+1522,4,5,Old Movie Fan
+1523,0,5,Comedy Lover
+1523,2,2,Comedy Lover
+1523,5,1,Comedy Lover
+1524,0,5,Comedy Lover
+1524,3,2,Comedy Lover
+1524,5,2,Comedy Lover
+1525,0,2,Old Movie Fan
+1525,2,2,Old Movie Fan
+1525,4,4,Old Movie Fan
+1526,0,2,Old Movie Fan
+1526,3,1,Old Movie Fan
+1526,4,5,Old Movie Fan
+1527,0,3,Effects Hater
+1527,1,5,Effects Hater
+1527,5,4,Effects Hater
+1528,0,5,Comedy Lover
+1528,1,5,Comedy Lover
+1528,4,2,Comedy Lover
+1529,0,1,Old Movie Fan
+1529,4,5,Old Movie Fan
+1529,5,4,Old Movie Fan
+1530,1,5,Comedy Lover
+1530,2,2,Comedy Lover
+1530,3,2,Comedy Lover
+1531,0,1,Old Movie Fan
+1531,1,3,Old Movie Fan
+1531,5,3,Old Movie Fan
+1532,1,5,Effects Hater
+1532,3,1,Effects Hater
+1532,4,5,Effects Hater
+1533,3,1,Old Movie Fan
+1533,4,5,Old Movie Fan
+1533,5,3,Old Movie Fan
+1534,1,5,Effects Hater
+1534,4,5,Effects Hater
+1534,5,4,Effects Hater
+1535,2,1,Comedy Lover
+1535,3,1,Comedy Lover
+1535,5,1,Comedy Lover
+1536,0,3,Effects Hater
+1536,3,1,Effects Hater
+1536,4,4,Effects Hater
+1537,1,5,Effects Hater
+1537,3,1,Effects Hater
+1537,4,5,Effects Hater
+1538,1,4,Effects Hater
+1538,2,1,Effects Hater
+1538,4,5,Effects Hater
+1539,0,3,Effects Hater
+1539,1,5,Effects Hater
+1539,3,1,Effects Hater
+1540,1,5,Comedy Lover
+1540,3,2,Comedy Lover
+1540,4,2,Comedy Lover
+1541,1,2,Person with Bad Taste
+1541,2,3,Person with Bad Taste
+1541,4,2,Person with Bad Taste
+1542,2,3,Old Movie Fan
+1542,4,4,Old Movie Fan
+1542,5,4,Old Movie Fan
+1543,1,4,Comedy Lover
+1543,3,1,Comedy Lover
+1543,5,1,Comedy Lover
+1544,0,4,Effects Hater
+1544,1,5,Effects Hater
+1544,4,4,Effects Hater
+1545,0,4,Effects Hater
+1545,2,1,Effects Hater
+1545,4,5,Effects Hater
+1546,2,2,Comedy Lover
+1546,4,2,Comedy Lover
+1546,5,1,Comedy Lover
+1547,0,5,Effects Hater
+1547,1,4,Effects Hater
+1547,2,1,Effects Hater
+1548,0,1,Old Movie Fan
+1548,2,3,Old Movie Fan
+1548,3,1,Old Movie Fan
+1549,1,1,Person with Bad Taste
+1549,3,5,Person with Bad Taste
+1549,4,1,Person with Bad Taste
+1550,1,5,Comedy Lover
+1550,3,2,Comedy Lover
+1550,4,2,Comedy Lover
+1551,0,5,Comedy Lover
+1551,2,2,Comedy Lover
+1551,3,1,Comedy Lover
+1552,1,3,Old Movie Fan
+1552,2,3,Old Movie Fan
+1552,5,4,Old Movie Fan
+1553,0,5,Comedy Lover
+1553,4,2,Comedy Lover
+1553,5,1,Comedy Lover
+1554,2,2,Comedy Lover
+1554,4,2,Comedy Lover
+1554,5,1,Comedy Lover
+1555,1,5,Effects Hater
+1555,3,1,Effects Hater
+1555,5,4,Effects Hater
+1556,0,1,Old Movie Fan
+1556,1,3,Old Movie Fan
+1556,2,3,Old Movie Fan
+1557,0,4,Effects Hater
+1557,3,1,Effects Hater
+1557,4,5,Effects Hater
+1558,3,1,Old Movie Fan
+1558,4,5,Old Movie Fan
+1558,5,4,Old Movie Fan
+1559,0,1,Old Movie Fan
+1559,3,1,Old Movie Fan
+1559,5,4,Old Movie Fan
+1560,2,2,Comedy Lover
+1560,3,2,Comedy Lover
+1560,5,2,Comedy Lover
+1561,0,1,Old Movie Fan
+1561,3,1,Old Movie Fan
+1561,5,5,Old Movie Fan
+1562,0,4,Effects Hater
+1562,1,4,Effects Hater
+1562,2,1,Effects Hater
+1563,1,5,Effects Hater
+1563,3,1,Effects Hater
+1563,5,4,Effects Hater
+1564,0,1,Old Movie Fan
+1564,1,3,Old Movie Fan
+1564,2,4,Old Movie Fan
+1565,1,4,Effects Hater
+1565,2,2,Effects Hater
+1565,4,5,Effects Hater
+1566,0,5,Comedy Lover
+1566,1,5,Comedy Lover
+1566,5,1,Comedy Lover
+1567,0,4,Comedy Lover
+1567,3,2,Comedy Lover
+1567,5,2,Comedy Lover
+1568,1,5,Effects Hater
+1568,2,1,Effects Hater
+1568,5,4,Effects Hater
+1569,1,5,Comedy Lover
+1569,4,2,Comedy Lover
+1569,5,1,Comedy Lover
+1570,2,4,Old Movie Fan
+1570,4,5,Old Movie Fan
+1570,5,4,Old Movie Fan
+1571,1,3,Old Movie Fan
+1571,2,3,Old Movie Fan
+1571,3,1,Old Movie Fan
+1572,2,3,Old Movie Fan
+1572,4,4,Old Movie Fan
+1572,5,4,Old Movie Fan
+1573,0,1,Old Movie Fan
+1573,4,5,Old Movie Fan
+1573,5,4,Old Movie Fan
+1574,0,5,Comedy Lover
+1574,4,3,Comedy Lover
+1574,5,1,Comedy Lover
+1575,1,5,Comedy Lover
+1575,3,2,Comedy Lover
+1575,5,1,Comedy Lover
+1576,2,3,Old Movie Fan
+1576,3,1,Old Movie Fan
+1576,4,4,Old Movie Fan
+1577,0,5,Comedy Lover
+1577,2,2,Comedy Lover
+1577,4,2,Comedy Lover
+1578,2,2,Old Movie Fan
+1578,4,4,Old Movie Fan
+1578,5,4,Old Movie Fan
+1579,2,2,Comedy Lover
+1579,3,3,Comedy Lover
+1579,5,1,Comedy Lover
+1580,1,3,Old Movie Fan
+1580,2,3,Old Movie Fan
+1580,4,5,Old Movie Fan
+1581,2,1,Effects Hater
+1581,3,1,Effects Hater
+1581,4,5,Effects Hater
+1582,0,5,Comedy Lover
+1582,1,5,Comedy Lover
+1582,5,1,Comedy Lover
+1583,1,2,Old Movie Fan
+1583,2,3,Old Movie Fan
+1583,4,5,Old Movie Fan
+1584,0,1,Person with Bad Taste
+1584,2,3,Person with Bad Taste
+1584,5,5,Person with Bad Taste
+1585,0,4,Effects Hater
+1585,4,5,Effects Hater
+1585,5,3,Effects Hater
+1586,1,5,Comedy Lover
+1586,4,2,Comedy Lover
+1586,5,1,Comedy Lover
+1587,0,1,Old Movie Fan
+1587,4,5,Old Movie Fan
+1587,5,5,Old Movie Fan
+1588,0,3,Effects Hater
+1588,2,2,Effects Hater
+1588,4,5,Effects Hater
+1589,2,2,Old Movie Fan
+1589,4,5,Old Movie Fan
+1589,5,4,Old Movie Fan
+1590,0,5,Comedy Lover
+1590,4,2,Comedy Lover
+1590,5,1,Comedy Lover
+1591,1,3,Old Movie Fan
+1591,2,4,Old Movie Fan
+1591,4,5,Old Movie Fan
+1592,1,2,Person with Bad Taste
+1592,2,2,Person with Bad Taste
+1592,5,5,Person with Bad Taste
+1593,0,4,Effects Hater
+1593,3,1,Effects Hater
+1593,5,4,Effects Hater
+1594,1,4,Effects Hater
+1594,2,2,Effects Hater
+1594,4,5,Effects Hater
+1595,0,5,Comedy Lover
+1595,2,2,Comedy Lover
+1595,4,2,Comedy Lover
+1596,0,1,Old Movie Fan
+1596,2,3,Old Movie Fan
+1596,4,4,Old Movie Fan
+1597,0,5,Comedy Lover
+1597,4,2,Comedy Lover
+1597,5,1,Comedy Lover
+1598,1,5,Comedy Lover
+1598,3,1,Comedy Lover
+1598,4,1,Comedy Lover
+1599,0,1,Old Movie Fan
+1599,1,3,Old Movie Fan
+1599,3,1,Old Movie Fan
+1600,0,5,Comedy Lover
+1600,3,1,Comedy Lover
+1600,5,1,Comedy Lover
+1601,1,5,Comedy Lover
+1601,3,3,Comedy Lover
+1601,5,1,Comedy Lover
+1602,0,5,Comedy Lover
+1602,2,2,Comedy Lover
+1602,4,1,Comedy Lover
+1603,1,5,Effects Hater
+1603,2,1,Effects Hater
+1603,3,1,Effects Hater
+1604,0,1,Old Movie Fan
+1604,2,3,Old Movie Fan
+1604,5,4,Old Movie Fan
+1605,0,2,Old Movie Fan
+1605,1,3,Old Movie Fan
+1605,3,2,Old Movie Fan
+1606,0,5,Comedy Lover
+1606,1,5,Comedy Lover
+1606,2,2,Comedy Lover
+1607,1,5,Effects Hater
+1607,2,1,Effects Hater
+1607,4,5,Effects Hater
+1608,0,5,Comedy Lover
+1608,3,2,Comedy Lover
+1608,5,1,Comedy Lover
+1609,0,1,Old Movie Fan
+1609,1,3,Old Movie Fan
+1609,4,5,Old Movie Fan
+1610,3,1,Old Movie Fan
+1610,4,4,Old Movie Fan
+1610,5,4,Old Movie Fan
+1611,0,1,Old Movie Fan
+1611,4,4,Old Movie Fan
+1611,5,4,Old Movie Fan
+1612,2,3,Old Movie Fan
+1612,3,1,Old Movie Fan
+1612,5,4,Old Movie Fan
+1613,2,4,Old Movie Fan
+1613,3,2,Old Movie Fan
+1613,4,5,Old Movie Fan
+1614,1,5,Comedy Lover
+1614,2,2,Comedy Lover
+1614,5,1,Comedy Lover
+1615,0,5,Comedy Lover
+1615,3,2,Comedy Lover
+1615,4,2,Comedy Lover
+1616,0,4,Effects Hater
+1616,2,1,Effects Hater
+1616,5,4,Effects Hater
+1617,0,5,Comedy Lover
+1617,2,2,Comedy Lover
+1617,3,1,Comedy Lover
+1618,0,4,Effects Hater
+1618,2,1,Effects Hater
+1618,5,4,Effects Hater
+1619,1,4,Comedy Lover
+1619,2,3,Comedy Lover
+1619,4,2,Comedy Lover
+1620,2,3,Person with Bad Taste
+1620,3,5,Person with Bad Taste
+1620,4,1,Person with Bad Taste
+1621,2,1,Effects Hater
+1621,3,1,Effects Hater
+1621,5,4,Effects Hater
+1622,0,4,Effects Hater
+1622,1,5,Effects Hater
+1622,4,4,Effects Hater
+1623,0,5,Effects Hater
+1623,2,1,Effects Hater
+1623,4,5,Effects Hater
+1624,0,4,Effects Hater
+1624,1,5,Effects Hater
+1624,2,1,Effects Hater
+1625,1,3,Old Movie Fan
+1625,2,3,Old Movie Fan
+1625,5,3,Old Movie Fan
+1626,1,5,Effects Hater
+1626,3,1,Effects Hater
+1626,4,5,Effects Hater
+1627,1,2,Old Movie Fan
+1627,2,4,Old Movie Fan
+1627,5,4,Old Movie Fan
+1628,0,2,Old Movie Fan
+1628,3,2,Old Movie Fan
+1628,5,3,Old Movie Fan
+1629,0,5,Effects Hater
+1629,1,5,Effects Hater
+1629,5,4,Effects Hater
+1630,0,5,Comedy Lover
+1630,1,5,Comedy Lover
+1630,4,2,Comedy Lover
+1631,2,1,Effects Hater
+1631,3,2,Effects Hater
+1631,4,5,Effects Hater
+1632,0,5,Comedy Lover
+1632,2,1,Comedy Lover
+1632,3,2,Comedy Lover
+1633,1,5,Comedy Lover
+1633,3,2,Comedy Lover
+1633,5,1,Comedy Lover
+1634,0,1,Old Movie Fan
+1634,3,1,Old Movie Fan
+1634,5,4,Old Movie Fan
+1635,1,5,Effects Hater
+1635,4,5,Effects Hater
+1635,5,3,Effects Hater
+1636,0,3,Effects Hater
+1636,1,5,Effects Hater
+1636,2,1,Effects Hater
+1637,1,4,Old Movie Fan
+1637,4,5,Old Movie Fan
+1637,5,5,Old Movie Fan
+1638,2,2,Comedy Lover
+1638,4,2,Comedy Lover
+1638,5,2,Comedy Lover
+1639,0,5,Comedy Lover
+1639,1,5,Comedy Lover
+1639,4,2,Comedy Lover
+1640,0,5,Comedy Lover
+1640,1,5,Comedy Lover
+1640,2,2,Comedy Lover
+1641,3,3,Comedy Lover
+1641,4,2,Comedy Lover
+1641,5,1,Comedy Lover
+1642,0,3,Effects Hater
+1642,2,1,Effects Hater
+1642,5,4,Effects Hater
+1643,0,1,Old Movie Fan
+1643,2,3,Old Movie Fan
+1643,3,1,Old Movie Fan
+1644,1,5,Effects Hater
+1644,2,1,Effects Hater
+1644,3,1,Effects Hater
+1645,2,1,Effects Hater
+1645,4,5,Effects Hater
+1645,5,4,Effects Hater
+1646,0,5,Effects Hater
+1646,1,5,Effects Hater
+1646,5,4,Effects Hater
+1647,0,4,Effects Hater
+1647,2,1,Effects Hater
+1647,4,5,Effects Hater
+1648,0,4,Comedy Lover
+1648,2,1,Comedy Lover
+1648,4,2,Comedy Lover
+1649,0,4,Effects Hater
+1649,1,5,Effects Hater
+1649,5,5,Effects Hater
+1650,0,5,Comedy Lover
+1650,2,2,Comedy Lover
+1650,3,2,Comedy Lover
+1651,0,5,Comedy Lover
+1651,1,5,Comedy Lover
+1651,4,2,Comedy Lover
+1652,0,1,Old Movie Fan
+1652,2,3,Old Movie Fan
+1652,5,4,Old Movie Fan
+1653,0,5,Effects Hater
+1653,1,4,Effects Hater
+1653,4,5,Effects Hater
+1654,0,5,Comedy Lover
+1654,3,2,Comedy Lover
+1654,4,2,Comedy Lover
+1655,1,5,Comedy Lover
+1655,3,2,Comedy Lover
+1655,4,2,Comedy Lover
+1656,0,1,Old Movie Fan
+1656,2,3,Old Movie Fan
+1656,3,1,Old Movie Fan
+1657,0,1,Old Movie Fan
+1657,3,2,Old Movie Fan
+1657,5,3,Old Movie Fan
+1658,1,5,Comedy Lover
+1658,2,1,Comedy Lover
+1658,3,2,Comedy Lover
+1659,1,5,Comedy Lover
+1659,4,3,Comedy Lover
+1659,5,1,Comedy Lover
+1660,0,4,Effects Hater
+1660,1,4,Effects Hater
+1660,5,4,Effects Hater
+1661,0,1,Old Movie Fan
+1661,3,1,Old Movie Fan
+1661,5,5,Old Movie Fan
+1662,0,5,Comedy Lover
+1662,3,2,Comedy Lover
+1662,5,1,Comedy Lover
+1663,0,4,Effects Hater
+1663,4,4,Effects Hater
+1663,5,4,Effects Hater
+1664,0,1,Old Movie Fan
+1664,3,1,Old Movie Fan
+1664,5,4,Old Movie Fan
+1665,1,4,Old Movie Fan
+1665,2,3,Old Movie Fan
+1665,5,4,Old Movie Fan
+1666,1,4,Comedy Lover
+1666,4,1,Comedy Lover
+1666,5,1,Comedy Lover
+1667,0,4,Comedy Lover
+1667,2,3,Comedy Lover
+1667,4,1,Comedy Lover
+1668,0,5,Effects Hater
+1668,1,5,Effects Hater
+1668,4,5,Effects Hater
+1669,1,5,Effects Hater
+1669,2,1,Effects Hater
+1669,4,5,Effects Hater
+1670,0,1,Old Movie Fan
+1670,2,2,Old Movie Fan
+1670,4,5,Old Movie Fan
+1671,0,5,Comedy Lover
+1671,2,1,Comedy Lover
+1671,4,2,Comedy Lover
+1672,2,1,Effects Hater
+1672,4,5,Effects Hater
+1672,5,5,Effects Hater
+1673,2,1,Effects Hater
+1673,4,4,Effects Hater
+1673,5,4,Effects Hater
+1674,0,4,Effects Hater
+1674,2,2,Effects Hater
+1674,5,3,Effects Hater
+1675,0,4,Effects Hater
+1675,1,4,Effects Hater
+1675,5,5,Effects Hater
+1676,0,5,Comedy Lover
+1676,4,3,Comedy Lover
+1676,5,1,Comedy Lover
+1677,0,4,Effects Hater
+1677,3,1,Effects Hater
+1677,4,5,Effects Hater
+1678,1,2,Old Movie Fan
+1678,2,3,Old Movie Fan
+1678,3,1,Old Movie Fan
+1679,0,4,Effects Hater
+1679,2,1,Effects Hater
+1679,5,4,Effects Hater
+1680,0,4,Effects Hater
+1680,2,1,Effects Hater
+1680,3,1,Effects Hater
+1681,0,3,Old Movie Fan
+1681,1,3,Old Movie Fan
+1681,5,4,Old Movie Fan
+1682,1,4,Effects Hater
+1682,3,1,Effects Hater
+1682,5,4,Effects Hater
+1683,0,1,Old Movie Fan
+1683,1,3,Old Movie Fan
+1683,4,5,Old Movie Fan
+1684,1,4,Old Movie Fan
+1684,3,1,Old Movie Fan
+1684,4,5,Old Movie Fan
+1685,0,4,Effects Hater
+1685,1,5,Effects Hater
+1685,3,2,Effects Hater
+1686,0,5,Comedy Lover
+1686,1,5,Comedy Lover
+1686,2,2,Comedy Lover
+1687,3,1,Old Movie Fan
+1687,4,5,Old Movie Fan
+1687,5,4,Old Movie Fan
+1688,2,3,Old Movie Fan
+1688,3,1,Old Movie Fan
+1688,5,4,Old Movie Fan
+1689,2,3,Comedy Lover
+1689,3,2,Comedy Lover
+1689,4,2,Comedy Lover
+1690,2,1,Effects Hater
+1690,3,1,Effects Hater
+1690,5,4,Effects Hater
+1691,1,5,Effects Hater
+1691,4,5,Effects Hater
+1691,5,4,Effects Hater
+1692,3,2,Effects Hater
+1692,4,4,Effects Hater
+1692,5,4,Effects Hater
+1693,0,2,Old Movie Fan
+1693,1,3,Old Movie Fan
+1693,3,2,Old Movie Fan
+1694,0,2,Old Movie Fan
+1694,1,3,Old Movie Fan
+1694,4,5,Old Movie Fan
+1695,1,2,Old Movie Fan
+1695,2,3,Old Movie Fan
+1695,3,3,Old Movie Fan
+1696,0,4,Effects Hater
+1696,2,1,Effects Hater
+1696,4,5,Effects Hater
+1697,3,2,Comedy Lover
+1697,4,2,Comedy Lover
+1697,5,1,Comedy Lover
+1698,0,5,Comedy Lover
+1698,1,5,Comedy Lover
+1698,2,1,Comedy Lover
+1699,0,5,Effects Hater
+1699,1,5,Effects Hater
+1699,3,1,Effects Hater
+1700,1,5,Effects Hater
+1700,3,2,Effects Hater
+1700,4,5,Effects Hater
+1701,0,5,Comedy Lover
+1701,3,3,Comedy Lover
+1701,4,2,Comedy Lover
+1702,0,3,Effects Hater
+1702,3,1,Effects Hater
+1702,5,4,Effects Hater
+1703,2,2,Comedy Lover
+1703,3,2,Comedy Lover
+1703,4,2,Comedy Lover
+1704,0,4,Effects Hater
+1704,4,4,Effects Hater
+1704,5,4,Effects Hater
+1705,0,1,Person with Bad Taste
+1705,2,3,Person with Bad Taste
+1705,3,5,Person with Bad Taste
+1706,0,5,Comedy Lover
+1706,3,1,Comedy Lover
+1706,5,1,Comedy Lover
+1707,0,1,Old Movie Fan
+1707,1,4,Old Movie Fan
+1707,5,3,Old Movie Fan
+1708,2,2,Comedy Lover
+1708,4,1,Comedy Lover
+1708,5,1,Comedy Lover
+1709,1,4,Comedy Lover
+1709,2,2,Comedy Lover
+1709,4,2,Comedy Lover
+1710,0,4,Comedy Lover
+1710,1,5,Comedy Lover
+1710,5,1,Comedy Lover
+1711,0,5,Comedy Lover
+1711,2,2,Comedy Lover
+1711,3,3,Comedy Lover
+1712,2,1,Comedy Lover
+1712,3,1,Comedy Lover
+1712,5,1,Comedy Lover
+1713,2,3,Comedy Lover
+1713,3,2,Comedy Lover
+1713,5,1,Comedy Lover
+1714,2,1,Comedy Lover
+1714,3,2,Comedy Lover
+1714,4,3,Comedy Lover
+1715,0,5,Comedy Lover
+1715,3,2,Comedy Lover
+1715,5,1,Comedy Lover
+1716,0,5,Comedy Lover
+1716,2,2,Comedy Lover
+1716,5,1,Comedy Lover
+1717,0,5,Comedy Lover
+1717,1,5,Comedy Lover
+1717,4,2,Comedy Lover
+1718,2,1,Effects Hater
+1718,3,1,Effects Hater
+1718,5,3,Effects Hater
+1719,1,5,Comedy Lover
+1719,2,2,Comedy Lover
+1719,4,2,Comedy Lover
+1720,2,2,Old Movie Fan
+1720,4,5,Old Movie Fan
+1720,5,4,Old Movie Fan
+1721,0,4,Effects Hater
+1721,4,5,Effects Hater
+1721,5,4,Effects Hater
+1722,1,4,Old Movie Fan
+1722,2,2,Old Movie Fan
+1722,5,5,Old Movie Fan
+1723,2,1,Effects Hater
+1723,3,1,Effects Hater
+1723,5,4,Effects Hater
+1724,1,4,Old Movie Fan
+1724,3,1,Old Movie Fan
+1724,4,5,Old Movie Fan
+1725,2,2,Comedy Lover
+1725,3,3,Comedy Lover
+1725,5,1,Comedy Lover
+1726,0,4,Comedy Lover
+1726,2,2,Comedy Lover
+1726,5,1,Comedy Lover
+1727,0,5,Comedy Lover
+1727,3,1,Comedy Lover
+1727,4,2,Comedy Lover
+1728,3,1,Effects Hater
+1728,4,5,Effects Hater
+1728,5,4,Effects Hater
+1729,0,5,Comedy Lover
+1729,3,2,Comedy Lover
+1729,5,1,Comedy Lover
+1730,0,1,Old Movie Fan
+1730,1,3,Old Movie Fan
+1730,5,4,Old Movie Fan
+1731,3,3,Comedy Lover
+1731,4,2,Comedy Lover
+1731,5,1,Comedy Lover
+1732,1,3,Old Movie Fan
+1732,4,5,Old Movie Fan
+1732,5,4,Old Movie Fan
+1733,0,4,Effects Hater
+1733,3,1,Effects Hater
+1733,4,5,Effects Hater
+1734,2,2,Comedy Lover
+1734,3,1,Comedy Lover
+1734,4,3,Comedy Lover
+1735,1,5,Effects Hater
+1735,3,1,Effects Hater
+1735,4,5,Effects Hater
+1736,0,5,Comedy Lover
+1736,1,4,Comedy Lover
+1736,3,2,Comedy Lover
+1737,1,4,Comedy Lover
+1737,2,2,Comedy Lover
+1737,3,2,Comedy Lover
+1738,2,1,Effects Hater
+1738,4,5,Effects Hater
+1738,5,5,Effects Hater
+1739,1,5,Comedy Lover
+1739,3,2,Comedy Lover
+1739,5,1,Comedy Lover
+1740,1,5,Comedy Lover
+1740,4,2,Comedy Lover
+1740,5,1,Comedy Lover
+1741,1,2,Old Movie Fan
+1741,3,1,Old Movie Fan
+1741,4,5,Old Movie Fan
+1742,1,4,Comedy Lover
+1742,2,3,Comedy Lover
+1742,5,1,Comedy Lover
+1743,1,5,Comedy Lover
+1743,3,1,Comedy Lover
+1743,4,1,Comedy Lover
+1744,0,4,Effects Hater
+1744,2,1,Effects Hater
+1744,5,4,Effects Hater
+1745,0,5,Comedy Lover
+1745,1,5,Comedy Lover
+1745,5,1,Comedy Lover
+1746,2,1,Effects Hater
+1746,3,1,Effects Hater
+1746,5,5,Effects Hater
+1747,0,5,Effects Hater
+1747,2,1,Effects Hater
+1747,4,5,Effects Hater
+1748,1,5,Effects Hater
+1748,3,1,Effects Hater
+1748,4,5,Effects Hater
+1749,2,1,Effects Hater
+1749,3,1,Effects Hater
+1749,4,5,Effects Hater
+1750,3,1,Old Movie Fan
+1750,4,5,Old Movie Fan
+1750,5,4,Old Movie Fan
+1751,2,2,Comedy Lover
+1751,3,2,Comedy Lover
+1751,5,1,Comedy Lover
+1752,1,5,Comedy Lover
+1752,4,2,Comedy Lover
+1752,5,1,Comedy Lover
+1753,0,4,Effects Hater
+1753,2,1,Effects Hater
+1753,4,5,Effects Hater
+1754,0,5,Comedy Lover
+1754,2,2,Comedy Lover
+1754,4,1,Comedy Lover
+1755,3,3,Comedy Lover
+1755,4,2,Comedy Lover
+1755,5,2,Comedy Lover
+1756,0,4,Effects Hater
+1756,2,1,Effects Hater
+1756,5,4,Effects Hater
+1757,0,5,Comedy Lover
+1757,1,5,Comedy Lover
+1757,4,2,Comedy Lover
+1758,0,3,Effects Hater
+1758,3,1,Effects Hater
+1758,5,5,Effects Hater
+1759,1,3,Old Movie Fan
+1759,2,3,Old Movie Fan
+1759,3,2,Old Movie Fan
+1760,1,5,Comedy Lover
+1760,3,2,Comedy Lover
+1760,5,1,Comedy Lover
+1761,1,5,Effects Hater
+1761,3,1,Effects Hater
+1761,5,4,Effects Hater
+1762,2,3,Old Movie Fan
+1762,3,1,Old Movie Fan
+1762,4,5,Old Movie Fan
+1763,2,2,Comedy Lover
+1763,3,2,Comedy Lover
+1763,5,1,Comedy Lover
+1764,0,5,Comedy Lover
+1764,2,2,Comedy Lover
+1764,3,1,Comedy Lover
+1765,1,5,Effects Hater
+1765,3,1,Effects Hater
+1765,5,3,Effects Hater
+1766,0,4,Effects Hater
+1766,3,1,Effects Hater
+1766,5,4,Effects Hater
+1767,1,3,Old Movie Fan
+1767,3,2,Old Movie Fan
+1767,4,5,Old Movie Fan
+1768,0,2,Old Movie Fan
+1768,4,5,Old Movie Fan
+1768,5,4,Old Movie Fan
+1769,0,4,Effects Hater
+1769,1,5,Effects Hater
+1769,5,4,Effects Hater
+1770,0,1,Old Movie Fan
+1770,1,3,Old Movie Fan
+1770,4,4,Old Movie Fan
+1771,0,5,Comedy Lover
+1771,1,5,Comedy Lover
+1771,5,1,Comedy Lover
+1772,0,3,Effects Hater
+1772,3,1,Effects Hater
+1772,4,5,Effects Hater
+1773,0,1,Old Movie Fan
+1773,2,4,Old Movie Fan
+1773,5,4,Old Movie Fan
+1774,2,3,Old Movie Fan
+1774,4,5,Old Movie Fan
+1774,5,4,Old Movie Fan
+1775,2,2,Old Movie Fan
+1775,3,1,Old Movie Fan
+1775,5,4,Old Movie Fan
+1776,0,1,Old Movie Fan
+1776,1,4,Old Movie Fan
+1776,4,5,Old Movie Fan
+1777,0,5,Comedy Lover
+1777,1,4,Comedy Lover
+1777,5,1,Comedy Lover
+1778,1,5,Comedy Lover
+1778,2,2,Comedy Lover
+1778,4,2,Comedy Lover
+1779,3,2,Effects Hater
+1779,4,5,Effects Hater
+1779,5,4,Effects Hater
+1780,0,5,Effects Hater
+1780,3,1,Effects Hater
+1780,5,4,Effects Hater
+1781,1,4,Old Movie Fan
+1781,2,4,Old Movie Fan
+1781,5,4,Old Movie Fan
+1782,1,2,Person with Bad Taste
+1782,2,4,Person with Bad Taste
+1782,5,5,Person with Bad Taste
+1783,1,3,Person with Bad Taste
+1783,2,3,Person with Bad Taste
+1783,4,2,Person with Bad Taste
+1784,0,5,Comedy Lover
+1784,1,5,Comedy Lover
+1784,3,2,Comedy Lover
+1785,0,1,Old Movie Fan
+1785,3,1,Old Movie Fan
+1785,4,5,Old Movie Fan
+1786,0,1,Old Movie Fan
+1786,2,4,Old Movie Fan
+1786,3,1,Old Movie Fan
+1787,1,5,Comedy Lover
+1787,3,1,Comedy Lover
+1787,4,2,Comedy Lover
+1788,2,2,Comedy Lover
+1788,3,2,Comedy Lover
+1788,5,1,Comedy Lover
+1789,0,5,Comedy Lover
+1789,2,2,Comedy Lover
+1789,4,2,Comedy Lover
+1790,0,1,Old Movie Fan
+1790,1,2,Old Movie Fan
+1790,2,2,Old Movie Fan
+1791,2,2,Old Movie Fan
+1791,4,4,Old Movie Fan
+1791,5,4,Old Movie Fan
+1792,2,2,Old Movie Fan
+1792,3,1,Old Movie Fan
+1792,5,4,Old Movie Fan
+1793,0,4,Comedy Lover
+1793,4,2,Comedy Lover
+1793,5,1,Comedy Lover
+1794,0,5,Comedy Lover
+1794,1,5,Comedy Lover
+1794,3,2,Comedy Lover
+1795,0,4,Effects Hater
+1795,2,1,Effects Hater
+1795,5,4,Effects Hater
+1796,0,1,Old Movie Fan
+1796,3,1,Old Movie Fan
+1796,5,5,Old Movie Fan
+1797,1,5,Comedy Lover
+1797,2,3,Comedy Lover
+1797,3,2,Comedy Lover
+1798,2,1,Effects Hater
+1798,3,1,Effects Hater
+1798,5,4,Effects Hater
+1799,0,1,Old Movie Fan
+1799,1,2,Old Movie Fan
+1799,3,1,Old Movie Fan
+1800,0,4,Effects Hater
+1800,1,5,Effects Hater
+1800,3,1,Effects Hater
+1801,1,5,Effects Hater
+1801,2,2,Effects Hater
+1801,5,3,Effects Hater
+1802,0,4,Effects Hater
+1802,2,1,Effects Hater
+1802,5,4,Effects Hater
+1803,0,1,Person with Bad Taste
+1803,2,4,Person with Bad Taste
+1803,5,5,Person with Bad Taste
+1804,0,4,Effects Hater
+1804,1,4,Effects Hater
+1804,2,1,Effects Hater
+1805,2,4,Old Movie Fan
+1805,3,1,Old Movie Fan
+1805,4,5,Old Movie Fan
+1806,2,2,Comedy Lover
+1806,3,2,Comedy Lover
+1806,4,1,Comedy Lover
+1807,1,5,Comedy Lover
+1807,3,2,Comedy Lover
+1807,4,2,Comedy Lover
+1808,1,5,Comedy Lover
+1808,2,1,Comedy Lover
+1808,5,1,Comedy Lover
+1809,0,4,Comedy Lover
+1809,1,5,Comedy Lover
+1809,4,2,Comedy Lover
+1810,0,4,Effects Hater
+1810,3,1,Effects Hater
+1810,4,5,Effects Hater
+1811,0,2,Old Movie Fan
+1811,3,1,Old Movie Fan
+1811,5,3,Old Movie Fan
+1812,0,1,Old Movie Fan
+1812,1,4,Old Movie Fan
+1812,4,5,Old Movie Fan
+1813,0,1,Old Movie Fan
+1813,4,5,Old Movie Fan
+1813,5,5,Old Movie Fan
+1814,0,5,Comedy Lover
+1814,2,1,Comedy Lover
+1814,4,3,Comedy Lover
+1815,2,3,Comedy Lover
+1815,3,2,Comedy Lover
+1815,5,1,Comedy Lover
+1816,1,2,Old Movie Fan
+1816,2,2,Old Movie Fan
+1816,5,4,Old Movie Fan
+1817,0,4,Comedy Lover
+1817,4,1,Comedy Lover
+1817,5,1,Comedy Lover
+1818,1,3,Old Movie Fan
+1818,3,1,Old Movie Fan
+1818,4,5,Old Movie Fan
+1819,0,4,Effects Hater
+1819,3,1,Effects Hater
+1819,4,5,Effects Hater
+1820,0,5,Effects Hater
+1820,2,2,Effects Hater
+1820,5,4,Effects Hater
+1821,0,4,Comedy Lover
+1821,1,5,Comedy Lover
+1821,2,3,Comedy Lover
+1822,0,5,Effects Hater
+1822,3,1,Effects Hater
+1822,5,4,Effects Hater
+1823,0,5,Comedy Lover
+1823,4,2,Comedy Lover
+1823,5,1,Comedy Lover
+1824,2,2,Old Movie Fan
+1824,4,5,Old Movie Fan
+1824,5,4,Old Movie Fan
+1825,0,4,Effects Hater
+1825,1,5,Effects Hater
+1825,4,4,Effects Hater
+1826,1,4,Effects Hater
+1826,2,1,Effects Hater
+1826,3,1,Effects Hater
+1827,0,4,Effects Hater
+1827,1,4,Effects Hater
+1827,5,4,Effects Hater
+1828,2,3,Comedy Lover
+1828,4,2,Comedy Lover
+1828,5,1,Comedy Lover
+1829,2,3,Old Movie Fan
+1829,3,1,Old Movie Fan
+1829,5,3,Old Movie Fan
+1830,1,4,Comedy Lover
+1830,3,2,Comedy Lover
+1830,5,2,Comedy Lover
+1831,0,5,Comedy Lover
+1831,3,2,Comedy Lover
+1831,4,3,Comedy Lover
+1832,0,4,Effects Hater
+1832,2,1,Effects Hater
+1832,3,2,Effects Hater
+1833,0,4,Effects Hater
+1833,1,5,Effects Hater
+1833,5,4,Effects Hater
+1834,0,5,Comedy Lover
+1834,2,3,Comedy Lover
+1834,3,2,Comedy Lover
+1835,1,3,Old Movie Fan
+1835,2,3,Old Movie Fan
+1835,4,4,Old Movie Fan
+1836,0,5,Comedy Lover
+1836,3,2,Comedy Lover
+1836,5,1,Comedy Lover
+1837,0,4,Effects Hater
+1837,2,1,Effects Hater
+1837,3,1,Effects Hater
+1838,2,2,Comedy Lover
+1838,3,3,Comedy Lover
+1838,4,1,Comedy Lover
+1839,2,2,Old Movie Fan
+1839,3,2,Old Movie Fan
+1839,5,4,Old Movie Fan
+1840,2,2,Comedy Lover
+1840,4,2,Comedy Lover
+1840,5,2,Comedy Lover
+1841,0,1,Old Movie Fan
+1841,1,4,Old Movie Fan
+1841,5,4,Old Movie Fan
+1842,2,3,Old Movie Fan
+1842,3,1,Old Movie Fan
+1842,4,5,Old Movie Fan
+1843,0,5,Effects Hater
+1843,2,1,Effects Hater
+1843,5,3,Effects Hater
+1844,0,4,Comedy Lover
+1844,4,2,Comedy Lover
+1844,5,1,Comedy Lover
+1845,0,5,Comedy Lover
+1845,2,2,Comedy Lover
+1845,5,1,Comedy Lover
+1846,1,5,Comedy Lover
+1846,2,3,Comedy Lover
+1846,5,1,Comedy Lover
+1847,1,5,Effects Hater
+1847,2,1,Effects Hater
+1847,4,5,Effects Hater
+1848,0,4,Comedy Lover
+1848,1,4,Comedy Lover
+1848,4,1,Comedy Lover
+1849,2,1,Effects Hater
+1849,3,1,Effects Hater
+1849,4,5,Effects Hater
+1850,0,4,Comedy Lover
+1850,3,2,Comedy Lover
+1850,4,2,Comedy Lover
+1851,0,1,Old Movie Fan
+1851,4,5,Old Movie Fan
+1851,5,4,Old Movie Fan
+1852,1,5,Comedy Lover
+1852,3,3,Comedy Lover
+1852,5,1,Comedy Lover
+1853,2,2,Comedy Lover
+1853,3,2,Comedy Lover
+1853,5,1,Comedy Lover
+1854,1,3,Old Movie Fan
+1854,2,3,Old Movie Fan
+1854,5,4,Old Movie Fan
+1855,1,3,Old Movie Fan
+1855,3,1,Old Movie Fan
+1855,5,5,Old Movie Fan
+1856,0,4,Effects Hater
+1856,3,2,Effects Hater
+1856,4,5,Effects Hater
+1857,1,2,Old Movie Fan
+1857,2,2,Old Movie Fan
+1857,5,4,Old Movie Fan
+1858,0,5,Comedy Lover
+1858,3,2,Comedy Lover
+1858,5,1,Comedy Lover
+1859,0,5,Comedy Lover
+1859,1,5,Comedy Lover
+1859,4,2,Comedy Lover
+1860,1,3,Old Movie Fan
+1860,3,2,Old Movie Fan
+1860,4,5,Old Movie Fan
+1861,0,1,Old Movie Fan
+1861,1,4,Old Movie Fan
+1861,5,4,Old Movie Fan
+1862,0,4,Effects Hater
+1862,3,1,Effects Hater
+1862,5,5,Effects Hater
+1863,1,5,Comedy Lover
+1863,2,2,Comedy Lover
+1863,5,2,Comedy Lover
+1864,3,1,Old Movie Fan
+1864,4,4,Old Movie Fan
+1864,5,4,Old Movie Fan
+1865,0,1,Old Movie Fan
+1865,3,1,Old Movie Fan
+1865,5,4,Old Movie Fan
+1866,2,1,Effects Hater
+1866,3,1,Effects Hater
+1866,5,5,Effects Hater
+1867,0,3,Effects Hater
+1867,4,5,Effects Hater
+1867,5,4,Effects Hater
+1868,2,2,Old Movie Fan
+1868,4,5,Old Movie Fan
+1868,5,4,Old Movie Fan
+1869,0,1,Old Movie Fan
+1869,3,1,Old Movie Fan
+1869,5,5,Old Movie Fan
+1870,0,5,Comedy Lover
+1870,2,2,Comedy Lover
+1870,4,2,Comedy Lover
+1871,0,5,Comedy Lover
+1871,1,5,Comedy Lover
+1871,5,1,Comedy Lover
+1872,3,1,Effects Hater
+1872,4,5,Effects Hater
+1872,5,3,Effects Hater
+1873,0,5,Comedy Lover
+1873,2,2,Comedy Lover
+1873,5,1,Comedy Lover
+1874,0,5,Comedy Lover
+1874,1,4,Comedy Lover
+1874,3,1,Comedy Lover
+1875,0,1,Old Movie Fan
+1875,2,3,Old Movie Fan
+1875,3,1,Old Movie Fan
+1876,0,1,Old Movie Fan
+1876,4,5,Old Movie Fan
+1876,5,5,Old Movie Fan
+1877,0,5,Comedy Lover
+1877,3,2,Comedy Lover
+1877,5,1,Comedy Lover
+1878,0,1,Old Movie Fan
+1878,3,1,Old Movie Fan
+1878,5,4,Old Movie Fan
+1879,2,1,Comedy Lover
+1879,3,2,Comedy Lover
+1879,5,1,Comedy Lover
+1880,1,5,Effects Hater
+1880,2,1,Effects Hater
+1880,3,1,Effects Hater
+1881,1,5,Effects Hater
+1881,3,1,Effects Hater
+1881,5,4,Effects Hater
+1882,0,5,Comedy Lover
+1882,2,2,Comedy Lover
+1882,3,2,Comedy Lover
+1883,3,1,Effects Hater
+1883,4,5,Effects Hater
+1883,5,4,Effects Hater
+1884,1,5,Effects Hater
+1884,2,1,Effects Hater
+1884,3,1,Effects Hater
+1885,1,5,Comedy Lover
+1885,2,2,Comedy Lover
+1885,3,2,Comedy Lover
+1886,1,5,Comedy Lover
+1886,2,3,Comedy Lover
+1886,5,1,Comedy Lover
+1887,1,3,Old Movie Fan
+1887,3,2,Old Movie Fan
+1887,5,3,Old Movie Fan
+1888,0,2,Old Movie Fan
+1888,1,3,Old Movie Fan
+1888,5,4,Old Movie Fan
+1889,3,1,Effects Hater
+1889,4,5,Effects Hater
+1889,5,4,Effects Hater
+1890,1,3,Old Movie Fan
+1890,2,3,Old Movie Fan
+1890,4,5,Old Movie Fan
+1891,2,4,Person with Bad Taste
+1891,3,5,Person with Bad Taste
+1891,5,5,Person with Bad Taste
+1892,0,4,Effects Hater
+1892,3,1,Effects Hater
+1892,4,5,Effects Hater
+1893,1,4,Effects Hater
+1893,2,1,Effects Hater
+1893,4,5,Effects Hater
+1894,1,5,Comedy Lover
+1894,3,3,Comedy Lover
+1894,4,3,Comedy Lover
+1895,2,2,Comedy Lover
+1895,3,2,Comedy Lover
+1895,4,2,Comedy Lover
+1896,1,3,Old Movie Fan
+1896,2,3,Old Movie Fan
+1896,3,1,Old Movie Fan
+1897,0,5,Comedy Lover
+1897,1,5,Comedy Lover
+1897,3,2,Comedy Lover
+1898,1,3,Old Movie Fan
+1898,4,5,Old Movie Fan
+1898,5,4,Old Movie Fan
+1899,0,1,Old Movie Fan
+1899,2,3,Old Movie Fan
+1899,4,5,Old Movie Fan
+1900,0,5,Comedy Lover
+1900,1,5,Comedy Lover
+1900,5,1,Comedy Lover
+1901,0,5,Comedy Lover
+1901,2,1,Comedy Lover
+1901,5,1,Comedy Lover
+1902,1,5,Effects Hater
+1902,4,5,Effects Hater
+1902,5,4,Effects Hater
+1903,0,5,Comedy Lover
+1903,1,5,Comedy Lover
+1903,3,3,Comedy Lover
+1904,0,3,Effects Hater
+1904,1,4,Effects Hater
+1904,3,1,Effects Hater
+1905,0,4,Effects Hater
+1905,4,5,Effects Hater
+1905,5,4,Effects Hater
+1906,3,1,Effects Hater
+1906,4,5,Effects Hater
+1906,5,4,Effects Hater
+1907,0,2,Old Movie Fan
+1907,1,4,Old Movie Fan
+1907,4,5,Old Movie Fan
+1908,1,4,Comedy Lover
+1908,2,2,Comedy Lover
+1908,4,2,Comedy Lover
+1909,0,5,Comedy Lover
+1909,1,4,Comedy Lover
+1909,5,1,Comedy Lover
+1910,0,4,Comedy Lover
+1910,2,2,Comedy Lover
+1910,3,1,Comedy Lover
+1911,1,5,Effects Hater
+1911,2,1,Effects Hater
+1911,5,3,Effects Hater
+1912,0,5,Comedy Lover
+1912,4,2,Comedy Lover
+1912,5,2,Comedy Lover
+1913,0,4,Effects Hater
+1913,4,5,Effects Hater
+1913,5,4,Effects Hater
+1914,0,1,Old Movie Fan
+1914,2,3,Old Movie Fan
+1914,5,4,Old Movie Fan
+1915,0,5,Comedy Lover
+1915,1,5,Comedy Lover
+1915,5,1,Comedy Lover
+1916,1,5,Comedy Lover
+1916,3,3,Comedy Lover
+1916,4,2,Comedy Lover
+1917,0,5,Effects Hater
+1917,1,4,Effects Hater
+1917,4,5,Effects Hater
+1918,0,1,Old Movie Fan
+1918,1,3,Old Movie Fan
+1918,3,1,Old Movie Fan
+1919,0,4,Effects Hater
+1919,2,1,Effects Hater
+1919,4,5,Effects Hater
+1920,0,1,Old Movie Fan
+1920,1,3,Old Movie Fan
+1920,3,1,Old Movie Fan
+1921,1,5,Comedy Lover
+1921,3,2,Comedy Lover
+1921,4,2,Comedy Lover
+1922,0,2,Old Movie Fan
+1922,2,3,Old Movie Fan
+1922,5,4,Old Movie Fan
+1923,1,2,Person with Bad Taste
+1923,3,5,Person with Bad Taste
+1923,5,5,Person with Bad Taste
+1924,0,1,Old Movie Fan
+1924,1,3,Old Movie Fan
+1924,2,3,Old Movie Fan
+1925,0,2,Old Movie Fan
+1925,1,3,Old Movie Fan
+1925,4,5,Old Movie Fan
+1926,3,1,Effects Hater
+1926,4,5,Effects Hater
+1926,5,4,Effects Hater
+1927,0,1,Old Movie Fan
+1927,4,5,Old Movie Fan
+1927,5,3,Old Movie Fan
+1928,3,1,Effects Hater
+1928,4,5,Effects Hater
+1928,5,4,Effects Hater
+1929,0,5,Comedy Lover
+1929,1,5,Comedy Lover
+1929,3,1,Comedy Lover
+1930,3,1,Effects Hater
+1930,4,5,Effects Hater
+1930,5,5,Effects Hater
+1931,0,4,Comedy Lover
+1931,2,2,Comedy Lover
+1931,4,2,Comedy Lover
+1932,1,5,Effects Hater
+1932,2,1,Effects Hater
+1932,5,3,Effects Hater
+1933,1,3,Old Movie Fan
+1933,3,1,Old Movie Fan
+1933,4,5,Old Movie Fan
+1934,1,3,Old Movie Fan
+1934,3,1,Old Movie Fan
+1934,5,4,Old Movie Fan
+1935,0,4,Effects Hater
+1935,3,1,Effects Hater
+1935,4,5,Effects Hater
+1936,1,5,Comedy Lover
+1936,3,2,Comedy Lover
+1936,4,2,Comedy Lover
+1937,0,1,Old Movie Fan
+1937,1,3,Old Movie Fan
+1937,4,4,Old Movie Fan
+1938,1,5,Comedy Lover
+1938,2,2,Comedy Lover
+1938,5,1,Comedy Lover
+1939,0,4,Effects Hater
+1939,1,4,Effects Hater
+1939,3,1,Effects Hater
+1940,0,1,Old Movie Fan
+1940,3,1,Old Movie Fan
+1940,4,5,Old Movie Fan
+1941,1,5,Effects Hater
+1941,2,1,Effects Hater
+1941,5,4,Effects Hater
+1942,0,4,Effects Hater
+1942,3,1,Effects Hater
+1942,5,4,Effects Hater
+1943,3,1,Old Movie Fan
+1943,4,5,Old Movie Fan
+1943,5,4,Old Movie Fan
+1944,2,1,Comedy Lover
+1944,3,2,Comedy Lover
+1944,4,3,Comedy Lover
+1945,0,4,Effects Hater
+1945,1,5,Effects Hater
+1945,4,5,Effects Hater
+1946,1,4,Comedy Lover
+1946,4,1,Comedy Lover
+1946,5,1,Comedy Lover
+1947,0,5,Comedy Lover
+1947,3,2,Comedy Lover
+1947,4,2,Comedy Lover
+1948,1,3,Old Movie Fan
+1948,4,5,Old Movie Fan
+1948,5,3,Old Movie Fan
+1949,0,5,Comedy Lover
+1949,1,5,Comedy Lover
+1949,3,2,Comedy Lover
+1950,0,1,Person with Bad Taste
+1950,3,5,Person with Bad Taste
+1950,5,5,Person with Bad Taste
+1951,1,3,Old Movie Fan
+1951,4,5,Old Movie Fan
+1951,5,5,Old Movie Fan
+1952,0,5,Comedy Lover
+1952,2,3,Comedy Lover
+1952,4,3,Comedy Lover
+1953,0,5,Comedy Lover
+1953,1,5,Comedy Lover
+1953,3,2,Comedy Lover
+1954,1,4,Comedy Lover
+1954,2,3,Comedy Lover
+1954,3,3,Comedy Lover
+1955,2,2,Comedy Lover
+1955,4,2,Comedy Lover
+1955,5,1,Comedy Lover
+1956,1,5,Comedy Lover
+1956,2,2,Comedy Lover
+1956,4,2,Comedy Lover
+1957,1,5,Comedy Lover
+1957,2,3,Comedy Lover
+1957,4,2,Comedy Lover
+1958,1,4,Comedy Lover
+1958,2,2,Comedy Lover
+1958,3,2,Comedy Lover
+1959,0,1,Old Movie Fan
+1959,1,3,Old Movie Fan
+1959,2,3,Old Movie Fan
+1960,1,3,Old Movie Fan
+1960,2,4,Old Movie Fan
+1960,4,4,Old Movie Fan
+1961,0,5,Comedy Lover
+1961,1,5,Comedy Lover
+1961,3,1,Comedy Lover
+1962,2,1,Effects Hater
+1962,4,4,Effects Hater
+1962,5,4,Effects Hater
+1963,1,5,Comedy Lover
+1963,2,2,Comedy Lover
+1963,4,2,Comedy Lover
+1964,1,4,Effects Hater
+1964,2,1,Effects Hater
+1964,3,2,Effects Hater
+1965,1,5,Effects Hater
+1965,2,2,Effects Hater
+1965,3,1,Effects Hater
+1966,2,4,Old Movie Fan
+1966,3,2,Old Movie Fan
+1966,5,4,Old Movie Fan
+1967,1,2,Person with Bad Taste
+1967,3,5,Person with Bad Taste
+1967,5,5,Person with Bad Taste
+1968,1,5,Comedy Lover
+1968,3,3,Comedy Lover
+1968,4,1,Comedy Lover
+1969,1,5,Comedy Lover
+1969,3,1,Comedy Lover
+1969,5,2,Comedy Lover
+1970,0,5,Comedy Lover
+1970,1,5,Comedy Lover
+1970,5,1,Comedy Lover
+1971,1,3,Old Movie Fan
+1971,3,1,Old Movie Fan
+1971,5,4,Old Movie Fan
+1972,2,3,Effects Hater
+1972,3,1,Effects Hater
+1972,5,4,Effects Hater
+1973,0,4,Effects Hater
+1973,2,2,Effects Hater
+1973,3,1,Effects Hater
+1974,1,4,Old Movie Fan
+1974,2,3,Old Movie Fan
+1974,3,1,Old Movie Fan
+1975,0,1,Old Movie Fan
+1975,1,3,Old Movie Fan
+1975,2,4,Old Movie Fan
+1976,2,2,Comedy Lover
+1976,3,3,Comedy Lover
+1976,4,2,Comedy Lover
+1977,0,3,Effects Hater
+1977,3,1,Effects Hater
+1977,4,5,Effects Hater
+1978,0,4,Comedy Lover
+1978,2,2,Comedy Lover
+1978,5,1,Comedy Lover
+1979,0,1,Old Movie Fan
+1979,1,3,Old Movie Fan
+1979,2,2,Old Movie Fan
+1980,0,1,Old Movie Fan
+1980,1,3,Old Movie Fan
+1980,2,4,Old Movie Fan
+1981,0,4,Effects Hater
+1981,2,1,Effects Hater
+1981,5,4,Effects Hater
+1982,2,1,Comedy Lover
+1982,3,2,Comedy Lover
+1982,4,2,Comedy Lover
+1983,0,5,Effects Hater
+1983,1,5,Effects Hater
+1983,5,4,Effects Hater
+1984,1,5,Comedy Lover
+1984,2,1,Comedy Lover
+1984,3,2,Comedy Lover
+1985,0,3,Effects Hater
+1985,3,1,Effects Hater
+1985,5,4,Effects Hater
+1986,0,4,Effects Hater
+1986,2,1,Effects Hater
+1986,5,4,Effects Hater
+1987,2,2,Comedy Lover
+1987,3,2,Comedy Lover
+1987,5,1,Comedy Lover
+1988,0,5,Comedy Lover
+1988,4,1,Comedy Lover
+1988,5,1,Comedy Lover
+1989,3,2,Comedy Lover
+1989,4,2,Comedy Lover
+1989,5,1,Comedy Lover
+1990,0,3,Effects Hater
+1990,1,5,Effects Hater
+1990,2,1,Effects Hater
+1991,0,4,Comedy Lover
+1991,3,3,Comedy Lover
+1991,4,3,Comedy Lover
+1992,0,5,Comedy Lover
+1992,2,2,Comedy Lover
+1992,4,2,Comedy Lover
+1993,0,4,Effects Hater
+1993,3,2,Effects Hater
+1993,5,4,Effects Hater
+1994,1,3,Old Movie Fan
+1994,4,5,Old Movie Fan
+1994,5,3,Old Movie Fan
+1995,0,4,Effects Hater
+1995,2,1,Effects Hater
+1995,3,2,Effects Hater
+1996,1,5,Comedy Lover
+1996,4,2,Comedy Lover
+1996,5,1,Comedy Lover
+1997,2,1,Effects Hater
+1997,3,1,Effects Hater
+1997,5,4,Effects Hater
+1998,0,4,Effects Hater
+1998,2,1,Effects Hater
+1998,3,1,Effects Hater
+1999,2,2,Comedy Lover
+1999,3,1,Comedy Lover
+1999,4,2,Comedy Lover

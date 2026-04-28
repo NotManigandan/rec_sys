@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+artifacts/
+data/movielens/
+data/*.zip
+data/*.tar
+data/*.tar.gz
+.pytest_cache/

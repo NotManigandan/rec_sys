@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rec-system"
+version = "0.1.0"
+description = "Recommendation-system baselines and experiments for the ML systems project."
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=2.4.0",
+    "python-docx>=1.2.0",
+    "torch>=2.11.0",
+    "tqdm>=4.67.0",
+]
+
+[tool.setuptools.packages.find]
+include = ["recsys*"]

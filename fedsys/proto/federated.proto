@@ -1,0 +1,67 @@
+syntax = "proto3";
+
+package federated;
+
+// ---------------------------------------------------------------------------
+// Federated Learning coordination service.
+//
+// Large model payloads (up to 300 M params ≈ 1.2 GB at fp32) are transmitted
+// via server-side streaming (FetchGlobalModel) and client-side streaming
+// (SendLocalUpdate).  Each stream is composed of fixed-size ModelChunk
+// messages; the gRPC channel size caps are overridden at server/channel
+// construction time.  The privacy middleware operates on the *reassembled*
+// byte buffer before chunking (outbound) and after reassembly (inbound) so
+// the gRPC layer treats the payload opaquely.
+// ---------------------------------------------------------------------------
+
+service FederatedLearning {
+    // Node self-registers at startup.
+    rpc Register (NodeInfo) returns (RegistrationResponse);
+
+    // Server streams the current global model to a node.
+    rpc FetchGlobalModel (EpochRequest) returns (stream ModelChunk);
+
+    // Node streams its local gradient update back to the coordinator.
+    rpc SendLocalUpdate (stream ModelChunk) returns (Ack);
+}
+
+// ---------------------------------------------------------------------------
+// Messages
+// ---------------------------------------------------------------------------
+
+message NodeInfo {
+    string node_id             = 1;
+    string address             = 2;
+    int32  local_dataset_size  = 3;
+    map<string, string> metadata = 4;
+}
+
+message RegistrationResponse {
+    bool   accepted           = 1;
+    string message            = 2;
+    int32  assigned_partition = 3;   // which data shard the node should load
+    int32  total_partitions   = 4;
+    string confirmed_node_id  = 5;
+}
+
+message EpochRequest {
+    string node_id = 1;
+    int32  epoch   = 2;
+}
+
+// A single binary chunk of a serialized model payload.
+message ModelChunk {
+    bytes  payload       = 1;   // raw bytes (opaque; already privacy-transformed)
+    int32  chunk_index   = 2;
+    int32  total_chunks  = 3;
+    string epoch_id      = 4;
+    int64  total_bytes   = 5;   // full payload size; sent in every chunk for validation
+    map<string, string> metadata = 6;
+}
+
+message Ack {
+    bool   success  = 1;
+    string message  = 2;
+    string node_id  = 3;
+    int32  epoch    = 4;
+}

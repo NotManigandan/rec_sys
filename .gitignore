@@ -7,3 +7,14 @@ data/*.zip
 data/*.tar
 data/*.tar.gz
 .pytest_cache/
+
+
+fedsys/fedsys/generated/federated_pb2.py
+fedsys/fedsys/generated/federated_pb2_grpc.py
+fedsys/data/
+fedsys/checkpoints/
+fedsys/logs/
+*.jsonl
+*.db
+*.sqlite
+*.sqlite3

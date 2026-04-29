@@ -1,0 +1,10 @@
+grpcio>=1.62.0
+grpcio-tools>=1.62.0
+protobuf>=4.25.0
+torch>=2.2.0
+numpy>=1.26.0
+requests>=2.31.0
+tqdm>=4.66.0
+pynvml>=11.5.0
+datasets>=2.18.0
+pandas>=2.2.0

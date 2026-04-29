@@ -116,7 +116,7 @@ sequenceDiagram
     participant AEVAL as adversarial/eval.py
 
     Note over N1: AttackConfig.enabled=True<br/>target_item_index=42, target_genre="Action"
-    Note over N0,N1: All nodes started with --attack-max-synth=200<br/>Clean nodes reserve rows only; malicious node uses them
+    Note over N0,N1: All nodes started with --attack-max-synth=200<br/>Clean nodes reserve rows only malicious node uses them
 
     par Node startup
         N0->>GRPC: Register(NodeInfo) RPC
@@ -136,7 +136,7 @@ sequenceDiagram
         and Node-1 (malicious)
             N1->>GRPC: FetchGlobalModel(epoch)
             GRPC-->>N1: stream ModelChunk
-            Note over N1: Before training:<br/>inject N_synth synthetic profiles<br/>(target item + filler + neutral items)<br/>via PoisonedBPRPairDataset
+            Note over N1: PoisonedBPRPairDataset is built at node startup<br/>and mixes in N_synth synthetic profiles<br/>(target item + filler + neutral items)
             N1->>N1: run_local_training()<br/>(BPR loss on real + synthetic users)<br/>target item embedding gets pushed
             N1-->>GRPC: SendLocalUpdate (poisoned delta)
         and Coordinator aggregation thread
@@ -146,8 +146,10 @@ sequenceDiagram
             AGG->>RAGG: aggregate(updates, sample_counts, epoch,<br/>global_state=current_state)
             Note over RAGG: 1. Compute Δ_i = local_i - global<br/>2. Compute L2 norms<br/>3. (focus) compute focus scores<br/>4. Clip norms to threshold θ<br/>5. (trimmed) trimmed mean per coord<br/>6. Reconstruct: new = global + Δ_agg
             RAGG-->>AGG: new_state_dict
-            AGG->>GRPC: update_global_model(new_state_dict, epoch+1)
+            Note over GRPC: coordinator loads new_state_dict into global model
             AGG->>AEVAL: evaluate_with_target_exposure(model, dataset,<br/>target_item=42, target_genre="Action")
+            Note over AGG: save_checkpoint(...), then publish updated model
+            AGG->>GRPC: update_global_model(new_state_dict, epoch+1)
             Note over AEVAL: Computes per round:<br/>hit@K, ndcg@K (all users)<br/>segment_hit@K (Action users)<br/>target_hit@K (item 42 in top-K?)
             AEVAL-->>AGG: {hit@10, target_hit@10, ...}
             AGG->>REG: advance_epoch()

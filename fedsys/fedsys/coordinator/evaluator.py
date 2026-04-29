@@ -162,6 +162,10 @@ def evaluate_ranking(
 
     hits:  Dict[int, int]   = {k: 0 for k in k_values}
     ndcg:  Dict[int, float] = {k: 0.0 for k in k_values}
+    top1_hits = 0
+    ndcg3 = 0.0
+    mrr = 0.0
+    pairwise_acc = 0.0
     n_users = 0
 
     # Pre-build item tensor once
@@ -194,6 +198,16 @@ def evaluate_ranking(
                     hits[k] += 1
                     ndcg[k] += 1.0 / math.log2(rank + 1)
 
+            if rank == 1:
+                top1_hits += 1
+            if rank <= 3:
+                ndcg3 += 1.0 / math.log2(rank + 1)
+            mrr += 1.0 / rank
+            if ml_dataset.num_items > 1:
+                # Pairwise accuracy with one relevant target item:
+                # fraction of negative items ranked below the target.
+                pairwise_acc += (ml_dataset.num_items - rank) / (ml_dataset.num_items - 1)
+
             n_users += 1
 
     elapsed_ms = (time.perf_counter() - t0) * 1_000
@@ -203,6 +217,10 @@ def evaluate_ranking(
     for k in k_values:
         metrics[f"hit@{k}"]  = round(hits[k]  / n, 6)
         metrics[f"ndcg@{k}"] = round(ndcg[k]  / n, 6)
+    metrics["top1_accuracy"] = round(top1_hits / n, 6)
+    metrics["ndcg@3"] = round(ndcg3 / n, 6)
+    metrics["mrr"] = round(mrr / n, 6)
+    metrics["pairwise_accuracy"] = round(pairwise_acc / n, 6) if ml_dataset.num_items > 1 else 0.0
 
     if logger is not None:
         logger.log({

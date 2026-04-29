@@ -106,16 +106,19 @@ python scripts/run_coordinator.py ^
   --port 50051 --total-nodes 2 --min-nodes 2 --num-rounds 10 ^
   --model-type bpr --ml-data-root data/ --ml-variant ml-1m ^
   --defense none ^
+  --attack-max-synth 200 ^
   --adv-target-item 42 --adv-target-genre Action
 
 # Clean node
 python scripts/run_node.py --coordinator 127.0.0.1:50051 ^
-  --movielens data/ --partition 0 --num-partitions 2
+  --movielens data/ --partition 0 --num-partitions 2 ^
+  --attack-max-synth 200
 
 # Malicious node (shard 1, poisoning enabled)
 python scripts/run_node.py --coordinator 127.0.0.1:50051 ^
   --movielens data/ --partition 1 --num-partitions 2 ^
-  --attack --attack-target-item 42 --attack-target-genre Action --attack-budget 0.3
+  --attack --attack-target-item 42 --attack-target-genre Action --attack-budget 0.3 ^
+  --attack-max-synth 200
 ```
 
 ### Defense only — harden an honest system
@@ -137,13 +140,14 @@ python scripts/run_coordinator.py ^
   --port 50051 --total-nodes 3 --min-nodes 3 --num-rounds 10 ^
   --model-type bpr --ml-data-root data/ --ml-variant ml-1m ^
   --defense focus_clip_trimmed_mean ^
+  --attack-max-synth 200 ^
   --adv-target-item 42 --adv-target-genre Action
 
 # 2 clean nodes + 1 malicious node
-python scripts/run_node.py --coordinator 127.0.0.1:50051 --movielens data/ --partition 0 --num-partitions 3
-python scripts/run_node.py --coordinator 127.0.0.1:50051 --movielens data/ --partition 1 --num-partitions 3
+python scripts/run_node.py --coordinator 127.0.0.1:50051 --movielens data/ --partition 0 --num-partitions 3 --attack-max-synth 200
+python scripts/run_node.py --coordinator 127.0.0.1:50051 --movielens data/ --partition 1 --num-partitions 3 --attack-max-synth 200
 python scripts/run_node.py --coordinator 127.0.0.1:50051 --movielens data/ --partition 2 --num-partitions 3 ^
-  --attack --attack-target-item 42 --attack-target-genre Action --attack-budget 0.3
+  --attack --attack-target-item 42 --attack-target-genre Action --attack-budget 0.3 --attack-max-synth 200
 ```
 
 ---
@@ -186,7 +190,7 @@ python scripts/run_node.py --coordinator 127.0.0.1:50051 --movielens data/ --par
 | `--attack-budget` | Fraction of shard users to replicate as synthetic profiles (default 0.30) |
 | `--attack-num-filler`, `--attack-num-neutral` | Profile shape (default 30, 20) |
 | `--attack-neutral-genre`, `--attack-target-weight` | Profile tuning |
-| `--attack-max-synth` | Max synthetic users; must match coordinator pre-allocation (default 200) |
+| `--attack-max-synth` | Synthetic-user row reservation. Use the same value on coordinator and every node for adversarial runs (node default 0) |
 
 ---
 

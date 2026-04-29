@@ -1,279 +1,206 @@
-﻿# BPR + MovieLens Integration and Fixes
+﻿# BPR + MovieLens in `fedsys`
 
-This document explains the BPR/MovieLens integration work in this codebase, the runtime failures we hit, exactly what was changed, and why the current implementation now runs end-to-end.
-
----
-
-## 1) What was the goal?
-
-The goal was to move the federated recommender path from the older/undesired implementations to:
-
-- `BPRModel` as the recommender model,
-- MovieLens as the dataset,
-- the existing gRPC FL system (`fedsys/coordinator`, `fedsys/node`, `proto/federated.proto`),
-- proper validation + test evaluation,
-- model checkpointing for **best** and **final** models,
-- and a reproducible test script that actually executes coordinator + nodes together.
-
-In short: keep the FL orchestration and networking layer from this repo, but make the training/evaluation stack BPR + MovieLens.
+This document describes the **current** BPR + MovieLens implementation in the gRPC federated learning framework, including architecture, data flow, configuration, training/evaluation behavior, and how to run it.
 
 ---
 
-## 2) Main failures that were fixed
+## 1) Scope
 
-### Failure A: state_dict size mismatch on node startup
+The BPR + MovieLens path uses:
 
-Symptom (earlier run): node failed to load global model due to tensor shape mismatch in `BPRModel`.
+- the existing FL runtime (`fedsys/coordinator`, `fedsys/node`, gRPC transport),
+- MovieLens data loading and user-sharded partitioning,
+- pairwise BPR local training,
+- ranking-based validation/test evaluation,
+- checkpointing for epoch, best, and final models.
 
-Root causes:
-
-1. Coordinator and node had different `num_users` / `num_items` (coordinator used CLI values; node derived dimensions from loaded MovieLens data).
-2. Coordinator and node used different `embedding_dim` defaults (16 vs 32 in different scripts).
-
-Fixes:
-
-- Coordinator now loads MovieLens early (when `--ml-data-root` is set) to derive the **actual** dimensions used in `ModelConfig`.
-- Defaults aligned so both launcher scripts use `--embedding-dim` default `32`.
-- Node path explicitly ensures `model_cfg.model_type = "bpr"` when MovieLens mode is selected.
-
-### Failure B: coordinator crash in `save_checkpoint`
-
-Symptom from your log:
-
-- `ValueError: Unknown format code 'f' for object of type 'str'` in `fedsys/coordinator/server.py`.
-- Then node RPCs fail with `StatusCode.UNAVAILABLE` / `Cancelling all calls` because the coordinator process/thread crashed.
-
-Root cause:
-
-- Best-checkpoint log line assumed pointwise metrics (`loss`, `accuracy`, `auc_roc`) and formatted fallback `'?'` with `:.4f`.
-- In BPR flow, validation metrics are ranking metrics (`hit@10`, `ndcg@10`, etc.), so `val_metrics.get('loss', '?')` returned string `'?'`, causing formatting failure.
-
-Fix:
-
-- Replaced hardcoded formatting with a generic formatter that prints all available float metrics from `val_metrics`.
-
-Result:
-
-- No formatting exception.
-- Coordinator remains alive.
-- Node `UNAVAILABLE` cascade disappears.
+The same core runtime also supports other models and synthetic data, but this document focuses on the BPR + MovieLens path.
 
 ---
 
-## 3) File-by-file code changes
+## 2) Core Components
 
-## `fedsys/models/bpr.py` (new)
+### Model: `fedsys/models/bpr.py`
 
-Purpose: Define `BPRModel` used by coordinator and nodes.
+`BPRModel` is a ranking model with:
 
-Key behavior:
+- user embeddings,
+- item embeddings,
+- optional bias terms,
+- scoring via user-item compatibility (embedding interactions).
 
-- User embedding table
-- Item embedding table
-- Optional user/item biases
-- Score function: dot(user_emb, item_emb) + biases
+Local training optimizes pairwise preferences (positive item > sampled negative item), which is appropriate for implicit-feedback recommendation.
 
-Why it matters:
+### Dataset: `fedsys/data/movielens_dataset.py`
 
-- BPR is a ranking model optimized with pairwise preference constraints instead of pointwise BCE labels.
+MovieLens support includes:
 
----
+- loading `ml-1m`, `ml-10m`, `ml-25m`, `ml-32m`,
+- ID remapping to contiguous user/item indices,
+- user-level train/val/test preparation,
+- `BPRPairDataset` for online negative sampling,
+- deterministic user partitioning across FL nodes.
 
-## `fedsys/data/movielens_dataset.py` (new)
+### Model Factory: `fedsys/models/recommendation.py`
 
-Purpose: End-to-end MovieLens support for federated BPR.
+The central `build_model()` factory builds the configured model type (`bpr`, `simple`, `neural_cf`, `two_tower`). This keeps coordinator and node model construction aligned.
 
-Key behavior:
+### Node Trainer: `fedsys/node/trainer.py`
 
-- Load dataset variants (`ml-1m`, `ml-10m`, `ml-25m`, `ml-32m`) from root path.
-- Parse ratings and map external IDs to compact contiguous IDs.
-- Build leave-one-out style splits for ranking evaluation.
-- Construct `BPRPairDataset` with online negative sampling.
-- Partition users into deterministic shards (`partition_users`) for federated clients.
-- Build shard-specific training dataloaders (`build_movielens_train_dataloader`).
+The node trainer supports both:
 
-Why it matters:
+- pairwise BPR batches (MovieLens path), and
+- pointwise batches (synthetic path).
 
-- FL requires per-node data partitioning and stable indexing.
-- BPR requires sampled (user, positive item, negative item) tuples.
+For MovieLens + BPR, it runs pairwise loss over `(user, pos_item, neg_item)` samples.
 
----
+### Coordinator Evaluation: `fedsys/coordinator/evaluator.py`
 
-## `fedsys/models/recommendation.py` (updated)
+MovieLens evaluation uses ranking metrics, primarily:
 
-Purpose: Model factory.
+- `hit@10`, `ndcg@10`,
+- `hit@20`, `ndcg@20`.
 
-Changes:
+At round end and final test, coordinator computes and prints ranking metrics.
 
-- Removed old large NCF path.
-- Added `"bpr"` branch in `build_model()`.
-- Kept `"simple"` branch for synthetic smoke testing.
+### Coordinator Runtime: `fedsys/coordinator/server.py`
 
-Why it matters:
+Coordinator responsibilities:
 
-- Coordinator and nodes construct model objects through the same factory path.
-- This prevents architecture drift when switching model type.
-
----
-
-## `fedsys/node/trainer.py` (updated)
-
-Purpose: Local training loop on each node.
-
-Changes:
-
-- Added dynamic batch-mode handling:
-  - If batch contains BPR fields (`pos_item_id`, etc.), run pairwise BPR objective.
-  - Otherwise run existing pointwise BCE path.
-
-Why it matters:
-
-- One trainer supports both synthetic simple model and BPR ranking without duplicated node runtime logic.
+- serve global model via chunked gRPC streaming,
+- receive and reconstruct node updates,
+- aggregate updates (FedAvg or robust aggregator when enabled),
+- evaluate on validation/test splits,
+- save checkpoints (`model_epoch_<n>.pt`, `model_best.pt`, `model_final.pt`).
 
 ---
 
-## `fedsys/coordinator/evaluator.py` (updated)
+## 3) End-to-End BPR MovieLens Flow
 
-Purpose: Validation/test metrics computed at coordinator.
-
-Changes:
-
-- Added ranking evaluator (`evaluate_ranking`) for BPR:
-  - Hit@K
-  - NDCG@K
-- Kept pointwise evaluator for synthetic/simple flow.
-
-Why it matters:
-
-- BPR quality is measured by ranking metrics, not BCE accuracy/AUC.
+1. Coordinator starts with MovieLens config and derives canonical dimensions.
+2. Nodes register and get shard assignments.
+3. Each node loads MovieLens shard and builds BPR dataloader.
+4. Each round:
+   - node fetches global model,
+   - node trains locally with pairwise BPR objective,
+   - node sends model update to coordinator,
+   - coordinator aggregates once K updates are collected.
+5. Coordinator evaluates and checkpoints.
+6. Final model is saved and tested.
 
 ---
 
-## `fedsys/coordinator/server.py` (updated)
+## 4) Dimension Consistency Rules
 
-Purpose: Coordinator service + aggregation loop + checkpointing.
+Correct BPR runs depend on consistent model dimensions across coordinator and all nodes:
 
-Important changes:
+- `model_type` must match (`bpr` for this doc’s path),
+- `num_users` and `num_items` come from loaded MovieLens dataset,
+- `embedding_dim` must match everywhere.
 
-1. Aggregation loop now supports both evaluation modes:
-   - BPR ranking mode when MovieLens dataset is configured.
-   - Pointwise mode when CSV val/test loaders are configured.
-
-2. Checkpoint policy:
-   - Save `model_epoch_<n>.pt` each round.
-   - Save/overwrite `model_best.pt` based on validation criterion.
-   - Save `model_final.pt` at final round.
-
-3. **Crash fix in `save_checkpoint`** (latest fix):
-   - Replaced hardcoded BCE metric print with generic float metric formatter:
-     - Works for both `loss/accuracy/auc_roc` and `hit@10/ndcg@10/...`.
-
-Why it matters:
-
-- This is the exact fix for your runtime exception.
-- It prevents coordinator shutdown and subsequent node gRPC failures.
+For adversarial runs with synthetic-user reservation, the same `--attack-max-synth` value must be passed to the coordinator and every node (clean + malicious) so model shapes remain consistent.
 
 ---
 
-## `scripts/run_coordinator.py` (updated)
+## 5) CLI Usage
 
-Purpose: Coordinator launcher.
+### Coordinator
 
-Changes:
+```bash
+python scripts/run_coordinator.py \
+  --host 127.0.0.1 --port 50051 \
+  --total-nodes 2 --min-nodes 2 \
+  --num-rounds 3 --round-timeout 120 \
+  --model-type bpr \
+  --ml-data-root data/ --ml-variant ml-1m \
+  --embedding-dim 32 \
+  --checkpoint-dir checkpoints/bpr_ml
+```
 
-- Added MovieLens flags (`--ml-data-root`, `--ml-variant`).
-- For BPR mode + MovieLens path, load dataset before creating `ModelConfig` so `num_users`/`num_items` are taken from actual data.
-- Default embedding dim aligned to `32`.
+### Node 0
 
-Why it matters:
+```bash
+python scripts/run_node.py \
+  --node-id node0 \
+  --coordinator 127.0.0.1:50051 \
+  --movielens data/ --ml-variant ml-1m \
+  --partition 0 --num-partitions 2 \
+  --model-type bpr \
+  --device cuda:0 \
+  --local-epochs 1 --batch-size 512 --lr 0.001 \
+  --num-rounds 3
+```
 
-- Removes manual, error-prone dimension syncing.
-- Prevents model parameter shape mismatch between coordinator and node.
+### Node 1
 
----
-
-## `scripts/run_node.py` (updated)
-
-Purpose: Node launcher.
-
-Changes:
-
-- Added MovieLens flags (`--movielens`, `--ml-variant`).
-- Load MovieLens shard and build BPR training dataloader.
-- Set `model_cfg.model_type = "bpr"` in MovieLens path.
-- Default embedding dim aligned to `32`.
-
-Why it matters:
-
-- Node model and coordinator model now agree on architecture and dimensions.
-
----
-
-## `scripts/_test_bpr_movielens.py` (new)
-
-Purpose: Reproducible integration test for this exact pipeline.
-
-What it does:
-
-1. Loads MovieLens once and derives canonical dimensions.
-2. Creates one shared `ModelConfig` used by coordinator and all nodes.
-3. Starts coordinator in a background thread.
-4. Starts N nodes, each with its own user shard.
-5. Runs configurable rounds/epochs.
-6. Fails fast if any node raises exception.
-7. Validates checkpoint artifacts (`model_best.pt`, `model_final.pt`).
-
-Why it matters:
-
-- Gives a one-command way to verify no regression in coordinator-node compatibility and checkpoint flow.
+```bash
+python scripts/run_node.py \
+  --node-id node1 \
+  --coordinator 127.0.0.1:50051 \
+  --movielens data/ --ml-variant ml-1m \
+  --partition 1 --num-partitions 2 \
+  --model-type bpr \
+  --device cuda:0 \
+  --local-epochs 1 --batch-size 512 --lr 0.001 \
+  --num-rounds 3
+```
 
 ---
 
-## 4) Why `UNAVAILABLE` happened after the ValueError
+## 6) Metrics and Checkpoints
 
-This is important operationally:
+### Validation/Test Metrics
 
-- The node stack trace (`grpc StatusCode.UNAVAILABLE`) was not the primary bug.
-- It was a downstream effect of coordinator failure in aggregation/checkpoint path.
-- Once the formatting crash was fixed, RPC streaming stayed healthy and the node completed rounds.
+MovieLens ranking mode reports:
 
----
+- `hit@10`, `ndcg@10`,
+- `hit@20`, `ndcg@20`.
 
-## 5) Validation of the fix (actual run)
+When adversarial tracking is enabled, additional target/segment metrics are printed (documented in `ADVERSARIAL.md`).
 
-We ran the test script directly:
+### Checkpoints
 
-`python scripts/_test_bpr_movielens.py --ml-data-root data/ --ml-variant ml-1m --num-rounds 3 --num-nodes 2 --local-epochs 1`
+Coordinator writes:
 
-Observed:
-
-- Coordinator started and stayed alive.
-- Two nodes trained and uploaded updates across 3 rounds.
-- Ranking metrics printed every round.
-- `model_best.pt` and `model_final.pt` were present.
-- Test-set ranking metrics printed at the end.
-- Process ended with `PASSED`.
-
-This verifies both the functional BPR integration and the specific checkpoint-formatting crash fix.
+- `model_epoch_<n>.pt` each round,
+- `model_best.pt` for best validation performance,
+- `model_final.pt` after final round.
 
 ---
 
-## 6) Current behavior summary
+## 7) Testing
 
-With the current code:
+Recommended coverage:
 
-- BPR + MovieLens is first-class in the existing gRPC FL system.
-- Coordinator and node model shapes are synchronized from dataset-derived dimensions.
-- Best and final model checkpointing works for ranking workflows.
-- Both ranking validation and ranking test evaluation are integrated.
-- There is a dedicated reproducible integration test script.
+- unit tests for model and dataset helpers,
+- integration tests with 1 coordinator + 2 nodes on MovieLens,
+- GPU matrix benchmark for normal and adversarial modes across available models.
+
+You can use:
+
+```bash
+python scripts/run_gpu_matrix_benchmark.py
+```
+
+This runs all configured models in normal and adversarial modes and writes logs + `logs/gpu_full/report.json`.
 
 ---
 
-## 7) Known next work (not yet implemented)
+## 8) Practical Notes
 
-Planned from your requirements:
+- Use the same `--model-type` on coordinator and nodes.
+- Keep `--embedding-dim` consistent across all participants.
+- For adversarial experiments, ensure `--attack-max-synth` is explicitly synchronized across coordinator and all nodes.
+- Start with `ml-1m` for fast iteration, then scale to larger variants.
 
-- Adversarial scenario integration (after stable BPR/MovieLens baseline).
+---
 
-That can now be layered on top of this baseline with fewer confounders, because model/dataset/eval/checkpoint plumbing is stable.
+## 9) Summary
+
+The BPR + MovieLens path is fully integrated into the gRPC FL runtime with:
+
+- consistent coordinator/node model construction,
+- MovieLens-native sharded BPR training,
+- ranking-focused evaluation,
+- robust checkpoint lifecycle,
+- reproducible benchmark/test workflows.

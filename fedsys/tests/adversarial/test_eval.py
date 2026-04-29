@@ -92,9 +92,17 @@ def test_evaluate_with_target_exposure_returns_expected_keys():
     )
     assert "hit@10"         in metrics
     assert "ndcg@10"        in metrics
+    assert "top1_accuracy"  in metrics
+    assert "ndcg@3"         in metrics
+    assert "mrr"            in metrics
+    assert "pairwise_accuracy" in metrics
     assert "target_hit@10"  in metrics
     assert "target_ndcg@10" in metrics
     assert "segment_hit@10" in metrics
+    assert "segment_top1_accuracy" in metrics
+    assert "segment_ndcg@3" in metrics
+    assert "segment_mrr" in metrics
+    assert "segment_pairwise_accuracy" in metrics
 
 
 def test_evaluate_target_exposure_values_in_range():

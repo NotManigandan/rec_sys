@@ -102,7 +102,7 @@ sequenceDiagram
 
 ## Adversarial FL Flow (Attack + Defense)
 
-This diagram shows the same pipeline when one malicious node (`N1`) is running the data-poisoning attack and the coordinator is using a robust aggregation defense.
+This diagram shows the same pipeline when one malicious node (`N1`) is running the data-poisoning attack and the coordinator is using a robust aggregation defense. In adversarial mode, pass the same `--attack-max-synth` value to the coordinator and all nodes so every participant instantiates the same user-embedding shape.
 
 ```mermaid
 sequenceDiagram
@@ -116,6 +116,7 @@ sequenceDiagram
     participant AEVAL as adversarial/eval.py
 
     Note over N1: AttackConfig.enabled=True<br/>target_item_index=42, target_genre="Action"
+    Note over N0,N1: All nodes started with --attack-max-synth=200<br/>Clean nodes reserve rows only; malicious node uses them
 
     par Node startup
         N0->>GRPC: Register(NodeInfo) RPC

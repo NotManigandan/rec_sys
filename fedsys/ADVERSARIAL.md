@@ -458,6 +458,7 @@ python scripts/run_coordinator.py \
     --model-type bpr \
     --ml-data-root data/ --ml-variant ml-1m \
     --defense none \
+    --attack-max-synth 200 \
     --adv-target-item 42 \
     --adv-target-genre Action
 
@@ -465,7 +466,8 @@ python scripts/run_coordinator.py \
 python scripts/run_node.py \
     --port 50051 \
     --movielens data/ --ml-variant ml-1m \
-    --partition 0 --num-partitions 2
+    --partition 0 --num-partitions 2 \
+    --attack-max-synth 200
 
 # Terminal 3 — Malicious node (shard 1, with attack)
 python scripts/run_node.py \
@@ -475,7 +477,8 @@ python scripts/run_node.py \
     --attack \
     --attack-target-item 42 \
     --attack-target-genre Action \
-    --attack-budget 0.3
+    --attack-budget 0.3 \
+    --attack-max-synth 200
 ```
 
 **Automatic target selection** (instead of hardcoding item 42):
@@ -527,12 +530,13 @@ python scripts/run_coordinator.py \
     --defense-clip-thresh 5.0 \
     --defense-trim-frac 0.1 \
     --defense-focus-k-frac 0.05 \
+    --attack-max-synth 200 \
     --adv-target-item 42 \
     --adv-target-genre Action
 
 # 2 clean nodes
-python scripts/run_node.py --port 50051 --movielens data/ --partition 0 --num-partitions 3
-python scripts/run_node.py --port 50051 --movielens data/ --partition 1 --num-partitions 3
+python scripts/run_node.py --port 50051 --movielens data/ --partition 0 --num-partitions 3 --attack-max-synth 200
+python scripts/run_node.py --port 50051 --movielens data/ --partition 1 --num-partitions 3 --attack-max-synth 200
 
 # 1 malicious node (shard 2)
 python scripts/run_node.py \
@@ -585,7 +589,7 @@ Low and stable `target_hit@K` indicates the defense is working.
 | `--attack-num-neutral` | `20` | Number of neutral items per synthetic profile |
 | `--attack-neutral-genre` | `Comedy` | Genre from which neutral items are drawn |
 | `--attack-target-weight` | `1.0` | Rating weight multiplier for target item |
-| `--attack-max-synth` | `200` | Max synthetic users; must match coordinator's pre-allocation |
+| `--attack-max-synth` | `0` | Synthetic-user row reservation on this node; use same value as coordinator in adversarial runs |
 | `--attack-seed` | `42` | RNG seed for reproducibility |
 
 ---

@@ -109,8 +109,12 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--attack-num-neutral",  type=int, default=20, dest="attack_num_neutral")
     p.add_argument("--attack-neutral-genre", default="Comedy",   dest="attack_neutral_genre")
     p.add_argument("--attack-target-weight", type=float, default=1.0, dest="attack_target_weight")
-    p.add_argument("--attack-max-synth",     type=int,   default=200, dest="attack_max_synth",
-                   help="Max synthetic users; must match --attack-max-synth on coordinator.")
+    p.add_argument("--attack-max-synth",     type=int,   default=0,  dest="attack_max_synth",
+                   help="Reserve this many extra user-embedding rows for synthetic profiles. "
+                        "MUST be passed on EVERY node (clean and malicious) and on the "
+                        "coordinator with the same value whenever any node uses --attack, "
+                        "to keep embedding-table shapes consistent. Clean nodes just reserve "
+                        "the rows without ever training on them.")
     p.add_argument("--attack-seed",          type=int,   default=42,  dest="attack_seed")
 
     return p.parse_args()
@@ -176,7 +180,7 @@ def main() -> None:
         )
 
     elif args.movielens_root:
-        # MovieLens BPR training
+        # MovieLens training
         from fedsys.data.movielens_dataset import (
             load_movielens_dataset, partition_users,
             build_movielens_train_dataloader,
@@ -187,10 +191,22 @@ def main() -> None:
             args.movielens_root, args.ml_variant, show_progress=True
         )
         # Override model dimensions from the actual dataset;
-        # embedding_dim stays as provided by --embedding-dim (default 32)
+        # embedding_dim stays as provided by --embedding-dim (default 32).
         model_cfg.num_users  = ml_ds.num_users
         model_cfg.num_items  = ml_ds.num_items
-        model_cfg.model_type = "bpr"
+        # Keep the caller-selected model type (bpr/neural_cf/two_tower/simple).
+        model_cfg.model_type = args.model_type
+
+        # ── Synthetic-user slot reservation ───────────────────────────────
+        # When any node in the experiment runs --attack, every node must carry
+        # the same extended embedding table so state-dict shapes stay consistent.
+        # Pass --attack-max-synth on all nodes (clean + malicious) with the same
+        # value used on the coordinator.  Clean nodes only reserve the rows;
+        # the malicious node's PoisonedBPRPairDataset actually fills them.
+        if args.attack_max_synth > 0 and not getattr(args, "attack", False):
+            model_cfg.num_users += args.attack_max_synth
+            print(f"[node:{node_id}] synthetic-user reserve: +{args.attack_max_synth} "
+                  f"(num_users={model_cfg.num_users})")
         print(f"[node:{node_id}] model_cfg: users={model_cfg.num_users}  "
               f"items={model_cfg.num_items}  emb={model_cfg.embedding_dim}")
 

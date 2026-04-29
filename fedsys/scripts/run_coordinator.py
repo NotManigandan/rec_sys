@@ -92,6 +92,10 @@ def parse_args() -> argparse.Namespace:
                         "-1 disables adversarial evaluation.")
     p.add_argument("--adv-target-genre", default="", dest="adv_target_genre",
                    help="Genre of the attack target item.")
+    p.add_argument("--attack-max-synth", type=int, default=0,
+                   dest="attack_max_synth",
+                   help="Reserve this many synthetic user rows in the global "
+                        "embedding table (needed when any node runs --attack).")
 
     # Model type
     p.add_argument("--model-type",     default="simple",
@@ -138,35 +142,33 @@ def main() -> None:
         log_file=os.path.join(args.log_dir, "telemetry.jsonl"),
     )
 
-    if args.model_type == "bpr":
-        # When --ml-data-root is given, load the dataset now to get the real
-        # num_users / num_items — do NOT trust the CLI defaults.
-        if args.ml_data_root:
-            from fedsys.data.movielens_dataset import load_movielens_dataset
-            print(f"[coordinator] Pre-loading {args.ml_variant} to determine model dimensions ...")
-            _ml_ds = load_movielens_dataset(
-                args.ml_data_root, args.ml_variant, show_progress=False
-            )
-            ml_num_users = _ml_ds.num_users
-            ml_num_items = _ml_ds.num_items
-            print(f"[coordinator] Dataset: {ml_num_users} users, {ml_num_items} items")
-        else:
-            ml_num_users = args.num_users
-            ml_num_items = args.num_items
-        model_cfg = ModelConfig(
-            model_type="bpr",
-            num_users=ml_num_users,
-            num_items=ml_num_items,
-            embedding_dim=args.embedding_dim,
+    # When --ml-data-root is given, always load dataset dimensions for all model types.
+    # This avoids coordinator/node shape mismatches on MovieLens for non-BPR models.
+    if args.ml_data_root:
+        from fedsys.data.movielens_dataset import load_movielens_dataset
+        print(f"[coordinator] Pre-loading {args.ml_variant} to determine model dimensions ...")
+        _ml_ds = load_movielens_dataset(
+            args.ml_data_root, args.ml_variant, show_progress=False
         )
+        cfg_num_users = _ml_ds.num_users
+        cfg_num_items = _ml_ds.num_items
+        print(f"[coordinator] Dataset: {cfg_num_users} users, {cfg_num_items} items")
     else:
-        model_cfg = ModelConfig(
-            model_type=args.model_type,
-            num_users=args.num_users,
-            num_items=args.num_items,
-            embedding_dim=args.embedding_dim,
-            mlp_hidden=[args.hidden_dim],
-        )
+        cfg_num_users = args.num_users
+        cfg_num_items = args.num_items
+
+    model_cfg = ModelConfig(
+        model_type=args.model_type,
+        num_users=cfg_num_users,
+        num_items=cfg_num_items,
+        embedding_dim=args.embedding_dim,
+        mlp_hidden=[args.hidden_dim],
+    )
+
+    if args.attack_max_synth > 0:
+        model_cfg.num_users += args.attack_max_synth
+        print(f"[coordinator] attack reserve: +{args.attack_max_synth} synthetic users "
+              f"(num_users={model_cfg.num_users})")
 
     print(f"[coordinator] model={model_cfg.model_type}  "
           f"users={model_cfg.num_users}  items={model_cfg.num_items}  "

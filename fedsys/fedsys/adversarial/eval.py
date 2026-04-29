@@ -173,6 +173,10 @@ def _ranking_metrics(
     """Standard Hit@K / NDCG@K for a list of users."""
     hits  = {k: 0 for k in cutoffs}
     ndcgs = {k: 0.0 for k in cutoffs}
+    top1_hits = 0
+    ndcg3 = 0.0
+    mrr = 0.0
+    pairwise_acc = 0.0
     n     = 0
 
     model.eval()
@@ -209,6 +213,13 @@ def _ranking_metrics(
                     if rank < k:
                         hits[k]  += 1
                         ndcgs[k] += 1.0 / math.log2(rank + 2)
+                if rank == 0:
+                    top1_hits += 1
+                if rank < 3:
+                    ndcg3 += 1.0 / math.log2(rank + 2)
+                mrr += 1.0 / (rank + 1)
+                if dataset.num_items > 1:
+                    pairwise_acc += (dataset.num_items - (rank + 1)) / (dataset.num_items - 1)
                 n += 1
 
     denom = max(n, 1)
@@ -216,6 +227,10 @@ def _ranking_metrics(
     for k in cutoffs:
         result[f"hit@{k}"]  = hits[k]  / denom
         result[f"ndcg@{k}"] = ndcgs[k] / denom
+    result["top1_accuracy"] = top1_hits / denom
+    result["ndcg@3"] = ndcg3 / denom
+    result["mrr"] = mrr / denom
+    result["pairwise_accuracy"] = (pairwise_acc / denom) if dataset.num_items > 1 else 0.0
     return result
 
 

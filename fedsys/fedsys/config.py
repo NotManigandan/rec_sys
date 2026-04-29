@@ -77,9 +77,11 @@ class CoordinatorConfig:
     grpc_options: List = field(default_factory=lambda: [
         ("grpc.max_send_message_length", -1),
         ("grpc.max_receive_message_length", -1),
-        ("grpc.keepalive_time_ms", 10_000),
-        ("grpc.keepalive_timeout_ms", 5_000),
-        ("grpc.keepalive_permit_without_calls", True),
+        # Keepalive: use values aligned with tests to avoid ENHANCE_YOUR_CALM
+        # "too_many_pings" during long-idle gaps (e.g., MovieLens loading).
+        ("grpc.keepalive_time_ms", 120_000),
+        ("grpc.keepalive_timeout_ms", 20_000),
+        ("grpc.keepalive_permit_without_calls", False),
     ])
 
 
@@ -132,9 +134,11 @@ class NodeConfig:
     grpc_options: List = field(default_factory=lambda: [
         ("grpc.max_send_message_length", -1),
         ("grpc.max_receive_message_length", -1),
-        ("grpc.keepalive_time_ms", 10_000),
-        ("grpc.keepalive_timeout_ms", 5_000),
-        ("grpc.keepalive_permit_without_calls", True),
+        # Keepalive: use values aligned with tests to avoid ENHANCE_YOUR_CALM
+        # "too_many_pings" during long-idle gaps.
+        ("grpc.keepalive_time_ms", 120_000),
+        ("grpc.keepalive_timeout_ms", 20_000),
+        ("grpc.keepalive_permit_without_calls", False),
     ])
 
     @property

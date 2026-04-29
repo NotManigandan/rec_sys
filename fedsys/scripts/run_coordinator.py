@@ -52,19 +52,33 @@ def parse_args() -> argparse.Namespace:
                    help="Directory to save model checkpoints (set to '' to disable)")
     p.add_argument("--val-data",  default="", dest="val_data_path",
                    metavar="VAL_CSV",
-                   help="Path to val.csv (from generate_synthetic_data.py). "
+                   help="Path to val.csv (synthetic data). "
                         "Used to track best model per round.")
     p.add_argument("--test-data", default="", dest="test_data_path",
                    metavar="TEST_CSV",
-                   help="Path to test.csv. Evaluated once after all rounds complete.")
+                   help="Path to test.csv (synthetic data). Evaluated once after all rounds.")
+    # MovieLens ranking evaluation
+    p.add_argument("--ml-data-root", default="", dest="ml_data_root",
+                   metavar="DIR",
+                   help="Root directory containing the MovieLens variant folder "
+                        "(e.g. data/ containing data/ml-1m/). "
+                        "When set, enables BPR ranking evaluation (Hit@K, NDCG@K) "
+                        "and overrides --val-data / --test-data.")
+    p.add_argument("--ml-variant",   default="ml-1m", dest="ml_variant",
+                   choices=["ml-1m", "ml-10m", "ml-25m", "ml-32m"],
+                   help="MovieLens dataset variant.")
     # Model type
-    p.add_argument("--model-type",     default="simple", choices=["simple", "ncf"],
+    p.add_argument("--model-type",     default="simple",
+                   choices=["simple", "bpr", "neural_cf", "two_tower"],
                    dest="model_type",
-                   help="'simple'=two-layer test model, 'ncf'=full ~300M param model")
+                   help="'simple'=two-layer baseline, 'bpr'=BPR-MF, "
+                        "'neural_cf'=MLP recommender, 'two_tower'=dual-tower scorer")
     # Model size knobs (only relevant for --model-type ncf)
     p.add_argument("--num-users",      type=int, default=1_000,   dest="num_users")
     p.add_argument("--num-items",      type=int, default=500,     dest="num_items")
-    p.add_argument("--embedding-dim",  type=int, default=16,      dest="embedding_dim")
+    p.add_argument("--embedding-dim",  type=int, default=32,      dest="embedding_dim",
+                   help="Embedding dimension. Default 32 works well for BPR; "
+                        "use 16 for the simple model.")
     p.add_argument("--hidden-dim",     type=int, default=64,      dest="hidden_dim")
     return p.parse_args()
 
@@ -83,17 +97,37 @@ def main() -> None:
         checkpoint_dir=args.checkpoint_dir,
         val_data_path=args.val_data_path,
         test_data_path=args.test_data_path,
+        ml_data_root=args.ml_data_root,
+        ml_variant=args.ml_variant,
         log_dir=args.log_dir,
         db_path=os.path.join(args.log_dir, "telemetry.db"),
         log_file=os.path.join(args.log_dir, "telemetry.jsonl"),
     )
 
-    if args.model_type == "ncf":
-        from fedsys.config import large_model_config
-        model_cfg = large_model_config()
+    if args.model_type == "bpr":
+        # When --ml-data-root is given, load the dataset now to get the real
+        # num_users / num_items — do NOT trust the CLI defaults.
+        if args.ml_data_root:
+            from fedsys.data.movielens_dataset import load_movielens_dataset
+            print(f"[coordinator] Pre-loading {args.ml_variant} to determine model dimensions ...")
+            _ml_ds = load_movielens_dataset(
+                args.ml_data_root, args.ml_variant, show_progress=False
+            )
+            ml_num_users = _ml_ds.num_users
+            ml_num_items = _ml_ds.num_items
+            print(f"[coordinator] Dataset: {ml_num_users} users, {ml_num_items} items")
+        else:
+            ml_num_users = args.num_users
+            ml_num_items = args.num_items
+        model_cfg = ModelConfig(
+            model_type="bpr",
+            num_users=ml_num_users,
+            num_items=ml_num_items,
+            embedding_dim=args.embedding_dim,
+        )
     else:
         model_cfg = ModelConfig(
-            model_type="simple",
+            model_type=args.model_type,
             num_users=args.num_users,
             num_items=args.num_items,
             embedding_dim=args.embedding_dim,

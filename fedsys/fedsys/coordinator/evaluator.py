@@ -1,24 +1,24 @@
 """
 Model evaluation — held by the coordinator, called after every FedAvg round.
 
-Metrics computed
-----------------
-    loss     : mean binary cross-entropy over the full eval set
-    accuracy : fraction of samples where sigmoid(logit) >= 0.5 matches label
-    auc_roc  : Area Under the ROC Curve, computed via the Mann-Whitney U
-               statistic (exact, O(n_pos * n_neg), no extra dependencies)
+Two evaluation modes are supported:
 
-The evaluator operates in torch.no_grad() mode and does NOT call
-model.train() — the caller is responsible for restoring training mode
-afterwards if needed.
+Pointwise (synthetic / BCE models)
+    ``evaluate()``  — DataLoader-based; computes BCE loss, accuracy, AUC-ROC.
+
+Ranking (BPR / MovieLens)
+    ``evaluate_ranking()``  — scores all items per user, computes Hit@K and
+    NDCG@K.  Uses the leave-one-out val/test items stored in
+    ``MovieLensFederatedDataset.splits_by_user``.
 
 No gRPC, no privacy, no data-generation logic lives here.
 """
 
 from __future__ import annotations
 
+import math
 import time
-from typing import Dict
+from typing import Dict, List, Optional, Sequence
 
 import torch
 import torch.nn as nn
@@ -108,6 +108,108 @@ def evaluate(
             "epoch":      epoch,
             "split":      split,
             "n_samples":  n_total,
+            "elapsed_ms": round(elapsed_ms, 4),
+            **metrics,
+        })
+
+    return metrics
+
+
+# ---------------------------------------------------------------------------
+# Ranking evaluation (BPR / MovieLens)
+# ---------------------------------------------------------------------------
+
+def evaluate_ranking(
+    model: nn.Module,
+    ml_dataset,                            # MovieLensFederatedDataset
+    split: str = "val",
+    k_values: Sequence[int] = (10, 20),
+    device: str = "cpu",
+    logger: Optional[AsyncTelemetryLogger] = None,
+    epoch: int = -1,
+) -> Dict[str, float]:
+    """
+    Leave-one-out ranking evaluation for BPR models.
+
+    For every user the held-out ``val_item`` (or ``test_item``) is scored
+    against ALL items, with all other known positives masked to -inf so they
+    cannot appear in the ranked list.  Hit@K and NDCG@K are averaged over
+    users.
+
+    Parameters
+    ----------
+    model       : BPRModel (or any model with forward(user_ids, item_ids)).
+    ml_dataset  : Fully loaded MovieLensFederatedDataset.
+    split       : "val" or "test".
+    k_values    : List of cut-off positions to evaluate.
+    device      : Compute device.
+    logger      : Optional telemetry sink.
+    epoch       : FL round index for log records.
+
+    Returns
+    -------
+    {
+        "hit@10":  float,
+        "ndcg@10": float,
+        "hit@20":  float,
+        "ndcg@20": float,
+        ...
+    }
+    """
+    dev = torch.device(device)
+    model.to(dev)
+    model.eval()
+
+    hits:  Dict[int, int]   = {k: 0 for k in k_values}
+    ndcg:  Dict[int, float] = {k: 0.0 for k in k_values}
+    n_users = 0
+
+    # Pre-build item tensor once
+    all_items = torch.arange(ml_dataset.num_items, dtype=torch.long, device=dev)
+
+    t0 = time.perf_counter()
+
+    with torch.no_grad():
+        for uidx, user_split in ml_dataset.splits_by_user.items():
+            target = user_split.val_item if split == "val" else user_split.test_item
+            # Known items to mask EXCEPT the target itself
+            mask_items = user_split.known_items - {target}
+
+            # Score all items for this user
+            user_tensor = torch.full(
+                (ml_dataset.num_items,), uidx, dtype=torch.long, device=dev
+            )
+            scores = model(user_tensor, all_items)  # (num_items,)
+
+            # Mask out known positive items (except the target)
+            for ki in mask_items:
+                scores[ki] = -float("inf")
+
+            # Rank of target item (1-based): number of items with higher score + 1
+            target_score = scores[target]
+            rank = int((scores > target_score).sum().item()) + 1
+
+            for k in k_values:
+                if rank <= k:
+                    hits[k] += 1
+                    ndcg[k] += 1.0 / math.log2(rank + 1)
+
+            n_users += 1
+
+    elapsed_ms = (time.perf_counter() - t0) * 1_000
+    n = max(n_users, 1)
+
+    metrics: Dict[str, float] = {}
+    for k in k_values:
+        metrics[f"hit@{k}"]  = round(hits[k]  / n, 6)
+        metrics[f"ndcg@{k}"] = round(ndcg[k]  / n, 6)
+
+    if logger is not None:
+        logger.log({
+            "event":      f"{split.upper()}_RANKING_EVAL",
+            "epoch":      epoch,
+            "split":      split,
+            "n_users":    n_users,
             "elapsed_ms": round(elapsed_ms, 4),
             **metrics,
         })

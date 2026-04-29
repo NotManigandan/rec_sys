@@ -44,6 +44,12 @@ class CoordinatorConfig:
     val_data_path:  str = ""
     test_data_path: str = ""
 
+    # MovieLens ranking evaluation (used when model_type="bpr").
+    # Set ml_data_root to the directory containing the variant folder.
+    # When set, overrides val_data_path / test_data_path for evaluation.
+    ml_data_root: str = ""
+    ml_variant:   str = "ml-1m"
+
     # Telemetry
     log_dir: str = "logs"
     db_path: str = "logs/telemetry.db"
@@ -82,6 +88,10 @@ class NodeConfig:
 
     chunk_size_bytes: int = 4 * 1024 * 1024
 
+    # MovieLens data source (used when model_type="bpr")
+    ml_data_root: str = ""
+    ml_variant:   str = "ml-1m"
+
     # Telemetry
     log_dir: str = "logs"
     db_path: str = "logs/telemetry.db"
@@ -109,20 +119,21 @@ class ModelConfig:
     """
     Shared model shape used by both coordinator and training nodes.
 
-    model_type : "simple"  -> TwoLayerModel  (fast, for testing)
-                 "ncf"     -> NCFRecommender (~300 M params, production)
+    model_type : "simple"  -> TwoLayerModel  (fast synthetic-data testing)
+                 "bpr"     -> BPRModel        (BPR-MF for MovieLens)
 
-    Simple defaults (model_type="simple"):
+    Simple defaults (model_type="simple", synthetic data):
         user_embedding : 1 000 × 16  =  16 K
         item_embedding :   500 × 16  =   8 K
         FC layers      : 32→64→1     =  ~2 K
         Total                        ~  26 K params
 
-    NCF defaults (model_type="ncf"):
-        user_embedding : 1 000 000 × 128  = 128 M
-        item_embedding :   500 000 × 128  =  64 M
-        MLP backbone                      ~ 108 M
-        Total                             ~ 300 M
+    BPR defaults (model_type="bpr", ml-1m):
+        user_embedding : 6 040 × 32  = 193 K
+        item_embedding : 3 706 × 32  = 119 K
+        user_bias      : 6 040 × 1   =   6 K
+        item_bias      : 3 706 × 1   =   4 K
+        Total                        ~ 321 K params
     """
     # "simple" is the default so tests run instantly on CPU
     model_type: str = "simple"
@@ -130,19 +141,8 @@ class ModelConfig:
     num_users: int = 1_000
     num_items: int = 500
     embedding_dim: int = 16
-    # Hidden layer widths; for TwoLayerModel only the first value is used
+    # Hidden layer widths; used by TwoLayerModel (only first value) — ignored by BPR
     mlp_hidden: List[int] = field(default_factory=lambda: [64])
-
-
-def large_model_config() -> "ModelConfig":
-    """Return a ModelConfig pre-set for the full ~300 M parameter NCF."""
-    return ModelConfig(
-        model_type="ncf",
-        num_users=1_000_000,
-        num_items=500_000,
-        embedding_dim=128,
-        mlp_hidden=[256, 4096, 8192, 8192, 4096, 2048, 1024],
-    )
 
 
 def ensure_log_dir(cfg: CoordinatorConfig | NodeConfig) -> None:

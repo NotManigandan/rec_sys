@@ -32,7 +32,7 @@ import grpc
 
 from fedsys.config import CoordinatorConfig, ModelConfig
 from fedsys.coordinator.aggregator import FedAvgAggregator, serialize_state_dict
-from fedsys.coordinator.evaluator import evaluate
+from fedsys.coordinator.evaluator import evaluate, evaluate_ranking
 from fedsys.coordinator.registry import NodeRegistry
 from fedsys.interceptors import TelemetryServerInterceptor
 from fedsys.logging_async import AsyncTelemetryLogger, TimedBlock
@@ -335,10 +335,12 @@ def save_checkpoint(
         torch.save(payload, best_path)
         logger.log({"event": "CHECKPOINT_BEST_SAVED", "epoch": epoch, "path": best_path,
                     **(val_metrics or {})})
-        print(f"[coordinator] Best model  -> {best_path}  "
-              f"(val_loss={val_metrics.get('loss', '?'):.4f}  "
-              f"acc={val_metrics.get('accuracy', '?'):.4f}  "
-              f"auc={val_metrics.get('auc_roc', '?'):.4f})")
+        # Print whichever metrics are available (BPR ranking or BCE pointwise)
+        metrics_str = "  ".join(
+            f"{k}={v:.4f}" for k, v in sorted((val_metrics or {}).items())
+            if isinstance(v, float)
+        )
+        print(f"[coordinator] Best model  -> {best_path}  ({metrics_str})")
 
     if is_final:
         final_path = os.path.join(checkpoint_dir, "model_final.pt")
@@ -363,19 +365,24 @@ def run_aggregation_loop(
     checkpoint_dir: str = "checkpoints",
     val_loader=None,
     test_loader=None,
+    ml_dataset=None,
 ) -> None:
     """
-    Background thread: waits for K updates, aggregates, evaluates on the
-    validation set, checkpoints (tracking the best val loss), then broadcasts.
-    Runs for ``num_rounds`` epochs.  After all rounds, evaluates on the test set.
+    Background thread: waits for K updates, aggregates, evaluates, checkpoints.
 
-    Checkpoint files produced
-    -------------------------
-    model_epoch_{N}.pt — global model after every completed round
-    model_best.pt      — round with the lowest validation loss (requires val_loader)
-    model_final.pt     — always the last completed round
+    Evaluation modes
+    ----------------
+    ml_dataset is not None  ->  ranking eval (Hit@K, NDCG@K); best = highest Hit@10
+    val_loader is not None  ->  pointwise eval (BCE, acc, AUC); best = lowest val_loss
     """
-    best_val_loss = float("inf")
+    best_is_higher = ml_dataset is not None
+    best_val_metric = -float("inf") if best_is_higher else float("inf")
+
+    def _is_better(v: float) -> bool:
+        return v > best_val_metric if best_is_higher else v < best_val_metric
+
+    def _primary(m: dict) -> float:
+        return m.get("hit@10", 0.0) if best_is_higher else m.get("loss", float("inf"))
 
     for epoch in range(num_rounds):
         logger.log({"event": "ROUND_START", "epoch": epoch, "waiting_for": min_nodes})
@@ -387,22 +394,31 @@ def run_aggregation_loop(
             registry.advance_epoch()
             continue
 
-        logger.log({
-            "event": "ROUND_UPDATES_READY",
-            "epoch": epoch,
-            "num_updates": len(updates),
-        })
+        logger.log({"event": "ROUND_UPDATES_READY", "epoch": epoch,
+                    "num_updates": len(updates)})
 
-        # ── FedAvg ───────────────────────────────────────────────────────
+        # FedAvg
         with TimedBlock(logger, "FEDAVG", epoch=epoch):
             new_state, _ = aggregator.aggregate(updates, sample_counts, epoch)
 
-        # ── Validation evaluation ─────────────────────────────────────────
+        servicer._global_model.load_state_dict(new_state)
+
+        # Validation
         val_metrics: Optional[dict] = None
         is_best = False
 
-        if val_loader is not None:
-            servicer._global_model.load_state_dict(new_state)
+        if ml_dataset is not None:
+            val_metrics = evaluate_ranking(
+                servicer._global_model, ml_dataset,
+                split="val", logger=logger, epoch=epoch,
+            )
+            parts = "  ".join(
+                f"hit@{k}={val_metrics.get(f'hit@{k}', 0):.4f}  "
+                f"ndcg@{k}={val_metrics.get(f'ndcg@{k}', 0):.4f}"
+                for k in (10, 20) if f"hit@{k}" in val_metrics
+            )
+            print(f"[coordinator] Epoch {epoch:>3}  {parts}")
+        elif val_loader is not None:
             val_metrics = evaluate(
                 servicer._global_model, val_loader,
                 logger=logger, split="val", epoch=epoch,
@@ -413,28 +429,33 @@ def run_aggregation_loop(
                 f"val_acc={val_metrics['accuracy']:.4f}  "
                 f"val_auc={val_metrics['auc_roc']:.4f}"
             )
-            if val_metrics["loss"] < best_val_loss:
-                best_val_loss = val_metrics["loss"]
-                is_best = True
 
-        # ── Checkpoint ───────────────────────────────────────────────────
+        if val_metrics is not None and _is_better(_primary(val_metrics)):
+            best_val_metric = _primary(val_metrics)
+            is_best = True
+
         is_final = (epoch == num_rounds - 1)
         save_checkpoint(
             new_state, checkpoint_dir, epoch, logger,
-            val_metrics=val_metrics,
-            is_best=is_best,
-            is_final=is_final,
+            val_metrics=val_metrics, is_best=is_best, is_final=is_final,
         )
 
-        # ── Broadcast updated model to waiting nodes ──────────────────────
         servicer.update_global_model(new_state, epoch + 1)
         registry.advance_epoch()
         logger.log({"event": "ROUND_END", "epoch": epoch})
 
     logger.log({"event": "ALL_ROUNDS_COMPLETE", "total_rounds": num_rounds})
 
-    # ── Final test-set evaluation ─────────────────────────────────────────
-    if test_loader is not None:
+    # Final test evaluation
+    if ml_dataset is not None:
+        test_metrics = evaluate_ranking(
+            servicer._global_model, ml_dataset,
+            split="test", logger=logger, epoch=num_rounds - 1,
+        )
+        lines = "\n".join(f"  {k}: {v}" for k, v in sorted(test_metrics.items()))
+        print(f"\n[coordinator] ===== TEST SET (BPR RANKING) =====\n{lines}"
+              f"\n[coordinator] ==================================")
+    elif test_loader is not None:
         test_metrics = evaluate(
             servicer._global_model, test_loader,
             logger=logger, split="test", epoch=num_rounds - 1,
@@ -496,25 +517,34 @@ def serve(cfg: CoordinatorConfig, model_cfg: ModelConfig) -> None:
     print(f"[coordinator] Listening on {cfg.host}:{cfg.port}  "
           f"(K={cfg.min_nodes} / N={cfg.total_nodes})")
 
-    # Load optional val / test dataloaders (coordinator holds these centrally)
+    # ── Load evaluation data ──────────────────────────────────────────────
     val_loader  = None
     test_loader = None
-    eval_batch  = 256   # larger batch is fine; no gradients
+    ml_dataset  = None
 
-    if cfg.val_data_path:
-        print(f"[coordinator] Loading validation set from {cfg.val_data_path}")
-        val_loader = load_csv_dataloader(cfg.val_data_path, batch_size=eval_batch)
+    if cfg.ml_data_root:
+        # MovieLens ranking evaluation
+        from fedsys.data.movielens_dataset import load_movielens_dataset
+        print(f"[coordinator] Loading MovieLens ({cfg.ml_variant}) from {cfg.ml_data_root} ...")
+        ml_dataset = load_movielens_dataset(
+            cfg.ml_data_root, cfg.ml_variant, show_progress=True
+        )
+    else:
+        # CSV-based pointwise evaluation (synthetic data)
+        eval_batch = 256
+        if cfg.val_data_path:
+            print(f"[coordinator] Loading validation set from {cfg.val_data_path}")
+            val_loader = load_csv_dataloader(cfg.val_data_path, batch_size=eval_batch)
+        if cfg.test_data_path:
+            print(f"[coordinator] Loading test set       from {cfg.test_data_path}")
+            test_loader = load_csv_dataloader(cfg.test_data_path, batch_size=eval_batch)
 
-    if cfg.test_data_path:
-        print(f"[coordinator] Loading test set       from {cfg.test_data_path}")
-        test_loader = load_csv_dataloader(cfg.test_data_path, batch_size=eval_batch)
-
-    # Start aggregation loop in background
+    # ── Start aggregation loop ────────────────────────────────────────────
     agg_thread = threading.Thread(
         target=run_aggregation_loop,
         args=(servicer, registry, aggregator, logger,
               cfg.num_rounds, cfg.min_nodes, cfg.checkpoint_dir,
-              val_loader, test_loader),
+              val_loader, test_loader, ml_dataset),
         name="aggregation-loop",
         daemon=False,
     )

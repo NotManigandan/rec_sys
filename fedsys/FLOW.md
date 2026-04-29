@@ -8,6 +8,27 @@ This document explains the runtime flow of your synchronous FL system with:
 
 ---
 
+## Model and Dataset Modes
+
+The control-flow is the same for all current model types:
+
+- `simple`
+- `bpr`
+- `neural_cf`
+- `two_tower`
+
+and both dataset modes:
+
+- synthetic (`--data-dir`, optional `--val-data` / `--test-data`)
+- MovieLens (`--movielens`, coordinator `--ml-data-root`)
+
+Only two parts differ by mode:
+
+- local loss in `trainer.py` (pairwise BPR vs pointwise BCE)
+- coordinator evaluation in `server.py` (`evaluate_ranking` for MovieLens, `evaluate` for synthetic)
+
+---
+
 ## Sequence Diagram
 
 ```mermaid
@@ -69,7 +90,7 @@ sequenceDiagram
         end
     end
 
-    Note over AGG: After final round:<br/>save_checkpoint(... is_final=True)<br/>optional test evaluate()
+    Note over AGG: After final round:<br/>save_checkpoint(... is_final=True)<br/>optional test evaluation
 ```
 
 ---
@@ -112,11 +133,13 @@ sequenceDiagram
 
 - `registry.wait_for_updates()` (blocks until K updates or timeout)
 - `aggregator.aggregate(updates, sample_counts, epoch)` (FedAvg)
-- optional validation evaluation (`evaluate(...)`)
+- optional validation evaluation:
+  - synthetic: `evaluate(...)` -> loss/accuracy/auc_roc
+  - MovieLens: `evaluate_ranking(...)` -> hit@k/ndcg@k
 - `save_checkpoint(...)` (`model_epoch_N`, `model_best`, `model_final`)
 - `servicer.update_global_model(new_state, epoch+1)`
 - `registry.advance_epoch()`
-- after all rounds: optional test evaluation (`evaluate(..., split="test")`)
+- after all rounds: optional test evaluation (same mode-specific evaluator)
 
 ---
 
@@ -147,4 +170,19 @@ Your coordinator process runs multiple threads with different responsibilities:
 `total_local_epochs_per_node = num_rounds * local_epochs`
 
 This is not identical to centralized "global epochs" because each node trains on only its partition.
+
+---
+
+## Integration Tests
+
+The same flow above is exercised via:
+
+- `tests/synthetic/test_simple.py`
+- `tests/synthetic/test_bpr.py`
+- `tests/synthetic/test_neural_cf.py`
+- `tests/synthetic/test_two_tower.py`
+- `tests/movielens/test_simple.py`
+- `tests/movielens/test_bpr.py`
+- `tests/movielens/test_neural_cf.py`
+- `tests/movielens/test_two_tower.py`
 

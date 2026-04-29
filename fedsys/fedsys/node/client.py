@@ -67,7 +67,7 @@ class FederatedNode:
         ensure_log_dir(cfg)
         self._logger = AsyncTelemetryLogger(cfg.log_file, cfg.db_path).start()
         self._sm = StateMachine(cfg.node_id, self._logger)
-        self._model: Optional[NCFRecommender] = None
+        self._model = None   # nn.Module, set by _init_model after registration
 
     # ------------------------------------------------------------------
     # Entry point

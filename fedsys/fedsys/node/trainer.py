@@ -87,7 +87,6 @@ def run_local_training(
 
     # ── Local training loop ───────────────────────────────────────────────
     optimizer = torch.optim.Adam(model.parameters(), lr=cfg.learning_rate)
-    criterion = nn.BCEWithLogitsLoss()
 
     logger.log({
         "event": "LOCAL_TRAINING_START",
@@ -101,9 +100,7 @@ def run_local_training(
     t_train_start = time.perf_counter()
 
     for local_epoch in range(cfg.local_epochs):
-        epoch_loss = _train_one_epoch(
-            model, dataloader, optimizer, criterion, device
-        )
+        epoch_loss = _train_one_epoch(model, dataloader, optimizer, device)
         logger.log({
             "event": "LOCAL_EPOCH_END",
             "node_id": cfg.node_id,
@@ -148,26 +145,49 @@ def _train_one_epoch(
     model: nn.Module,
     loader: DataLoader,
     optimizer: torch.optim.Optimizer,
-    criterion: nn.Module,
     device: torch.device,
 ) -> float:
-    """Run one local epoch and return the mean batch loss."""
+    """
+    Run one local epoch and return the mean batch loss.
+
+    Batch format detection
+    ----------------------
+    BPR (pairwise):  batch contains "pos_item_id" and "neg_item_id"
+        loss = -mean( log σ( score(u, i+) - score(u, i-) ) )
+
+    Pointwise (default): batch contains "item_id" and "label"
+        loss = BCEWithLogitsLoss(logit, label)
+    """
     total_loss = 0.0
-    n_batches = 0
+    n_batches  = 0
 
     for batch in loader:
         user_ids = batch["user_id"].to(device)
-        item_ids = batch["item_id"].to(device)
-        labels = batch["label"].float().to(device)
-
         optimizer.zero_grad(set_to_none=True)
-        logits = model(user_ids, item_ids)
-        loss = criterion(logits.squeeze(-1), labels)
+
+        histories = batch.get("history")
+        if histories is not None:
+            histories = histories.to(device)
+
+        if "pos_item_id" in batch:
+            # ── BPR pairwise loss ────────────────────────────────────────
+            pos_ids    = batch["pos_item_id"].to(device)
+            neg_ids    = batch["neg_item_id"].to(device)
+            pos_scores = model(user_ids, pos_ids, histories)
+            neg_scores = model(user_ids, neg_ids, histories)
+            loss = -torch.nn.functional.logsigmoid(pos_scores - neg_scores).mean()
+        else:
+            # ── Pointwise BCE loss ───────────────────────────────────────
+            item_ids = batch["item_id"].to(device)
+            labels   = batch["label"].float().to(device)
+            logits   = model(user_ids, item_ids, histories)
+            loss     = nn.BCEWithLogitsLoss()(logits.squeeze(-1), labels)
+
         loss.backward()
         optimizer.step()
 
         total_loss += loss.item()
-        n_batches += 1
+        n_batches  += 1
 
     return total_loss / max(n_batches, 1)
 

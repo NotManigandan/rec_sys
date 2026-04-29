@@ -16,7 +16,9 @@ Examples
 
 import argparse
 import os
+import subprocess
 import sys
+from datetime import datetime
 
 # Ensure the repo root is on sys.path regardless of where the script is invoked
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
@@ -33,6 +35,8 @@ except ModuleNotFoundError:
 from fedsys.config import CoordinatorConfig, ModelConfig
 from fedsys.coordinator.server import serve
 
+ACTIVE_RUN_FILE = os.path.join("logs", ".active_run_dir")
+
 
 def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(
@@ -46,10 +50,16 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--num-rounds",     type=int,   default=3,   dest="num_rounds")
     p.add_argument("--round-timeout",  type=float, default=60,  dest="round_timeout")
     p.add_argument("--chunk-size-mb",  type=float, default=4.0, dest="chunk_size_mb")
-    p.add_argument("--log-dir",        default="logs",          dest="log_dir")
+    p.add_argument("--log-dir",        default="",              dest="log_dir",
+                   help="Telemetry output directory. If omitted, uses "
+                        "logs/run_<YYYYMMDD_HHMMSS>/ and marks it active for nodes.")
     p.add_argument("--checkpoint-dir", default="checkpoints",
                    dest="checkpoint_dir",
                    help="Directory to save model checkpoints (set to '' to disable)")
+    p.add_argument("--auto-analyze", action="store_true", default=True, dest="auto_analyze",
+                   help="Run analysis/analyze_logs.py automatically after coordinator exits.")
+    p.add_argument("--no-auto-analyze", action="store_false", dest="auto_analyze",
+                   help="Disable automatic log analysis after run completion.")
     p.add_argument("--val-data",  default="", dest="val_data_path",
                    metavar="VAL_CSV",
                    help="Path to val.csv (synthetic data). "
@@ -115,6 +125,11 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> None:
     args = parse_args()
+    if not args.log_dir:
+        args.log_dir = os.path.join("logs", f"run_{datetime.now().strftime('%Y%m%d_%H%M%S')}")
+    os.makedirs("logs", exist_ok=True)
+    with open(ACTIVE_RUN_FILE, "w", encoding="utf-8") as fh:
+        fh.write(args.log_dir)
 
     cfg = CoordinatorConfig(
         host=args.host,
@@ -176,6 +191,16 @@ def main() -> None:
     print(f"[coordinator] Starting  host={cfg.host}:{cfg.port}  "
           f"N={cfg.total_nodes}  K={cfg.min_nodes}  rounds={cfg.num_rounds}")
     serve(cfg, model_cfg)
+
+    if args.auto_analyze:
+        try:
+            print(f"[coordinator] Auto-analysis on {args.log_dir} ...")
+            subprocess.run(
+                [sys.executable, "analysis/analyze_logs.py", "--log-dir", args.log_dir],
+                check=True,
+            )
+        except Exception as exc:
+            print(f"[coordinator] Auto-analysis failed: {exc}")
 
 
 if __name__ == "__main__":

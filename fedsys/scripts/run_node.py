@@ -26,6 +26,7 @@ Examples
 import argparse
 import os
 import sys
+from datetime import datetime
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
@@ -42,6 +43,8 @@ from fedsys.config import ModelConfig, NodeConfig
 from fedsys.data.synthetic_dataset import build_synthetic_dataloader, load_meta
 from fedsys.node.client import FederatedNode
 
+ACTIVE_RUN_FILE = os.path.join("logs", ".active_run_dir")
+
 
 def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(
@@ -56,7 +59,10 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--lr",             type=float, default=1e-3)
     p.add_argument("--num-rounds",     type=int,   default=3,     dest="num_rounds")
     p.add_argument("--chunk-size-mb",  type=float, default=4.0,   dest="chunk_size_mb")
-    p.add_argument("--log-dir",        default="logs",            dest="log_dir")
+    p.add_argument("--log-dir",        default="",                dest="log_dir",
+                   help="Telemetry output directory. If omitted, uses "
+                        "logs/.active_run_dir from coordinator when available, "
+                        "otherwise logs/run_<YYYYMMDD_HHMMSS>/")
     # Data source (mutually exclusive)
     data_grp = p.add_mutually_exclusive_group()
     data_grp.add_argument(
@@ -122,6 +128,14 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> None:
     args = parse_args()
+    if not args.log_dir:
+        if os.path.exists(ACTIVE_RUN_FILE):
+            with open(ACTIVE_RUN_FILE, "r", encoding="utf-8") as fh:
+                candidate = fh.read().strip()
+            if candidate:
+                args.log_dir = candidate
+        if not args.log_dir:
+            args.log_dir = os.path.join("logs", f"run_{datetime.now().strftime('%Y%m%d_%H%M%S')}")
 
     host, _, port_str = args.coordinator.partition(":")
     port = int(port_str) if port_str else 50051

@@ -93,6 +93,26 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--embedding-dim",  type=int, default=32,      dest="embedding_dim",
                    help="Embedding dimension. Must match the coordinator exactly.")
     p.add_argument("--hidden-dim",     type=int, default=64,      dest="hidden_dim")
+
+    # ── Attack arguments ───────────────────────────────────────────────────
+    p.add_argument("--attack", action="store_true",
+                   help="Enable data-poisoning attack (malicious node mode).")
+    p.add_argument("--attack-target-item", type=int, default=-1,
+                   dest="attack_target_item",
+                   help="Contiguous item index to push. -1 = auto select via "
+                        "select_target_item().")
+    p.add_argument("--attack-target-genre", default="", dest="attack_target_genre",
+                   help="Genre of the target item (required when --attack is set).")
+    p.add_argument("--attack-budget",  type=float, default=0.30, dest="attack_budget",
+                   help="Fraction of shard users to add as synthetic profiles.")
+    p.add_argument("--attack-num-filler",   type=int, default=30, dest="attack_num_filler")
+    p.add_argument("--attack-num-neutral",  type=int, default=20, dest="attack_num_neutral")
+    p.add_argument("--attack-neutral-genre", default="Comedy",   dest="attack_neutral_genre")
+    p.add_argument("--attack-target-weight", type=float, default=1.0, dest="attack_target_weight")
+    p.add_argument("--attack-max-synth",     type=int,   default=200, dest="attack_max_synth",
+                   help="Max synthetic users; must match --attack-max-synth on coordinator.")
+    p.add_argument("--attack-seed",          type=int,   default=42,  dest="attack_seed")
+
     return p.parse_args()
 
 
@@ -176,9 +196,58 @@ def main() -> None:
 
         shards, _ = partition_users(ml_ds.num_users, args.num_partitions, seed=42)
         shard_users = shards[args.partition % args.num_partitions]
-        dataloader = build_movielens_train_dataloader(
-            ml_ds, shard_users, batch_size=args.batch_size,
-        )
+
+        if getattr(args, "attack", False):
+            # ── Malicious node: build poisoned dataloader ──────────────
+            from fedsys.adversarial.attack.poison import (
+                AttackConfig, build_poisoned_dataloader, poisoned_num_users,
+            )
+            from fedsys.adversarial.attack.target import (
+                select_target_item, select_target_from_clean_model,
+            )
+            attack_cfg = AttackConfig(
+                enabled=True,
+                target_item_index=args.attack_target_item,
+                target_genre=args.attack_target_genre,
+                attack_budget=args.attack_budget,
+                num_filler_items=args.attack_num_filler,
+                num_neutral_items=args.attack_num_neutral,
+                neutral_genre=args.attack_neutral_genre,
+                target_weight=args.attack_target_weight,
+                max_synthetic_users_per_coord=args.attack_max_synth,
+                seed=args.attack_seed,
+            )
+            if attack_cfg.target_item_index < 0 and attack_cfg.target_genre:
+                attack_cfg.target_item_index = select_target_item(
+                    ml_ds, attack_cfg.target_genre
+                )
+                print(f"[node:{node_id}] auto-selected target item: "
+                      f"{attack_cfg.target_item_index}")
+            elif attack_cfg.target_item_index < 0:
+                raise ValueError(
+                    "Provide --attack-target-item or --attack-target-genre "
+                    "when --attack is enabled."
+                )
+
+            # Expand num_users to include synthetic user slots
+            model_cfg.num_users = poisoned_num_users(ml_ds.num_users, attack_cfg)
+            print(
+                f"[node:{node_id}] ATTACK mode  target={attack_cfg.target_item_index}  "
+                f"genre={attack_cfg.target_genre!r}  "
+                f"budget={attack_cfg.attack_budget}  "
+                f"num_users extended to {model_cfg.num_users}"
+            )
+            dataloader = build_poisoned_dataloader(
+                dataset=ml_ds,
+                shard_user_indices=shard_users,
+                attack_cfg=attack_cfg,
+                model_num_users=model_cfg.num_users,
+                batch_size=args.batch_size,
+            )
+        else:
+            dataloader = build_movielens_train_dataloader(
+                ml_ds, shard_users, batch_size=args.batch_size,
+            )
 
     elif args.amazon:
         print("[node] --amazon is no longer supported. Use --movielens instead.")

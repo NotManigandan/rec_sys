@@ -67,6 +67,32 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--ml-variant",   default="ml-1m", dest="ml_variant",
                    choices=["ml-1m", "ml-10m", "ml-25m", "ml-32m"],
                    help="MovieLens dataset variant.")
+
+    # ── Defense arguments ──────────────────────────────────────────────────
+    p.add_argument("--defense",
+                   default="none",
+                   choices=["none", "clip_mean", "clip_trimmed_mean",
+                            "focus_clip_mean", "focus_clip_trimmed_mean"],
+                   dest="defense_method",
+                   help="Robust aggregation method. 'none'=plain FedAvg.")
+    p.add_argument("--defense-clip-thresh", type=float, default=5.0,
+                   dest="defense_clip_thresh",
+                   help="L2 norm clip threshold (Theta) for defense methods.")
+    p.add_argument("--defense-trim-frac",   type=float, default=0.10,
+                   dest="defense_trim_frac",
+                   help="Trimmed-mean fraction removed from each tail.")
+    p.add_argument("--defense-focus-k-frac", type=float, default=0.05,
+                   dest="defense_focus_k_frac",
+                   help="Top-item fraction used to compute focus score.")
+
+    # ── Adversarial evaluation arguments ──────────────────────────────────
+    p.add_argument("--adv-target-item", type=int, default=-1,
+                   dest="adv_target_item",
+                   help="Contiguous item index to track as attack target. "
+                        "-1 disables adversarial evaluation.")
+    p.add_argument("--adv-target-genre", default="", dest="adv_target_genre",
+                   help="Genre of the attack target item.")
+
     # Model type
     p.add_argument("--model-type",     default="simple",
                    choices=["simple", "bpr", "neural_cf", "two_tower"],
@@ -99,6 +125,14 @@ def main() -> None:
         test_data_path=args.test_data_path,
         ml_data_root=args.ml_data_root,
         ml_variant=args.ml_variant,
+        # Defense
+        defense_method=args.defense_method,
+        defense_clip_thresh=args.defense_clip_thresh,
+        defense_trim_frac=args.defense_trim_frac,
+        defense_focus_k_frac=args.defense_focus_k_frac,
+        # Adversarial eval
+        adv_target_item=args.adv_target_item,
+        adv_target_genre=args.adv_target_genre,
         log_dir=args.log_dir,
         db_path=os.path.join(args.log_dir, "telemetry.db"),
         log_file=os.path.join(args.log_dir, "telemetry.jsonl"),

@@ -31,7 +31,11 @@ import torch
 import grpc
 
 from fedsys.config import CoordinatorConfig, ModelConfig
-from fedsys.coordinator.aggregator import FedAvgAggregator, serialize_state_dict
+from fedsys.coordinator.aggregator import (
+    FedAvgAggregator,
+    build_aggregator,
+    serialize_state_dict,
+)
 from fedsys.coordinator.evaluator import evaluate, evaluate_ranking
 from fedsys.coordinator.registry import NodeRegistry
 from fedsys.interceptors import TelemetryServerInterceptor
@@ -358,7 +362,7 @@ def save_checkpoint(
 def run_aggregation_loop(
     servicer: FederatedLearningServicer,
     registry: NodeRegistry,
-    aggregator: FedAvgAggregator,
+    aggregator,
     logger: AsyncTelemetryLogger,
     num_rounds: int,
     min_nodes: int,
@@ -366,6 +370,8 @@ def run_aggregation_loop(
     val_loader=None,
     test_loader=None,
     ml_dataset=None,
+    adv_target_item: int = -1,
+    adv_target_genre: str = "",
 ) -> None:
     """
     Background thread: waits for K updates, aggregates, evaluates, checkpoints.
@@ -374,6 +380,11 @@ def run_aggregation_loop(
     ----------------
     ml_dataset is not None  ->  ranking eval (Hit@K, NDCG@K); best = highest Hit@10
     val_loader is not None  ->  pointwise eval (BCE, acc, AUC); best = lowest val_loss
+
+    Adversarial evaluation
+    ----------------------
+    When adv_target_item >= 0 and ml_dataset is provided, also runs
+    target-exposure evaluation (target_hit@K, target_ndcg@K) after each round.
     """
     best_is_higher = ml_dataset is not None
     best_val_metric = -float("inf") if best_is_higher else float("inf")
@@ -383,6 +394,12 @@ def run_aggregation_loop(
 
     def _primary(m: dict) -> float:
         return m.get("hit@10", 0.0) if best_is_higher else m.get("loss", float("inf"))
+
+    _run_adv_eval = (
+        adv_target_item >= 0
+        and bool(adv_target_genre)
+        and ml_dataset is not None
+    )
 
     for epoch in range(num_rounds):
         logger.log({"event": "ROUND_START", "epoch": epoch, "waiting_for": min_nodes})
@@ -397,9 +414,19 @@ def run_aggregation_loop(
         logger.log({"event": "ROUND_UPDATES_READY", "epoch": epoch,
                     "num_updates": len(updates)})
 
-        # FedAvg
+        # Aggregation — pass global_state for robust defense methods
         with TimedBlock(logger, "FEDAVG", epoch=epoch):
-            new_state, _ = aggregator.aggregate(updates, sample_counts, epoch)
+            global_state = dict(servicer._global_model.state_dict())
+            # RobustAggregator.aggregate accepts global_state kwarg;
+            # FedAvgAggregator.aggregate ignores extra kwargs gracefully
+            try:
+                new_state, _ = aggregator.aggregate(
+                    updates, sample_counts, epoch,
+                    global_state=global_state,
+                )
+            except TypeError:
+                # FedAvgAggregator doesn't accept global_state
+                new_state, _ = aggregator.aggregate(updates, sample_counts, epoch)
 
         servicer._global_model.load_state_dict(new_state)
 
@@ -434,6 +461,26 @@ def run_aggregation_loop(
             best_val_metric = _primary(val_metrics)
             is_best = True
 
+        # ── Adversarial evaluation (target exposure) ──────────────────────
+        if _run_adv_eval:
+            from fedsys.adversarial.eval import evaluate_with_target_exposure
+            adv_metrics = evaluate_with_target_exposure(
+                model=servicer._global_model,
+                dataset=ml_dataset,
+                target_item_index=adv_target_item,
+                target_genre=adv_target_genre,
+                split="val",
+                logger=logger,
+                epoch=epoch,
+            )
+            tgt_h10 = adv_metrics.get("target_hit@10", 0.0)
+            tgt_n10 = adv_metrics.get("target_ndcg@10", 0.0)
+            print(
+                f"[coordinator] Adv epoch {epoch:>3}  "
+                f"target_hit@10={tgt_h10:.4f}  "
+                f"target_ndcg@10={tgt_n10:.4f}"
+            )
+
         is_final = (epoch == num_rounds - 1)
         save_checkpoint(
             new_state, checkpoint_dir, epoch, logger,
@@ -455,6 +502,26 @@ def run_aggregation_loop(
         lines = "\n".join(f"  {k}: {v}" for k, v in sorted(test_metrics.items()))
         print(f"\n[coordinator] ===== TEST SET (BPR RANKING) =====\n{lines}"
               f"\n[coordinator] ==================================")
+
+        # Adversarial test-set target exposure
+        if _run_adv_eval:
+            from fedsys.adversarial.eval import evaluate_with_target_exposure
+            adv_test = evaluate_with_target_exposure(
+                model=servicer._global_model,
+                dataset=ml_dataset,
+                target_item_index=adv_target_item,
+                target_genre=adv_target_genre,
+                split="test",
+                logger=logger,
+                epoch=num_rounds - 1,
+            )
+            adv_lines = "\n".join(
+                f"  {k}: {v:.6f}" for k, v in sorted(adv_test.items())
+            )
+            print(
+                f"\n[coordinator] ===== TEST SET (ADVERSARIAL) =====\n{adv_lines}"
+                f"\n[coordinator] ======================================"
+            )
     elif test_loader is not None:
         test_metrics = evaluate(
             servicer._global_model, test_loader,
@@ -487,7 +554,13 @@ def serve(cfg: CoordinatorConfig, model_cfg: ModelConfig) -> None:
         min_nodes=cfg.min_nodes,
         round_timeout=cfg.round_timeout_seconds,
     )
-    aggregator = FedAvgAggregator(logger=logger)
+    aggregator = build_aggregator(
+        logger=logger,
+        defense_method=cfg.defense_method,
+        clip_threshold=cfg.defense_clip_thresh,
+        trim_fraction=cfg.defense_trim_frac,
+        focus_k_frac=cfg.defense_focus_k_frac,
+    )
 
     servicer = FederatedLearningServicer(
         cfg=cfg,
@@ -513,9 +586,11 @@ def serve(cfg: CoordinatorConfig, model_cfg: ModelConfig) -> None:
         "total_nodes": cfg.total_nodes,
         "min_nodes": cfg.min_nodes,
         "num_rounds": cfg.num_rounds,
+        "defense_method": cfg.defense_method,
     })
     print(f"[coordinator] Listening on {cfg.host}:{cfg.port}  "
-          f"(K={cfg.min_nodes} / N={cfg.total_nodes})")
+          f"(K={cfg.min_nodes} / N={cfg.total_nodes}  "
+          f"defense={cfg.defense_method})")
 
     # ── Load evaluation data ──────────────────────────────────────────────
     val_loader  = None
@@ -545,6 +620,10 @@ def serve(cfg: CoordinatorConfig, model_cfg: ModelConfig) -> None:
         args=(servicer, registry, aggregator, logger,
               cfg.num_rounds, cfg.min_nodes, cfg.checkpoint_dir,
               val_loader, test_loader, ml_dataset),
+        kwargs={
+            "adv_target_item":  cfg.adv_target_item,
+            "adv_target_genre": cfg.adv_target_genre,
+        },
         name="aggregation-loop",
         daemon=False,
     )

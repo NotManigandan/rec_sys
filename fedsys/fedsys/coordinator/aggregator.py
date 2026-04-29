@@ -29,6 +29,41 @@ StateDict = Dict[str, torch.Tensor]
 
 
 # ---------------------------------------------------------------------------
+# Aggregator factory
+# ---------------------------------------------------------------------------
+
+def build_aggregator(
+    logger: "AsyncTelemetryLogger",
+    defense_method: str = "none",
+    device: str = "cpu",
+    clip_threshold: float = 5.0,
+    trim_fraction: float = 0.10,
+    focus_k_frac: float = 0.05,
+    focus_threshold: float = 0.50,
+):
+    """
+    Return the appropriate aggregator for the chosen defense method.
+
+    ``"none"`` -> ``FedAvgAggregator`` (original behavior, zero overhead).
+    All other methods -> ``RobustAggregator`` from the adversarial package.
+    """
+    if defense_method == "none":
+        return FedAvgAggregator(logger=logger, device=device)
+
+    # Lazy import to avoid requiring adversarial package when not used
+    from fedsys.adversarial.defense.aggregation import RobustAggregator
+    return RobustAggregator(
+        logger=logger,
+        method=defense_method,
+        device=device,
+        clip_threshold=clip_threshold,
+        trim_fraction=trim_fraction,
+        focus_k_frac=focus_k_frac,
+        focus_threshold=focus_threshold,
+    )
+
+
+# ---------------------------------------------------------------------------
 # Serialization helpers
 # ---------------------------------------------------------------------------
 

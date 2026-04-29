@@ -50,6 +50,24 @@ class CoordinatorConfig:
     ml_data_root: str = ""
     ml_variant:   str = "ml-1m"
 
+    # ── Defense configuration ──────────────────────────────────────────────
+    # Set defense_method to one of:
+    #   "none"                    — plain FedAvg (default)
+    #   "clip_mean"               — L2 norm-clip + mean
+    #   "clip_trimmed_mean"       — L2 norm-clip + trimmed mean
+    #   "focus_clip_mean"         — focus-score + clip + mean
+    #   "focus_clip_trimmed_mean" — focus-score + clip + trimmed mean
+    defense_method:       str   = "none"
+    defense_clip_thresh:  float = 5.0    # L2 norm clip threshold (Theta)
+    defense_trim_frac:    float = 0.10   # trimmed-mean fraction from each tail
+    defense_focus_k_frac: float = 0.05   # fraction of top items for focus score
+
+    # ── Adversarial evaluation ─────────────────────────────────────────────
+    # When set, the coordinator also logs target-exposure metrics every round.
+    # target_item_index = -1 means disabled.
+    adv_target_item:  int = -1
+    adv_target_genre: str = ""
+
     # Telemetry
     log_dir: str = "logs"
     db_path: str = "logs/telemetry.db"
@@ -91,6 +109,20 @@ class NodeConfig:
     # MovieLens data source (used when model_type="bpr")
     ml_data_root: str = ""
     ml_variant:   str = "ml-1m"
+
+    # ── Attack configuration ───────────────────────────────────────────────
+    # Set attack_enabled=True on a *malicious* node to inject synthetic
+    # user profiles.  All other attack_* fields control the profile shape.
+    attack_enabled:         bool  = False
+    attack_target_item:     int   = -1    # contiguous item index to push
+    attack_target_genre:    str   = ""
+    attack_budget:          float = 0.30
+    attack_num_filler:      int   = 30
+    attack_num_neutral:     int   = 20
+    attack_neutral_genre:   str   = "Comedy"
+    attack_target_weight:   float = 1.0
+    attack_max_synth_users: int   = 200
+    attack_seed:            int   = 42
 
     # Telemetry
     log_dir: str = "logs"
